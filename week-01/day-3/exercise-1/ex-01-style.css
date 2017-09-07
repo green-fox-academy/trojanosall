@@ -1,0 +1,13 @@
+
+p {
+    color: rgb(4,96,104);
+    font-family: 'Segoe UI';
+    font-size: 26px;
+    width: 348px;
+    height: 136px;
+    padding-left: 10px;
+    padding-top: 10px;
+    margin: 19px;
+    border: 6px solid #80D094;
+    background-color: #0E91A1;
+}
