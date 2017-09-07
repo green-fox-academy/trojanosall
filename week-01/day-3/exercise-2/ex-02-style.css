@@ -1,0 +1,36 @@
+body {
+  border: 17px solid #4285F4;
+  width: 347px;
+  height: 510px;
+}
+
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 36px;
+  width: 348px;
+  height: 128px;
+  text-align: center;
+  padding: 0px;
+  line-height: 128px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background: red;
+}
+
+p:nth-child(1) {
+  background-color: #E67676;
+}
+
+p:nth-child(2) {
+  background-color:#F2F062;
+}
+
+p:nth-child(3) {
+  background-color:#A9E6E6;
+}
+
+p:nth-child(4) {
+  background-color:#7692E4;
+}
+
