@@ -1,7 +1,33 @@
-form{
+.container{
   width: 624px;
-  height: 275px;
-  background-color: #127731;
-  box-sizing: border-box;
+  height: 786px;
+  background-color: #10772F;
   margin: auto;
+  padding-top: 12px;
+  position: relative;
+}
+
+.box{
+  box-sizing: border-box;
+  width: 100%;
+  border: 15px solid #FF1200;
+  background-color: #FFE42E;
+  padding: 5px;
+}
+
+.half{
+  width: 50%;
+  height: 411px;
+  float: left;
+}
+
+.top{
+  height: 48px;
+  margin-bottom: 18px;
+}
+
+.down{
+  height: 187px;
+  display: inline-block;
+  margin-top: 16px;
 }
