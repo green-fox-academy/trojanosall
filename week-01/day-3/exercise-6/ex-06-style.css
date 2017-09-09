@@ -1,0 +1,32 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  margin-right: 60%;
+  list-style: none;
+  font-size: 36px;
+  color: white;
+  font-family: Arial;
+  font-weight: bold;
+}
+li{
+  padding: 45px;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  margin: 4.5px;
+}
+li:first-child{
+  background: #B90CEB;
+}
+li:nth-child(2), li:nth-child(3), li:nth-child(4), li:nth-child(5){
+  background-color: #0CEBDE;
+} 
+li:last-child{
+  background-color: #EBBE0C;
+}
