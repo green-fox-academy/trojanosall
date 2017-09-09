@@ -1,28 +1,63 @@
-main {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-
-h2{
-    color:  #ff0099
-}
-
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 10% 0 10%;
+  overflow: hidden;
+  background-color: #333333;
+  height: 52px;
 }
 
 li {
-    float: right;
+  float: right;
 }
 
 li a {
-    display: inline-block;
-    color: #ff0099;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: #ff0099;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  font-family: 'merriweather sans';
+}
+
+li a:hover {
+  background-color: #111111;
+}
+
+img {
+  height: 50px;
+}
+
+main {
+  padding: 0 10% 0 10%;  
+  }
+
+h1{
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 42px;
+}
+
+h2{
+  color:  #ff0099;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  font-size: 23px;
+}
+
+.aboutmyself{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.separator {
+  font-size: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.wiki_solution {
+  text-align: justify;
 }
