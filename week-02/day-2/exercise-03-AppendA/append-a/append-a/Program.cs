@@ -14,7 +14,14 @@ namespace append_a
             // - Write a function called `appendA` that gets a string as an input
             //   and appends an 'a' character to its end
             // - Print the result of `appendA(am)`
-            Console.ReadLine();
+            string am = "kuty";
+            Console.WriteLine(appendA(am));
+            Console.ReadKey();
         }
+        public static string appendA (string name)
+            {
+            name = name + "a";
+            return name;
+            }
     }
 }
