@@ -10,13 +10,13 @@ namespace Functions
     {
         public static void GreetingFunction()
         {
-            Console.WriteLine("hello");
+            Console.WriteLine("Nu mi a helyzet");
         }
 
         static void Main(string[] args)
         {
             GreetingFunction();
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }
