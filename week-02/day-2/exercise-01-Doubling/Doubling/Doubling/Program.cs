@@ -15,9 +15,13 @@ namespace Doubling
             // - Print the result of `doubling(ak)`
 
             int ak = 123;
-
-
+            Doubling(ak);
             Console.ReadKey();
+        }
+
+        public static void Doubling(int ak)
+            { 
+            Console.WriteLine(ak*2); 
         }
     }
 }
