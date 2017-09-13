@@ -22,7 +22,12 @@ namespace Ex_04_String_ToDoPrint
             //  - Download games
             //      - Diablo
 
-            Console.WriteLine(todoText);
+            StringBuilder NewToDoText = new StringBuilder(todoText);
+            NewToDoText.Insert(0, "My todo: \n", 1).Insert(22, " - Download games\n",1).Insert(40, "     - Diablo", 1);
+
+
+            Console.WriteLine(NewToDoText);
+            Console.ReadKey();
         }
     }
 }
