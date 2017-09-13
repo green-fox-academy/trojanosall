@@ -13,7 +13,7 @@ namespace Ex_01_List_SolarSystem
             var planetList = new List<string> { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus",
             "Neptune" };
 
-            planetList.Insert(, "Saturn");
+            planetList.Insert(5, "Saturn");
 
 
             // Saturn is missing from the planetList
