@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintElements", "PrintElements\PrintElements.csproj", "{B8AB3F2F-62D2-4446-A890-4E7662045E2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8AB3F2F-62D2-4446-A890-4E7662045E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8AB3F2F-62D2-4446-A890-4E7662045E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8AB3F2F-62D2-4446-A890-4E7662045E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8AB3F2F-62D2-4446-A890-4E7662045E2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8890F87-8542-48AA-906A-CA2CB8906378}
+	EndGlobalSection
+EndGlobal
