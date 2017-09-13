@@ -13,13 +13,18 @@ namespace Ex_01_List_SolarSystem
             var planetList = new List<string> { "Mercury", "Venus", "Earth", "Mars", "Jupiter", "Uranus",
             "Neptune" };
 
-            planetList.Add(new Part() { PartName = "Saturn", PartId = 6 });
+            planetList.Insert(, "Saturn");
 
 
             // Saturn is missing from the planetList
             // Insert it into the correct position
 
-            Console.WriteLine(planetList);
+            foreach (string a in planetList)
+
+            {
+                Console.WriteLine(a);
+            }
+            Console.ReadKey();
         }
     }
 }
