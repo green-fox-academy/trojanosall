@@ -16,11 +16,19 @@ namespace Ex_01_strings
             // Please fix it for me!
             // Expected ouput: In a galaxy far far away
 
+            //BETTER (OR OTHER) SOLUTION
             string starttext= "In a dishwasher far far away";
-            string example= starttext.Replace("dishwasher", "galaxy");
-            Console.WriteLine(example);
+            string example;
+            Console.WriteLine((example = starttext.Replace("dishwasher", "galaxy")));
 
             Console.ReadKey();
+
+            //FIRST SOLUTION
+            //string starttext= "In a dishwasher far far away";
+            //string example= starttext.Replace("dishwasher", "galaxy");
+            //Console.WriteLine(example);
+
+            //Console.ReadKey();
         }
     }
 }
