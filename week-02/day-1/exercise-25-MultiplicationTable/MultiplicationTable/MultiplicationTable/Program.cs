@@ -32,7 +32,7 @@ namespace MultiplicationTable
             for (int i = 1; i < 11; i++)
             {
                 int SUM= i * 15;
-                Console.WriteLine(SUM);
+                Console.WriteLine(i + "* 15 =" + SUM);
             }
 
             Console.ReadKey();
