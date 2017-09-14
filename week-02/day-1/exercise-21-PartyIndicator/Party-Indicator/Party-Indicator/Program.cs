@@ -24,6 +24,16 @@ namespace Party_Indicator
             //
             // It should print: Sausage party
             // If no girls are coming, regardless the count of the people
+
+            Console.WriteLine("How many girls came to a party?");
+            int GirlsNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("How many boyss came to a party?");
+            int BoysNumber = int.Parse(Console.ReadLine());
+
+            if ( GirlsNumber == BoysNumber  )
+
+            Console.ReadKey();
         }
     }
 }
