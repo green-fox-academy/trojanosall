@@ -29,6 +29,12 @@ namespace MultiplicationTable
             Console.WriteLine("Please give me a number: ");
             int UserInput = int.Parse(Console.ReadLine());
 
+            for (int i = 1; i < 11; i++)
+            {
+                int SUM= i * 15;
+                Console.WriteLine(SUM);
+            }
+
             Console.ReadKey();
 
 
