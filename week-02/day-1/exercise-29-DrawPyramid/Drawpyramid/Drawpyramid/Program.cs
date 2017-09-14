@@ -36,10 +36,6 @@ namespace Drawpyramid
                 {
                     Console.Write("*");
                 }
-                for (int l = 0; l < UserInput - i; l++)
-                {
-                    Console.Write(" ");
-                }
                 Console.WriteLine();
             }
             Console.ReadKey();
