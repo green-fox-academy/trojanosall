@@ -26,11 +26,12 @@ namespace DrawDyamiond
 
             Console.Write("Please give me a number and based on this number I will build a dyamond for you: ");
             int UserInput = int.Parse(Console.ReadLine());
+            int HalfOfUserInput = UserInput / 2;
 
 
-            for (int i = 0; i <= UserInput; i++)
+            for (int i = 0; i <= HalfOfUserInput; i++)
             {
-                for (int j = 0; j < UserInput - i; j++)
+                for (int j = 0; j < HalfOfUserInput - i; j++)
                 {
                     Console.Write(" ");
                 }
@@ -38,8 +39,22 @@ namespace DrawDyamiond
                 {
                     Console.Write("*");
                 }
-                Console.WriteLine();
+             Console.WriteLine();
             }
+
+            for (int i = HalfOfUserInput; i >= 0; i--)
+            {
+                for (int j = HalfOfUserInput - i; j > 0; j--)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = 2 * i - 1; k > 0 ; k--)
+                {
+                    Console.Write("*");
+                }
+             Console.WriteLine();
+            }
+
             Console.ReadKey();
         }
     }
