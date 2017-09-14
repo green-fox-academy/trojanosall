@@ -24,7 +24,6 @@ namespace CondVariableMutation
             // if b is between 10 and 20 set out2 to "Sweet!"
             // if less than 10 set out2 to "More!",
             // if more than 20 set out2 to "Less!"
-
             int b = 13;
             string out2 = "";
 
