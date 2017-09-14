@@ -23,6 +23,11 @@ namespace drawTriangle
             Console.WriteLine("Please give me a number and I will draw a triangle based on your numbers:");
             int UserInput = int.Parse(Console.ReadLine());
 
+            for (int i = 0; i < UserInput; i++)
+            {
+
+            }
+
             Console.ReadKey();
         }
     }
