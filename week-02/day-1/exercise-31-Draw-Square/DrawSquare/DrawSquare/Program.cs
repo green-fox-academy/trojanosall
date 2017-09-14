@@ -10,10 +10,23 @@ namespace DrawSquare
     {
         static void Main(string[] args)
         {
+             // Write a program that reads a number from the standard input, then draws a
+            // square like this:
+            //
+            //
+            // %%%%%
+            // %   %
+            // %   %
+            // %   %
+            // %   %
+            // %%%%%
+            //
+            // The square should have as many lines as the number was
+
             Console.Write("Height of your square: ");
             int height = int.Parse(Console.ReadLine());
-
             Console.WriteLine();
+
             Console.WriteLine("Here is your square!");
 
             for (int j = 0; j < height; j++)
@@ -28,12 +41,13 @@ namespace DrawSquare
             {
                 Console.Write("%");
 
-            for (int l = 0; l < height - 2; l++)
-            {
+                for (int l = 0; l < height - 2; l++)
+                {
                  Console.Write(" ");
-            }
+                }
 
             Console.Write("%");
+            
             Console.WriteLine();
 
             }
@@ -44,9 +58,7 @@ namespace DrawSquare
                 Console.Write("%");
             }
 
-        Console.WriteLine();
-
-        Console.ReadKey();
+             Console.ReadKey();
         }
     }
 }
