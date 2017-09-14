@@ -84,6 +84,18 @@ namespace CondVariableMutation
             int time = 120;
             string out3 = "";
 
+            if (d %4== 0 && time <= 200)
+            {
+                out3 = "Check";
+            }
+            else if (time > 200)
+            {
+                out3 = "Time out";
+            }
+            else
+            {
+                out3 = "Run Forest Run!";
+            }
 
             Console.WriteLine(out3);
 
