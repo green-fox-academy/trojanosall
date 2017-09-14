@@ -26,6 +26,12 @@ namespace MultiplicationTable
             // 9 * 15 = 135
             // 10 * 15 = 150
 
+            Console.WriteLine("Please give me a number: ");
+            int UserInput = int.Parse(Console.ReadLine());
+
+            Console.ReadKey();
+
+
         }
     }
 }
