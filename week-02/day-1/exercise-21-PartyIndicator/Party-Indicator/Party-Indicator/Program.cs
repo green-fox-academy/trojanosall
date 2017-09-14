@@ -31,7 +31,24 @@ namespace Party_Indicator
             Console.WriteLine("How many boyss came to a party?");
             int BoysNumber = int.Parse(Console.ReadLine());
 
-            if ( GirlsNumber == BoysNumber  )
+
+            if ( GirlsNumber == BoysNumber && (GirlsNumber + BoysNumber) > 20 )
+
+            {
+                Console.WriteLine("The party is exellent!");
+            }
+            else if (GirlsNumber != BoysNumber && GirlsNumber > 0 && (GirlsNumber + BoysNumber) > 20)
+            {
+                Console.WriteLine("Quite cool party!");
+            }
+            else if (GirlsNumber > 0 && (GirlsNumber + BoysNumber) < 20)
+            {
+                Console.WriteLine("Average party...");
+            }
+            else
+            {
+                Console.WriteLine("Sausage party");
+            }
 
             Console.ReadKey();
         }
