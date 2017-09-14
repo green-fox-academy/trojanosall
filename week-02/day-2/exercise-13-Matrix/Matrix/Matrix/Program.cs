@@ -20,16 +20,25 @@ namespace Matrix
             //
             // - Print this two dimensional array to the output
 
-            for (int i = 0; i < 4; i++)
+            int[,] matrix = new int[4,4];
+
+            for (int i = 0; i < matrix.GetLength(0); i++)
             {
-                for (int j = 0; j < 4; j++)
+                for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    if (i == j) Console.Write("1 ");
-                    else Console.Write("0 ");
+                    if (i == j)
+                    {
+                        Console.Write(1);
+                    }
+                    else
+                    {
+                        Console.Write(0);
+                    }
                 }
                 Console.WriteLine();
-
-                Console.ReadKey();
+            }
+            Console.ReadKey();
+                        
         }
     }
 }
