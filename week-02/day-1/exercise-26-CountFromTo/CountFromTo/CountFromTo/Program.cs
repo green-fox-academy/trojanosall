@@ -30,10 +30,20 @@ namespace CountFromTo
             Console.WriteLine("Please give me another number: ");
             int UserNumber2 = int.Parse(Console.ReadLine());
 
+                       
             if (UserNumber2 <= UserNumber1)
             {
                 Console.WriteLine("The second number should be bigger");
             }
+            else
+            {
+                Console.WriteLine("\n The numbers from the first number to the second number are the following:");
+                for (int i = 1; i < (UserNumber2 - UserNumber1); i++)
+                {
+                    Console.WriteLine(UserNumber1 +i);
+                }
+            }
+
 
             Console.ReadKey();
 
