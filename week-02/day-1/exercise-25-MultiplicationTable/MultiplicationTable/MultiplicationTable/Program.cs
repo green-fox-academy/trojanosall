@@ -25,14 +25,14 @@ namespace MultiplicationTable
             // 8 * 15 = 120
             // 9 * 15 = 135
             // 10 * 15 = 150
-
+                        
             Console.WriteLine("Please give me a number: ");
             int UserInput = int.Parse(Console.ReadLine());
 
             for (int i = 1; i < 11; i++)
             {
-                int SUM= i * 15;
-                Console.WriteLine(i + "* 15 =" + SUM);
+                int SUM= i * UserInput;
+                Console.WriteLine(i + " * " + UserInput + " = " + SUM);
             }
 
             Console.ReadKey();
