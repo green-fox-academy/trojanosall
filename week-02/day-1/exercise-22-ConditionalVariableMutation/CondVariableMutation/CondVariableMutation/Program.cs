@@ -52,10 +52,28 @@ namespace CondVariableMutation
             int c = 123;
             int credits = 100;
             bool isBonus = false;
-            
+
+            if (credits >= 50 && isBonus==false)
+            {
+                c -= 2;
+            }
+            else if (credits <= 50 && isBonus==false)
+            {
+                c -= 1;
+            }
+            else if (isBonus==true)
+            {
+                c=c;
+            }
+            else
+            {
+                c=c;
+            }
 
             Console.WriteLine(c);
 
+
+            
             // if d is dividable by 4
             // and time is not more than 200
             // set out3 to "check"
