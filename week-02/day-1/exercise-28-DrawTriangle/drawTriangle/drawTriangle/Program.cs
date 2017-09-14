@@ -19,6 +19,11 @@ namespace drawTriangle
             // ****
             //
             // The triangle should have as many lines as the number was
+
+            Console.WriteLine("Please give me a number and I will draw a triangle based on your numbers:");
+            int UserInput = int.Parse(Console.ReadLine());
+
+            Console.ReadKey();
         }
     }
 }
