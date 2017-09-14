@@ -24,7 +24,18 @@ namespace CountFromTo
             // 4
             // 5
 
+            Console.WriteLine("Please give me a number: ");
+            int UserNumber1 = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Please give me another number: ");
+            int UserNumber2 = int.Parse(Console.ReadLine());
+
+            if (UserNumber2 <= UserNumber1)
+            {
+                Console.WriteLine("The second number should be bigger");
+            }
+
+            Console.ReadKey();
 
         }
     }
