@@ -39,6 +39,7 @@ namespace GuessMyNumber
             int ComputerNumber = rnd.Next(LowerLimit, UpperLimit);
             Console.WriteLine(ComputerNumber);
 
+
             for (int i = 1; i <= attempts; i++)
             {
                 Console.WriteLine("\nPlease give me your " + i + ". attempt:");
@@ -47,6 +48,8 @@ namespace GuessMyNumber
                 if (UserAttempt == ComputerNumber)
                 {
                     Console.WriteLine("You are very, very, very lucky. Congratulation. You won!");
+
+                    break;
                 }
                 else if (UserAttempt > ComputerNumber)
                 {
