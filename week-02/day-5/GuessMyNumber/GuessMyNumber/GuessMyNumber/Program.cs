@@ -54,16 +54,24 @@ namespace GuessMyNumber
                 else if (UserAttempt > ComputerNumber)
                 {
                     Console.WriteLine("Too high. You have " + (attempts - i) + " lives left.");
+
+                    if (i == attempts)
+                    {
+                        Console.WriteLine("\nYou have no more attempts. Unfortunately You lost.");
+                    }
                 }
                 else
                 {
                     Console.WriteLine("Too low. You have " + (attempts - i) + " lives left.");
+
+                    if (i == attempts)
+                    {
+                        Console.WriteLine("\nYou have no more attempts. Unfortunately You lost.");
+                    }
                 }
-
+                            
             }
-
-            Console.WriteLine("\nYou have no more attempts. Unfortunately You lost.");
-                        
+                      
             Console.ReadKey();
                         
         }
