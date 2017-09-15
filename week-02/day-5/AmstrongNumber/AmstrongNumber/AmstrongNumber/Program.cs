@@ -26,6 +26,8 @@ namespace AmstrongNumber
             //CONVERT THE STRING (THE USER INPUT) TO CHAR
             Char[] ElementOfUserInput=UserInput.ToCharArray();
             
+            //
+            
 
             Console.ReadKey();
 
