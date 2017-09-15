@@ -27,14 +27,11 @@ namespace GuessMyNumber
             Console.WriteLine("Upper limit:");
             int UpperLimit = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("\nBased on your request the limits are the following:\n");
-            Console.WriteLine("Lower limit is: " + LowerLimit);
-            Console.WriteLine("Upper limit is: " + UpperLimit);
                         
             //Attempts number declaration
             int attempts = 5;
             Console.WriteLine("\nLet`s play MyFriend...\n");
-            Console.WriteLine("You have " + attempts + " attempts (life). So please be smart.");
+            Console.WriteLine("I have a number between " + LowerLimit + " and " + UpperLimit + ". You have "  + attempts + " attempts (lifes). So please be smart.");
 
             // Generate random number
 
@@ -42,7 +39,26 @@ namespace GuessMyNumber
             int ComputerNumber = rnd.Next(LowerLimit, UpperLimit);
             Console.WriteLine(ComputerNumber);
 
+            for (int i = 1; i < attempts; i++)
+            {
+                Console.WriteLine("Please give me your" + i + ". attempt:");
+                int UserAttempt = int.Parse(Console.ReadLine());
 
+                if (UserAttempt == ComputerNumber)
+                {
+                    Console.WriteLine("You are very, very, very lucky. Congratulation. You won!");
+                }
+                else if (UserAttempt > ComputerNumber)
+                {
+                    Console.WriteLine("Too high. You have " + i + " lives left.");
+                }
+                else
+                {
+                    Console.WriteLine("Too low. You have " + i + "lives left.");
+                }
+
+            }
+                        
             Console.ReadKey();
 
             
