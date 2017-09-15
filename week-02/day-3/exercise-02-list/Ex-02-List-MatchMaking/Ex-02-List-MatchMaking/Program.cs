@@ -17,7 +17,25 @@ namespace Ex_02_List_MatchMaking
             // Join the two lists by matching one girl with one boy in the order list
             // Exepected output: "Eve", "Joe", "Ashley", "Fred"...
 
-            Console.WriteLine(order);
+            for (int i = 0; i < boys.Count; i++)
+            {
+                if (girls.Count > i)
+                {
+                    order.Add(girls[i]);
+                }
+                if (boys.Count > i)
+                {
+                    order.Add(boys[i]);
+                }
+
+            }
+
+            foreach (string couple in order)
+            {
+                Console.WriteLine(couple);
+            }
+
+            Console.ReadKey();
         }
     }
 }
