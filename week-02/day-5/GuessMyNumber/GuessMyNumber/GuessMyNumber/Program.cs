@@ -19,7 +19,7 @@ namespace GuessMyNumber
 
             // Make the range
             Console.WriteLine("GUESS MY NUMBER \n \n");
-            Console.WriteLine("Please give me the parameter of the range.");
+            Console.WriteLine("Please give me the parameter of the range.\n");
 
             Console.WriteLine("Lower limit:");
             int LowerLimit = int.Parse(Console.ReadLine());
@@ -39,9 +39,9 @@ namespace GuessMyNumber
             int ComputerNumber = rnd.Next(LowerLimit, UpperLimit);
             Console.WriteLine(ComputerNumber);
 
-            for (int i = 1; i < attempts; i++)
+            for (int i = 1; i <= attempts; i++)
             {
-                Console.WriteLine("Please give me your" + i + ". attempt:");
+                Console.WriteLine("\nPlease give me your " + i + ". attempt:");
                 int UserAttempt = int.Parse(Console.ReadLine());
 
                 if (UserAttempt == ComputerNumber)
@@ -50,18 +50,19 @@ namespace GuessMyNumber
                 }
                 else if (UserAttempt > ComputerNumber)
                 {
-                    Console.WriteLine("Too high. You have " + i + " lives left.");
+                    Console.WriteLine("Too high. You have " + (attempts - i) + " lives left.");
                 }
                 else
                 {
-                    Console.WriteLine("Too low. You have " + i + "lives left.");
+                    Console.WriteLine("Too low. You have " + (attempts - i) + " lives left.");
                 }
 
             }
+
+            Console.WriteLine("\nYou have no more attempts. Unfortunately You lost.");
                         
             Console.ReadKey();
-
-            
+                        
         }
     }
 }
