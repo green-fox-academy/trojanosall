@@ -15,8 +15,17 @@ namespace AmstrongNumber
             // For a 3-digit number: 153 is a 3-digit number, raise each digit to the third power, and add: 1^3 + 5^3 + 3^3 = 153, so it is an Armstrong number.
             // Write a simple program to check if a given number is an armstrong number. The program should ask for a number. E.g. if we type 371, the program should print out: The 371 is an Armstrong number.
 
+            // ASK A NUMBER AS DISPLAY AS STRING
             Console.WriteLine("Please give me a number and I check that it is an Amstrong number or not: ");
-            int UserInput = int.Parse(Console.ReadLine());
+            string UserInput = Console.ReadLine();
+
+            //DETERMINE THE COUNT OF DIGIT (CALCULATION BASED ON THE LENGHT OF USERINPUT)
+            int CountOfDigit = UserInput.Length;
+            Console.WriteLine(CountOfDigit);
+
+            //CONVERT THE STRING (THE USER INPUT) TO CHAR
+            Char[] ElementOfUserInput=UserInput.ToCharArray();
+            
 
             Console.ReadKey();
 
