@@ -30,16 +30,22 @@ namespace GuessMyNumber
             Console.WriteLine("\nBased on your request the limits are the following:\n");
             Console.WriteLine("Lower limit is: " + LowerLimit);
             Console.WriteLine("Upper limit is: " + UpperLimit);
-
-            Console.ReadKey();
+                        
+            //Attempts number declaration
+            int attempts = 5;
+            Console.WriteLine("\nLet`s play MyFriend...\n");
+            Console.WriteLine("You have " + attempts + " attempts (life). So please be smart.");
 
             // Generate random number
 
-            //Random rnd = new Random();
-            //int ComputerNumber = rnd.Next(1, 101);
-            //Console.WriteLine(ComputerNumber);
-            //Console.ReadKey();
+            Random rnd = new Random();
+            int ComputerNumber = rnd.Next(LowerLimit, UpperLimit);
+            Console.WriteLine(ComputerNumber);
 
+
+            Console.ReadKey();
+
+            
         }
     }
 }
