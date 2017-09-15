@@ -37,7 +37,7 @@ namespace GuessMyNumber
 
             Random rnd = new Random();
             int ComputerNumber = rnd.Next(LowerLimit, UpperLimit);
-            Console.WriteLine(ComputerNumber);
+            // Console.WriteLine(ComputerNumber);
 
 
             for (int i = 1; i <= attempts; i++)
@@ -57,7 +57,7 @@ namespace GuessMyNumber
 
                     if (i == attempts)
                     {
-                        Console.WriteLine("\nYou have no more attempts. Unfortunately You lost.");
+                        Console.WriteLine("\nYou have no more attempts. Unfortunately You lost. My number was: " + ComputerNumber);
                     }
                 }
                 else
@@ -66,7 +66,7 @@ namespace GuessMyNumber
 
                     if (i == attempts)
                     {
-                        Console.WriteLine("\nYou have no more attempts. Unfortunately You lost.");
+                        Console.WriteLine("\nYou have no more attempts. Unfortunately You lost. My number was: " + ComputerNumber);
                     }
                 }
                             
