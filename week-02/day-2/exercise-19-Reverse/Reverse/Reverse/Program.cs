@@ -16,7 +16,17 @@ namespace Reverse
             // - Reverse the order of the elements in `aj`
             // - Print the elements of the reversed `aj`
 
+            int[] aj = { 3, 4, 5, 6, 7 };
 
+            //Reverse the order of the elements in an array
+            Array.Reverse(aj);
+
+            //Display the element of the array
+            foreach (int i in aj)
+            {
+                Console.Write("{0} ", i);
+            }
+            
             Console.ReadKey();
 
         }
