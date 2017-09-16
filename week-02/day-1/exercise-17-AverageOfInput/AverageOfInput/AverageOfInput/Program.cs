@@ -16,6 +16,29 @@ namespace AverageOfInput
             //
             // Sum: 22, Average: 4.4
 
+            Console.WriteLine("\nGive me the first number: ");
+            int FirstNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nGive me the second number: ");
+            int SecondNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nGive me the third number: ");
+            int ThirdNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nGive me the fourth number: ");
+            int FourthNumber = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nGive me the fifth number: ");
+            int FifthNumber = int.Parse(Console.ReadLine());
+
+            
+            int Sum = FirstNumber + SecondNumber + ThirdNumber + FourthNumber + FifthNumber;
+            double Average = Sum / 5;
+
+            Console.WriteLine("\nSum: " + Sum + "," + " Average :" + Average);
+
+            Console.ReadKey();
+
         }
     }
 }
