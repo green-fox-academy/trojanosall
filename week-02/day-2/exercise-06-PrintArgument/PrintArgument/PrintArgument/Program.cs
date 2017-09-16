@@ -8,6 +8,7 @@ namespace PrintArgument
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             // - Create a function called `printer`
@@ -19,15 +20,21 @@ namespace PrintArgument
             // printer("first", "second")
             // printer("first", "second", "third", "fourh")
             // ...
+
+            string[] example1 = { "first" };
+            string[] example2 = { "first", "second" };
+            string[] example3 = { "first", "second", "third", "fourh" };
+
+            Printer(example3);
+            Console.ReadKey();
         }
-        
+
+        public static void Printer(string[] input)
         {
-
-        public static void Printer()  
-
-        }
-
-            Console.ReadLine();
+            for (int i = 0; i < input.Length; i++)
+            {
+                Console.WriteLine(input[i]);
+            }
 
         }
     }
