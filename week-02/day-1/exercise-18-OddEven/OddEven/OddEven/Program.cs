@@ -14,13 +14,12 @@ namespace OddEven
             // Than prints "Odd" if the number is odd, or "Even" it it is even.
 
             Console.WriteLine("If you give me a number I tell you that this number is ODD or EVEN. Enter your number: ");
-            string userInput = Console.ReadLine();
-            int userNum = Int32.Parse(userInput);
+            int UserNumber = int.Parse(Console.ReadLine);
 
-            if ((userNum & 1) == 0)
-                Console.WriteLine("EVEN!\n");
+            if (UserNumber % 2 == 0)
+                Console.WriteLine("EVEN\n");
             else
-                Console.WriteLine("ODD!\n");
+                Console.WriteLine("ODD\n");
 
             Console.ReadKey();
         }
