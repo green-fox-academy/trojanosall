@@ -22,6 +22,62 @@ namespace DrawChessTable
             //  % % % %
             //
 
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write("% ");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write(" %");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write("% ");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write(" %");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write("% ");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write(" %");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write("% ");
+            }
+
+            Console.WriteLine();
+
+            for (int i = 0; i < 8; i++)
+            {
+                Console.Write(" %");
+            }
+
+            Console.ReadKey();
+
         }
     }
 }
