@@ -17,7 +17,12 @@ namespace SecondsInADay
             // Write a program that prints the remaining seconds (as an integer) from a
             // day if the current time is represented bt the variables
 
+            int RemainingSeconds;
 
+            
+            Console.WriteLine("Remaining seconds: " + (RemainingSeconds = 9 * 60 * 60 + ((60 - currentMinutes) * 60) + 60 - currentSeconds));
+
+            Console.ReadKey();
         }
     }
 }
