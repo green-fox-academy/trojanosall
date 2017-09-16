@@ -19,6 +19,14 @@ namespace PrintArgument
             // printer("first", "second")
             // printer("first", "second", "third", "fourh")
             // ...
+        }
+        
+        {
+
+        public static void Printer()  
+
+        }
+
             Console.ReadLine();
 
         }
