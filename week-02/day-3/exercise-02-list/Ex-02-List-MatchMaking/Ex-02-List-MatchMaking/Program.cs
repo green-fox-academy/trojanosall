@@ -35,6 +35,9 @@ namespace Ex_02_List_MatchMaking
                 Console.WriteLine(couple);
             }
 
+            // Other method to display the contents of the list using the Print method.
+            // order.ForEach(Print);
+
             Console.ReadKey();
         }
     }
