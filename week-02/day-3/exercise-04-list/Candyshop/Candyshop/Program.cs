@@ -22,8 +22,15 @@ namespace Candyshop
             list[3] = "Ice cream";
 
             // Display element of the list
-            list.ForEach(Console.WriteLine);
+            // list.ForEach(Console.WriteLine);
 
+            // Other way to dispalz element of the list
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                Console.Write("{0}, ", list[i]);
+            }
+            
             Console.ReadKey();
 
             // Accidentally we added "2" and "false" to the list. 
