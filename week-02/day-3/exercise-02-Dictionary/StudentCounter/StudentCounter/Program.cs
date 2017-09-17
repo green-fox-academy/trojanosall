@@ -55,6 +55,26 @@ namespace StudentCounter
             //  - Who has got more candies than 4 candies
             //  - Sum the age of people who have lass than 5 candies
 
+            int sumAge = 0;
+
+            Console.Write("Who has more than 4 candies: ");
+
+            foreach (var element in map)
+            {
+                if (Convert.ToInt32(element["candies"]) > 4)
+                {
+                    Console.Write(element["name"] + " ");
+                }
+                if (Convert.ToInt32(element["candies"]) < 5)
+                {
+                    sumAge += Convert.ToInt32(element["age"]);
+                }
+            }
+            Console.WriteLine();
+            Console.WriteLine("The sum of the ages is {0}", sumAge);
+
+            Console.ReadKey();
+
         }
     }
 }
