@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HeWillNever
+namespace HeWillnever
 {
     class Program
     {
@@ -14,7 +14,7 @@ namespace HeWillNever
             string output = "";
             int[] notSoCrypticMessage = { 1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11 };
 
-            var map = new Dictionary<string, string>();
+            var map = new Dictionary<int, string>();
 
             map.Add(7, "run around and desert you");
             map.Add(50, "tell a lie and hurt you");
@@ -29,7 +29,14 @@ namespace HeWillNever
             // Your job is to decode the notSoCrypticMessage by using the hashmap as a look up table
             // Assemble the fragments into the out variable
 
+
+            for (int i = 0; i < notSoCrypticMessage.Length; i++)
+            {
+                output += map[notSoCrypticMessage[i]] + " ";
+            }
             Console.WriteLine(output);
+
+            Console.ReadLine();
 
         }
     }
