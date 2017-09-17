@@ -8,7 +8,22 @@ namespace Substr
 {
     class Program
     {
-        static void Main(string[] args)
+        private static int SubStringFinder (string String1, string String2)
+        {
+
+
+            for (int i = 0; i < String1.Length - String2.Length; i++)
+            {
+                if (String1.Substring(i).StartsWith(String2))
+                {
+                    return i;
+                }
+            }
+            return -1;
+
+        }
+
+            static void Main(string[] args)
         {
 
             // Find part of an integer
@@ -20,7 +35,13 @@ namespace Substr
             // input: "this is what I'm searching in", "searching"
             // output: 17
 
+            string String1 = "this is what I'm searching in";
+            string String2 = "searching";
 
+            SubStringFinder(String1, String2);
+
+            Console.WriteLine(SubStringFinder(String1, String2));
+            Console.ReadKey();
 
         }
     }
