@@ -13,8 +13,17 @@ namespace AppendLetter
 
             var far = new List<string> { "kuty", "macsk", "kacs", "rók", "halacsk" };
             // Add "a" to every string in the far list.
+            
 
-            Console.WriteLine(far);
+            for (int i = 0; i < far.Count; i++)
+            {
+                far[i] = far[i] + "a";
+            }
+
+            // Display element of the list
+            far.ForEach(Console.WriteLine);
+
+            Console.ReadKey();
 
         }
     }
