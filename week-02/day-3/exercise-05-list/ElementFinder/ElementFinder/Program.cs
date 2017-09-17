@@ -16,6 +16,17 @@ namespace ElementFinder
             // Check if the arrayList contains "7" if it contains print "Hoorray" otherwise print "Noooooo"
             // Do this again with a different solution using different list functions!
 
+            if (List.Contains(7))
+            {
+                Console.WriteLine("Hoorray");
+            }
+            else
+            {
+                Console.WriteLine("Noooooo");
+            }
+
+            Console.ReadKey();
+
         }
     }
 }
