@@ -17,6 +17,15 @@ namespace Candyshop
             list.Add("Brownie");
             list.Add(false);
 
+            // Redeclaration of the list element
+            list[1] = "Croissamt";
+            list[3] = "Ice cream";
+
+            // Display element of the list
+            list.ForEach(Console.WriteLine);
+
+            Console.ReadKey();
+
             // Accidentally we added "2" and "false" to the list. 
             // Your task is to change from "2" to "Croissant" and change from "false" to "Ice cream"
             // No, don't just remove the lines
