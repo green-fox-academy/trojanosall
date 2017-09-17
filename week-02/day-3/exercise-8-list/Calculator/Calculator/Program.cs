@@ -27,6 +27,45 @@ namespace Calculator
             // Print the result to the prompt
             // Exit
 
+            Console.WriteLine("Please type in the expression ({operation} {operand} {operand}): ");
+
+            //SPLITTEL KIKAPKODTUK A SZOKOZOKET A USER INPUTBOL... IGY MAR CSAK A MUVELET ES A SZAMOK MARADTAK MEG
+            string[] userInput = Console.ReadLine().Split(' ');
+
+            //DEFINIALTAM AZ ARRAY-T, AMELY IGY 3 ELEMBOL ALL. A NULLADIK HELYEN A MUVELET. AZ ELSO ES MASODIK HELYEN PEDIG A SZAMOK, AMIKET EGYUTTAL MAR INTEGERRE IS ALAKITOTTUNK
+            Calculator(userInput[0], int.Parse(userInput[1]), int.Parse(userInput[2]));
+            Console.WriteLine();
+            Console.ReadLine();
+        }
+
+            //A CALCULATORRA EGY FUGGVENYT KREALTUNK
+        public static void Calculator(string operation, int operand1, int operand2)
+        {
+            int result = 0;
+
+            // A MUVELETI JEL (+-*/) DEFINIALJA, HOGY MIT CSINALJON A PROGRAM. SWITCH is a selection statement that chooses a single switch section to execute from a list of candidates based on a pattern match with the match expression.
+            switch (operation)
+            {
+                case "-":
+                    result = operand1 - operand2;
+                    break;
+                case "+":
+                    result = operand1 + operand2;
+                    break;
+                case "*":
+                    result = operand1 * operand2;
+                    break;
+                case "/":
+                    result = operand1 / operand2;
+                    break;
+                case "%":
+                    result = operand1 % operand2;
+                    break;
+            }
+            Console.WriteLine("The result is {0}", result);
+
+            Console.ReadKey();
+
         }
     }
 }
