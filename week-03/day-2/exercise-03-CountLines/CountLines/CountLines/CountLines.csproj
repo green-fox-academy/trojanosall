@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66D032B1-ABC1-4967-8DC0-063EEE879025}</ProjectGuid>
+    <ProjectGuid>{CBB871E6-FCBA-446A-9353-1D18E6D7CE94}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>CountLines</RootNamespace>
     <AssemblyName>CountLines</AssemblyName>

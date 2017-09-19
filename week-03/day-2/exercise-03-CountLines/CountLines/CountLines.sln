@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLines", "CountLines\CountLines.csproj", "{66D032B1-ABC1-4967-8DC0-063EEE879025}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountLines", "CountLines\CountLines.csproj", "{CBB871E6-FCBA-446A-9353-1D18E6D7CE94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{66D032B1-ABC1-4967-8DC0-063EEE879025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{66D032B1-ABC1-4967-8DC0-063EEE879025}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{66D032B1-ABC1-4967-8DC0-063EEE879025}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{66D032B1-ABC1-4967-8DC0-063EEE879025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB871E6-FCBA-446A-9353-1D18E6D7CE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB871E6-FCBA-446A-9353-1D18E6D7CE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB871E6-FCBA-446A-9353-1D18E6D7CE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB871E6-FCBA-446A-9353-1D18E6D7CE94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {00650723-223E-4355-A434-775C5A0A21AD}
+		SolutionGuid = {06D48F32-F4FC-4D10-B3DE-0627A5C274FA}
 	EndGlobalSection
 EndGlobal
