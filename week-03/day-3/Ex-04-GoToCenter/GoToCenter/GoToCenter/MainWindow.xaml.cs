@@ -27,13 +27,14 @@ namespace GoToCenter
             // the x and y coordinates of the line's starting point
             // and draws a line from that point to the center of the canvas.
             // draw 3 lines with that function.
-
-
+            
             InitializeComponent();
             var foxDraw = new FoxDraw(canvas);
 
+            //A main-ben generaltuk a random szamot, mert a fuggvenyben generalt szam mindig ugyanaz volt
             Random rnd = new Random();
 
+            //Haromszor meghivtuk a fuggvenyt, hogz meglegyen a harom vonal
             GoToCenter(foxDraw, rnd);
 
             GoToCenter(foxDraw, rnd);
@@ -42,10 +43,12 @@ namespace GoToCenter
         }
 
         public void GoToCenter(FoxDraw foxDraw, Random rnd)
-        {                                 
+        {
+            //A vonalak kezdo koordinatainak legeneralasa a main-ben generalt random szam segitsegevel
             double x1 = rnd.Next(300);                        
             double y1 = rnd.Next(300);
 
+            //A center koordinatainak meghatarozasa
             double x2 = canvas.Width / 2;
             double y2 = canvas.Height / 2;
 
