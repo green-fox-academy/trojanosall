@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BunniesEarCounter
+namespace Bunny2
 {
     class Program
     {
@@ -17,8 +17,8 @@ namespace BunniesEarCounter
             // number of "ears" in the bunny line 1, 2, ... n (without loops or multiplication).
 
             Console.WriteLine("Please give me how many bunnies you have and I will compute the sum of ears of the bunnies have based on the commented information: ");
-            int BunniesNumber = int.Parse(Console.ReadLine());                     
-            
+            int BunniesNumber = int.Parse(Console.ReadLine());
+
             Console.WriteLine("The sum of ears of the bunnies is " + BunniesEarCounter(BunniesNumber) + ".");
 
             Console.ReadKey();

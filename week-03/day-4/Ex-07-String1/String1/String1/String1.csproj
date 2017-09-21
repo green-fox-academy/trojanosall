@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{15E844F3-BE61-4DB3-AA17-E928B2DD02D7}</ProjectGuid>
+    <ProjectGuid>{4AB36BC3-0EB2-4500-9DBD-90A81B5C226C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Bunny2</RootNamespace>
-    <AssemblyName>Bunny2</AssemblyName>
+    <RootNamespace>String1</RootNamespace>
+    <AssemblyName>String1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
