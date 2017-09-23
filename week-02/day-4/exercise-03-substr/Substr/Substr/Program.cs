@@ -8,20 +8,6 @@ namespace Substr
 {
     class Program
     {
-        private static int SubStringFinder (string String1, string String2)
-        {
-
-
-            for (int i = 0; i < String1.Length - String2.Length; i++)
-            {
-                if (String1.Substring(i).StartsWith(String2))
-                {
-                    return i;
-                }
-            }
-            return -1;
-
-        }
 
             static void Main(string[] args)
         {
@@ -42,7 +28,23 @@ namespace Substr
 
             Console.WriteLine(SubStringFinder(String1, String2));
             Console.ReadKey();
+            
+        }
+
+        private static int SubStringFinder(string String1, string String2) // Integer-t varok vissza a fuggvenytol es ket stringet adok neki.
+        {
+            
+            for (int i = 0; i < String1.Length; i++) // for ciklussal megyek vegig az string1-ben es keresem, hol van benne string 2
+            {
+                if (String1.Substring(i).StartsWith(String2)) // String.Substring Method (Int32, Int32) --> string Substring(int startIndex, int length) --> A substring egy megadott sorszamu kezdo karaktertol egy megadott karakter hosszik "levag" az eredeti stringbol.
+                {                                             // String.StartsWih Method: determines whether the beginning of this string instance matches a specified string. Return Value: true if value matches the beginning of this string; otherwise, false.
+                    return i;
+                }
+            }
+            return -1;
 
         }
+
+
     }
 }
