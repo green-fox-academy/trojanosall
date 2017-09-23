@@ -19,20 +19,49 @@ namespace AmstrongNumber
             Console.WriteLine("Please give me a number and I check that it is an Amstrong number or not: ");
             string UserInput = Console.ReadLine();
 
+            // DOUBLE FORMATUMBAN IS MEG KELL LEGYEN A SZAM, HOGY OSSZE TUDJAM HASONLITANI A HATVANYRA EMELT DIGITEK OSSZEGEVEL
+            Double OriginalNumber = Double.Parse(UserInput);
+
             //DETERMINE THE COUNT OF DIGIT (CALCULATION BASED ON THE LENGHT OF USERINPUT)
-            int CountOfDigit = UserInput.Length;
-            Console.WriteLine(CountOfDigit);
+            int CountOfDigit = UserInput.Length;            
 
-            //CONVERT THE STRING (THE USER INPUT) TO CHAR
-            Char[] ElementOfUserInput=UserInput.ToCharArray();
-            
-            //
-            
+            //CONVERT THE STRING (THE USER INPUT) TO CHAR ARRAY
+            Char[] ElementsOfUserInput = UserInput.ToCharArray();
 
+            // A CHAR TIPUSU ARRAY ELEMENTEKET ATALAKITOTTAM INTEGER-RE ES EGY UJ TOMBE TETTEM OKET.
+            int[] ConvertedElementsOfUserInput = Array.ConvertAll(ElementsOfUserInput, c => (int)Char.GetNumericValue(c));
+
+            //EZ A MODSZER A SZINTEN A FENTI CELT SZOLGALTA DE SAJNOS NEM MUKODOTT. MIERT????
+            //int[] ConvertedElementsOfUserInput = new int[ElementsOfUserInput.Length];
+            //for (int i = 0; i < ElementsOfUserInput.Length; i++)
+            //{
+            //    ConvertedElementsOfUserInput[i] = Convert.ToInt32(ElementsOfUserInput[i]);
+            //}            
+
+            // KESZITETTEM EGY UJ ARRAY-T, AMIBE BEDOBTAM A DIGIT-EK HATVANYAIT
+            double[] Result = new double[ConvertedElementsOfUserInput.Length];
+
+            // DEKLARALTAM EGY VALTOZOT A DIGITEK HATVANYAINAK OSSZEGZESERE
+            double SumOfPoweredDigit = 0;
+
+            // FOR CIKLUSSAL KISZAMITOTTAM A DIGIT-EK HATVANYAIT
+            for (int i = 0; i < ConvertedElementsOfUserInput.Length; i++)
+            {
+                Result[i] = Math.Pow(ConvertedElementsOfUserInput[i], ElementsOfUserInput.Length);
+                SumOfPoweredDigit += Result[i];
+            }
+
+            if (SumOfPoweredDigit == OriginalNumber)
+            {
+                Console.WriteLine("It is an Amstrong number.");
+            }
+            else
+            {
+                Console.WriteLine("It is not an Amstrong number.");
+            }
+            
             Console.ReadKey();
-
-
-
+            
         }
     }
 }
