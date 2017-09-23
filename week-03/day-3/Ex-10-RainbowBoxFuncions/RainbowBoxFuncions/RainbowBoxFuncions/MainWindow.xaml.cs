@@ -41,8 +41,8 @@ namespace RainbowBoxFuncions
         {
             for (int i = 0; i < (canvas.Width / 2); i++)
             {
-                double x1 = canvas.Width - (canvas.Width - i);
-                double y1 = canvas.Height - (canvas.Height - i);
+                double x1 = i;
+                double y1 = i;
                 double a = canvas.Width - 2 * i;
 
                 foxDraw.FillColor(Color.FromRgb((byte)rnd.Next(0, 255), (byte)rnd.Next(0, 255), (byte)rnd.Next(0, 255)));
