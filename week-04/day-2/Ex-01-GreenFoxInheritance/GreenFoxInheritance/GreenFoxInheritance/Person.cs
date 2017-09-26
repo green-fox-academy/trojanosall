@@ -28,9 +28,9 @@ namespace GreenFoxInheritance
 
         }
 
-        public void Introduce(string name, int age, string gender)
+        public void Introduce()
         {
-            Console.WriteLine("Hi, I'm {0}, a {1} year old {2}.", name, age, gender);
+            Console.WriteLine($"Hi, I'm {Name}, a {Age} year old {Gender}.");
         }
 
         public void GetGoal()
