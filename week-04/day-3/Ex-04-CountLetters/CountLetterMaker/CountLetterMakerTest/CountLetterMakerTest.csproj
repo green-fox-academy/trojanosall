@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BD7EFB58-C26A-4263-BB8D-54FB911C4936}</ProjectGuid>
+    <ProjectGuid>{56599248-CBA2-4B90-9341-5270E1E18993}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CountLetterTest</RootNamespace>
-    <AssemblyName>CountLetterTest</AssemblyName>
+    <RootNamespace>CountLetterMakerTest</RootNamespace>
+    <AssemblyName>CountLetterMakerTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,13 +47,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CountLetter\CountLetter.csproj">
-      <Project>{747b38b7-abb8-4986-9257-868af21daafe}</Project>
-      <Name>CountLetter</Name>
+    <ProjectReference Include="..\CountLetterMaker\CountLetterMaker.csproj">
+      <Project>{dea87daf-0b83-4478-b027-7b7d444b1527}</Project>
+      <Name>CountLetterMaker</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

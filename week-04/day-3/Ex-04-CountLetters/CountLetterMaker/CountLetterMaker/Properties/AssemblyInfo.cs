@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CountLetterTest")]
+[assembly: AssemblyTitle("CountLetterMaker")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CountLetterTest")]
+[assembly: AssemblyProduct("CountLetterMaker")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("bd7efb58-c26a-4263-bb8d-54fb911c4936")]
+[assembly: Guid("dea87daf-0b83-4478-b027-7b7d444b1527")]
 
 // Version information for an assembly consists of the following four values:
 //

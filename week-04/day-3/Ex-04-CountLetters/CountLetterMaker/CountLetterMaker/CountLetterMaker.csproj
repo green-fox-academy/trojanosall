@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{747B38B7-ABB8-4986-9257-868AF21DAAFE}</ProjectGuid>
+    <ProjectGuid>{DEA87DAF-0B83-4478-B027-7B7D444B1527}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CountLetter</RootNamespace>
-    <AssemblyName>CountLetter</AssemblyName>
+    <RootNamespace>CountLetterMaker</RootNamespace>
+    <AssemblyName>CountLetterMaker</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
