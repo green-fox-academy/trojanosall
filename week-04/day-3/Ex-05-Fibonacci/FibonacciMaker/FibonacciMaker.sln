@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciMaker", "FibonacciMaker\FibonacciMaker.csproj", "{F1195657-9F48-45E7-855D-E3378130B58E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciMakerTest", "FibonacciMakerTest\FibonacciMakerTest.csproj", "{534FE34A-C5A0-4AC3-B42F-44F7B15F5881}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1195657-9F48-45E7-855D-E3378130B58E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1195657-9F48-45E7-855D-E3378130B58E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1195657-9F48-45E7-855D-E3378130B58E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1195657-9F48-45E7-855D-E3378130B58E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534FE34A-C5A0-4AC3-B42F-44F7B15F5881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534FE34A-C5A0-4AC3-B42F-44F7B15F5881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534FE34A-C5A0-4AC3-B42F-44F7B15F5881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534FE34A-C5A0-4AC3-B42F-44F7B15F5881}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37FD8FF8-043B-4B77-93D3-9DDCC3972CA9}
+	EndGlobalSection
+EndGlobal
