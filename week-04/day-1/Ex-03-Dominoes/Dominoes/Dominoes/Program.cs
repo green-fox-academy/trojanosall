@@ -10,6 +10,7 @@ namespace Dominoes
     {
         public static void Main(string[] args)
         {
+
             var dominoes = InitializeDominoes(); // ehun meghivom a lenti funcion-t
             // You have the list of Dominoes
             // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
@@ -23,6 +24,7 @@ namespace Dominoes
 
         public static List<Domino> InitializeDominoes() // ez egy funcion, ami legeneralja a dominokat...
         {
+
             var dominoes = new List<Domino>();
             dominoes.Add(new Domino(5, 2));
             dominoes.Add(new Domino(4, 6));
