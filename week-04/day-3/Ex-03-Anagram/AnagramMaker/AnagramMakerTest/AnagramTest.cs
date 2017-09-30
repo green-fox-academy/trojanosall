@@ -60,7 +60,7 @@ namespace AnagramMakerTest
         {
             //arrange
             string firstString = "kutyamutya";
-            string secondString = "tyaty muku";
+            string secondString = "tyatya muku";
 
             //act
             bool output = false;
@@ -77,7 +77,7 @@ namespace AnagramMakerTest
             string secondString = "NoNo";
 
             //act
-            bool output = true;
+            bool output = false;
 
             //assert
             Assert.AreEqual(output, Anagram.AnagramChecker(firstString, secondString));
