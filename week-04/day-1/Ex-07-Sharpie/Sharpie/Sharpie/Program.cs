@@ -20,6 +20,14 @@ namespace Sharpie
             // We can Use() the sharpie objects
             // which decreases inkAmount
 
+            var sharpie = new Sharpie(1, "blue", 100, 100);
+
+            sharpie.Use();
+
+            Console.WriteLine(sharpie.GetInkAmount());
+
+            Console.ReadKey();
+
         }
     }
 }
