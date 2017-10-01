@@ -16,7 +16,7 @@ namespace Dice
         {
             for (int i = 0; i < Dices.Length; i++)
             {
-                Dices[i] = RandomValue.Next(1, 7);
+                Dices[i] = RandomValue.Next(1, 6);
             }
             return Dices;
         }
@@ -35,27 +35,39 @@ namespace Dice
         {
             for (int i = 0; i < Dices.Length; i++)
             {
-                Dices[i] = RandomValue.Next(1, 7);
+                Dices[i] = RandomValue.Next(1, 6);
             }
         }
 
         public void Reroll(int k)
         {
-            Dices[k] = new Random().Next(1, 7);
+            Dices[k] = RandomValue.Next(1, 7);
         }
 
         public static void Main(string[] args)
         {
             RandomValue = new Random();
             Dice myDice = new Dice();
+
+            int sum = 0;
+
+            while (sum < 36)
+            {
+                sum = 0;
+                for (int i = 0; i < 6; i++)
+                {
+                    if (myDice.GetCurrent(i) < 6)
+                    {
+                        myDice.Reroll(i);
+                    }
+                    Console.Write(Dices[i] + " ");
+                    sum += Dices[i];
+                }
+                Console.WriteLine();
+            }
             myDice.GetCurrent();
-            myDice.Roll();
-            myDice.GetCurrent();
-            myDice.GetCurrent(5);
-            myDice.Reroll();
-            myDice.GetCurrent();
-            myDice.Reroll(4);
-            myDice.GetCurrent();
+            Console.WriteLine("Vége van");
+            Console.ReadLine();
         }
     }
 }
