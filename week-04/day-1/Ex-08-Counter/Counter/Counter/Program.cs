@@ -21,6 +21,20 @@ namespace Counter
             // and we can Get() the current value as string
             // also we can Reset() the value to the initial value
 
+            var baseNumber = new Counter(5);
+
+            baseNumber.Add(5);
+            Console.WriteLine(baseNumber.GetCounter());
+            
+            baseNumber.Add();
+            Console.WriteLine(baseNumber.GetCounter());
+
+            Console.WriteLine(baseNumber.GetCounter());
+
+            baseNumber.ResetCouter();
+            Console.WriteLine(baseNumber.GetCounter());
+
+            Console.ReadKey();
         }
     }
 }
