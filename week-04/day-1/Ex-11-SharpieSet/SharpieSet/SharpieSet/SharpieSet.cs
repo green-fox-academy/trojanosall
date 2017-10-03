@@ -43,10 +43,5 @@ namespace SharpieSet
                 Console.WriteLine(sharpie.Name());
             }
         }
-
-
-
-
-
     }
 }
