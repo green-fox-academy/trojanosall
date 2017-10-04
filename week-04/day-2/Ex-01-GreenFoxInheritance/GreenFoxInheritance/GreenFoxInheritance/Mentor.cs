@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GreenFoxInheritance
 {
-    class Mentor : Person
+    public class Mentor : Person
     {
         private string level;
 
