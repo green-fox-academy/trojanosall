@@ -6,37 +6,33 @@ using System.Threading.Tasks;
 
 namespace GreenFoxInheritance
 {
-    class Person
+    public class Person
     {
 
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string Gender { get; set; }
+        protected string name;
+        protected int age;
+        protected string gender;
 
         public Person(string name, int age, string gender)
         {
-            this.Name = name;
-            this.Age = age;
-            this.Gender = gender;
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
         }
-
         public Person()
         {
-            this.Name = "Jane Doe";
-            this.Age = 30;
-            this.Gender = "female";
+            this.name = "Jane Doe";
+            this.age = 30;
+            this.gender = "female";
 
         }
-
-        public void Introduce()
+        public virtual void Introduce()
         {
-            Console.WriteLine($"Hi, I'm {Name}, a {Age} year old {Gender}.");
+            Console.WriteLine($"Hi, I'm {name}, a {age} year old {gender}.");
         }
-
-        public void GetGoal()
+        public virtual void GetGoal()
         {
             Console.WriteLine("My goal is: Live for the moment!");
         }
-
     }
 }

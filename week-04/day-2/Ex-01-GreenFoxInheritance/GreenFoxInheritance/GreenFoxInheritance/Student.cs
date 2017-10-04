@@ -6,44 +6,43 @@ using System.Threading.Tasks;
 
 namespace GreenFoxInheritance
 {
-    class Student : Person
+    public class Student : Person
     {
-        public string PreviousOrganization { get; set; }
-        public int SkippedDays { get; set; }
-
-
+        private string previousOrganization;
+        private int skippedDays;
+        
         public Student(string name, int age, string gender, string previousOrganization)
         {
-            this.Name = name;
-            this.Age = age;
-            this.Gender = gender;
-            this.PreviousOrganization = previousOrganization;
-            SkippedDays = 0;
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.previousOrganization = previousOrganization;
+            skippedDays = 0;
         }
 
         public Student()
         {
-            this.Name = "Jane Doe";
-            this.Age = 30;
-            this.Gender = "female";
-            this.PreviousOrganization = "to The School of Life";
-            this.SkippedDays = 0;
+            this.name = "Jane Doe";
+            this.age = 30;
+            this.gender = "female";
+            this.previousOrganization = "to The School of Life";
+            this.skippedDays = 0;
 
         }
-        
-        public new void GetGoal()
+
+        public override void GetGoal()
         {
             Console.WriteLine("Be a junior software developer.");
         }
 
-        public void Introduce(string name, int age, string gender, string previousOrganization, int skippedDays)
+        public override void Introduce()
         {
-            Console.WriteLine($"Hi, I'm {Name}, a {Age} year old {Gender} from {PreviousOrganization} who skipped {SkippedDays} days from the course already.");
+            Console.WriteLine($"Hi, I'm {name}, a {age} year old {gender} from {previousOrganization} who skipped {skippedDays} days from the course already.");
         }
 
         public void SkipDays(int numberOfDays)
         {
-            SkippedDays += numberOfDays;
+            skippedDays += numberOfDays;
             
         }
 
