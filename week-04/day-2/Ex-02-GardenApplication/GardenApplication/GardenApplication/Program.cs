@@ -29,8 +29,7 @@ namespace GardenApplication
             {
                 plans.NeedWater();
             }
-
-
+            
             Console.WriteLine("\nWatering with 40");
 
             foreach (Plants plans in gardenPlanses)
@@ -56,8 +55,6 @@ namespace GardenApplication
             }
             
             Console.ReadLine();
-
-
         }
     }
 }
