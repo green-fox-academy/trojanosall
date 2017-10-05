@@ -13,16 +13,16 @@ namespace GardenApplication
             
             List<Plants> gardenPlanses = new List<Plants>();
 
-            Flowers yellowFlower = new Flowers("yellow", "Flower", 1, 5);
+            Flowers yellowFlower = new Flowers("yellow", "Flower", 1, 10);
             gardenPlanses.Add(yellowFlower);
 
-            Flowers blueFlower = new Flowers("blue","Flower", 1, 5);
+            Flowers blueFlower = new Flowers("blue","Flower", 1, 10);
             gardenPlanses.Add(blueFlower);
 
-            Trees orangeTree = new Trees("orange","Tree", 1, 10);
+            Trees orangeTree = new Trees("orange","Tree", 1, 20);
             gardenPlanses.Add(orangeTree);
 
-            Trees purpleTree = new Trees("purple", "Tree", 1, 10);
+            Trees purpleTree = new Trees("purple", "Tree", 1, 20);
             gardenPlanses.Add(purpleTree);
 
             foreach (Plants plans in gardenPlanses)
@@ -30,6 +30,31 @@ namespace GardenApplication
                 plans.NeedWater();
             }
 
+
+            Console.WriteLine("\nWatering with 40");
+
+            foreach (Plants plans in gardenPlanses)
+            {
+                plans.Irrigation(40);
+            }
+
+            foreach (Plants plans in gardenPlanses)
+            {
+                plans.NeedWater();
+            }
+
+            Console.WriteLine("\nWatering with 70");
+
+            foreach (Plants plans in gardenPlanses)
+            {
+                plans.Irrigation(70);
+            }
+
+            foreach (Plants plans in gardenPlanses)
+            {
+                plans.NeedWater();
+            }
+            
             Console.ReadLine();
 
 

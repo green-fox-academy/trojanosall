@@ -37,5 +37,17 @@ namespace GardenApplication
             }
         }
 
+        public virtual int Irrigation(int irrigationForWatering)
+        {
+            if (currentWaterLevel < expectedWaterLevel)
+            {
+                return currentWaterLevel += irrigationForWatering / 4;
+            }
+            else
+            {
+                return currentWaterLevel;
+            }
+        }
+
     }
 }

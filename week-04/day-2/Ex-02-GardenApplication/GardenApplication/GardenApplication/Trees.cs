@@ -13,7 +13,7 @@ namespace GardenApplication
             this.color = color;
             this.typeOfPlan = "Tree";
             this.currentWaterLevel = currentWaterLevel;
-            this.expectedWaterLevel = 10;
+            this.expectedWaterLevel = 20;
         }
     }
 }
