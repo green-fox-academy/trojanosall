@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace GardenApplication
 {
-    class Flowers : Plans
+    public class Flowers : Plants
     {
-        public Flowers(string color, int currentWaterLevel,int expectedWaterLevel)
+       public Flowers(string color, string typeOfPlan, int currentWaterLevel, int expectedWaterLevel)
         {
             this.color = color;
+            this.typeOfPlan = "Flower";
             this.currentWaterLevel = currentWaterLevel;
-            this.expectedWaterLevel = expectedWaterLevel;
+            this.expectedWaterLevel = 5;
         }
 
     }

@@ -10,16 +10,28 @@ namespace GardenApplication
     {
         static void Main(string[] args)
         {
-            List<Plans> gardenPlanses = new List<Plans>();
+            
+            List<Plants> gardenPlanses = new List<Plants>();
 
-            Flowers yellowFlower = new Flowers("yellow", 1, 5);
-            Flowers blueFlower = new Flowers("blue", 1, 5);
+            Flowers yellowFlower = new Flowers("yellow", "Flower", 1, 5);
+            gardenPlanses.Add(yellowFlower);
 
-            Trees orangeTree = new Trees("orange", 1, 10);
-            Trees purpleTree = new Trees("purple", 1, 10);
-            
-            
-            
+            Flowers blueFlower = new Flowers("blue","Flower", 1, 5);
+            gardenPlanses.Add(blueFlower);
+
+            Trees orangeTree = new Trees("orange","Tree", 1, 10);
+            gardenPlanses.Add(orangeTree);
+
+            Trees purpleTree = new Trees("purple", "Tree", 1, 10);
+            gardenPlanses.Add(purpleTree);
+
+            foreach (Plants plans in gardenPlanses)
+            {
+                plans.NeedWater();
+            }
+
+            Console.ReadLine();
+
 
         }
     }
