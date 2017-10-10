@@ -14,18 +14,26 @@ namespace CountLinesAgain
             string fileName = @"my-file.txt";
             int counter;
 
-            using (StreamReader str = File.OpenText(fileName))
+            if (File.Exists(fileName))
             {
-                string content;
-                counter = 0;
 
-                while ((content = str.ReadLine()) != null)
+                using (StreamReader str = File.OpenText(fileName))
                 {
-                    Console.WriteLine(content);
-                    counter++;
-                }
+                    string content;
+                    counter = 0;
 
-                Console.WriteLine($"\nThe number of lines is {counter}");
+                    while ((content = str.ReadLine()) != null)
+                    {
+                        Console.WriteLine(content);
+                        counter++;
+                    }
+
+                    Console.WriteLine($"\nThe number of lines is {counter}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("0");
             }
 
             Console.ReadKey();
