@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CountLinesAgain
 {
@@ -12,15 +13,21 @@ namespace CountLinesAgain
         static void Main(string[] args)
         {
             string fileName = @"my-file.txt";
-            int counter;
 
+            Console.WriteLine(LineCounter(fileName));
+            
+            Console.ReadKey();
+        }
+
+        public static string LineCounter(string fileName)
+        {
             if (File.Exists(fileName))
             {
 
                 using (StreamReader str = File.OpenText(fileName))
                 {
                     string content;
-                    counter = 0;
+                    int counter = 0;
 
                     while ((content = str.ReadLine()) != null)
                     {
@@ -28,16 +35,15 @@ namespace CountLinesAgain
                         counter++;
                     }
 
-                    Console.WriteLine($"\nThe number of lines is {counter}");
+                    string result = $"\nThe number of lines is {counter}";
+                    return result;
                 }
             }
             else
             {
-                Console.WriteLine("0");
+                return "0";
             }
-
-            Console.ReadKey();
-
         }
+
     }
 }
