@@ -18,15 +18,24 @@ namespace FleetOfThigsAgain
             // 4. [x] Eat lunch
             // Hint: You have to create a Print method also
 
-            fleet.Add(new Thing("Get milk"));
-            fleet.Add(new Thing("Remove the obstacles"));
-            fleet.Add(new Thing("Stand up"));
-            fleet.Add(new Thing("Eat lunch"));
+            var thing1 = new Thing("Get milk");
+            var thing2 = new Thing("Remove the obstacles");
+
+            var thing3 = new Thing("Stand up");
+            thing3.Complete();
+
+            var thing4 = new Thing("Eat lunch");
+            thing4.Complete();
+
+            fleet.Add(thing1);
+            fleet.Add(thing2);
+            fleet.Add(thing3);
+            fleet.Add(thing4);
+
 
             fleet.Print();
 
             Console.ReadKey();
-
 
         }
     }
