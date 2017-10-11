@@ -13,6 +13,8 @@ namespace Student
         private string course;
         private int feepaid;
 
+        private static double serviceTax = 12.3;
+
         public Student(int rollno, string name, string course)
         {
             this.rollno = rollno;
@@ -40,7 +42,19 @@ namespace Student
 
         public int TotalFee
         {
-            get { return course == "C#" ? 2000 : 3000; }
+            get
+            {
+                double total = course == "C#" ? 2000 : 3000;
+                total = total + total * serviceTax / 100;
+                return (int) total;
+            }
+        }
+
+        public static double ServiceTax
+        {
+            get { return serviceTax; }
+            set { serviceTax = value; }
+
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Student
     {
         static void Main(string[] args)
         {
-            Student myStudent = new Student(1, "ABC", "C#");
+            Student myStudent = new Student(1, "ABC", "asp.net");
 
             myStudent.Payment(1000);
 
