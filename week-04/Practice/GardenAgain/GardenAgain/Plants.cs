@@ -36,7 +36,7 @@ namespace GardenAgain
             }
             else
             {
-                Console.WriteLine($"The {Color} {TypeOfPlan} need water");
+                Console.WriteLine($"The {Color} {TypeOfPlan} needs water");
             }
         }
 
