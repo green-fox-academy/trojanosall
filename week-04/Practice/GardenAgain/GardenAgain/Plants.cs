@@ -40,12 +40,13 @@ namespace GardenAgain
             }
         }
 
-        public virtual void Watering(int waterAmount)
+        public virtual double Watering(double waterAmount)
         {
             if (CurrentWaterLevel < ExpectedWaterLevel)
             {
                 CurrentWaterLevel = CurrentWaterLevel + waterAmount * AbsorbPercentage / 100;
             }
+            return CurrentWaterLevel;
         }
     }
 }
