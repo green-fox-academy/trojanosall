@@ -11,8 +11,7 @@ namespace SharpieSetAgain
         static void Main(string[] args)
         {
             var mySharpieSet = new SharpieSet(new List<Sharpie>());
-
-
+            
             var mysharpie1 = new Sharpie("blue", 100);
             var mysharpie2 = new Sharpie("black", 200);
             var mysharpie3 = new Sharpie("green", 100);
