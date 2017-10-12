@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace GardenAgain
 {
-    class Flowers
+    class Flowers : Plants
     {
+        public Flowers(string typeOfPlan, string color, double currentWaterLevel, double expectedWaterLevel, double absorbPercentage)
+        {
+            this.TypeOfPlan = "Flower";
+            this.Color = color;
+            this.CurrentWaterLevel = currentWaterLevel;
+            this.ExpectedWaterLevel = 5;
+            this.AbsorbPercentage = 75;
+        }
     }
 }

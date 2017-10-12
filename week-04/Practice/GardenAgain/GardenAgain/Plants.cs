@@ -14,10 +14,18 @@ namespace GardenAgain
         protected double ExpectedWaterLevel;
         protected double AbsorbPercentage;
 
-        public Plants(string color, string typeOfPlan)
+        public Plants(string typeOfPlan, string color, double currentWaterLevel, double expectedWaterLevel, double absorbPercentage)
         {
-            this.Color = color;
             this.TypeOfPlan = typeOfPlan;
+            this.Color = color;
+            this.CurrentWaterLevel = currentWaterLevel;
+            this.ExpectedWaterLevel = expectedWaterLevel;
+            this.AbsorbPercentage = absorbPercentage;
+
+        }
+
+        public Plants()
+        {
         }
 
         public virtual void NeedsWaterOrNot()
