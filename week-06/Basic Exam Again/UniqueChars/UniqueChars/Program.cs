@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UniqueChars
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -31,7 +31,7 @@ namespace UniqueChars
 
         }
 
-        private static List<char> UniqueCharacters(string userWord)
+        public static List<char> UniqueCharacters(string userWord)
         {
             userWord = userWord.Replace(" ", "").ToLower();
             Char[] userInputArray = userWord.ToCharArray();
