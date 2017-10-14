@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace MinMaxDiff
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Create a function called `minMaxDiff` that takes a list of numbers as parameter
             // and returns the difference between maximum and minimum values in the list
@@ -27,9 +27,9 @@ namespace MinMaxDiff
             myFuncionList.Sort();
             int minElement = myFuncionList[0];
             int maxElement = myFuncionList[myFuncionList.Count - 1];
-            int DiffMinAndMax = maxElement - minElement;
+            int diffMinAndMax = maxElement - minElement;
 
-            return DiffMinAndMax;
+            return diffMinAndMax;
         }
     }
 }
