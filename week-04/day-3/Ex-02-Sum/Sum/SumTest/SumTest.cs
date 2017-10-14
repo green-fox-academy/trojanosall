@@ -12,6 +12,7 @@ namespace SumTest
 
     public class SumTest
     {
+
         Sum sum = new Sum();
 
         [TestCase]
