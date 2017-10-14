@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Seconds
 {
-    class Program
+    public class SecondsMaker
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // Create a function that takes a list as a parameter,
             // and returns a new list with every second element from the orignal list
@@ -31,14 +31,22 @@ namespace Seconds
         {
             List<int> secondsList = new List<int>();
 
-            for (int i = 0; i < myList.Count; i++)
+            if (myList.Count < 2)
             {
-                if (i % 2 != 0)
-                {
-                    secondsList.Add(myList[i]);
-                }
+                return secondsList = null;
             }
-            return secondsList;
+            else
+            {
+                for (int i = 0; i < myList.Count; i++)
+                {
+                    if (i % 2 != 0)
+                    {
+                        secondsList.Add(myList[i]);
+                    }
+                }
+                return secondsList;
+            }
+            
         }
     }
 }
