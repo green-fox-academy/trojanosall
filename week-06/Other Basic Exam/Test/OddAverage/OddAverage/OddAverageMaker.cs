@@ -14,9 +14,7 @@ namespace OddAverage
             // and returns the average value of the odd numbers in the list
             // Create basic unit tests for it with at least 3 different test cases
             List<int> basicList = new List<int>(new int[] { 1, 2, 3, 5, 6, 7 });
-
-            oddAverage(basicList);
-
+            
             Console.WriteLine(oddAverage(basicList));
 
             Console.ReadKey();
@@ -26,8 +24,7 @@ namespace OddAverage
 
         public static double oddAverage(List<int> inputList)
         {
-            int sum = 0;
-            int count = 0;
+            int sum = 0, count = 0;
 
             for (int i = 0; i < inputList.Count; i++)
             {
