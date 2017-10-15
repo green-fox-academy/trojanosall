@@ -19,9 +19,8 @@ namespace CountAs
             // example: on the input "not-a-file" the function should return 0 - print this result
 
             string fileName = @"afile.txt";
-            int number = CountAs(fileName);
-
-            Console.WriteLine(number);
+            
+            Console.WriteLine(CountAs(fileName));
 
             Console.ReadKey();
 
