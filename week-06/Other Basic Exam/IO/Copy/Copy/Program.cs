@@ -20,8 +20,6 @@ namespace Copy
             // When both arguments provided and the source is a file
             // Read all contents from it and write it to the destination
 
-            //sourcefile.txt destinationfile.txt
-
             if (args.Length == 0)
             {
                 Console.WriteLine("\n\n```COPY```\n\nPlease follow the below instructions and I will copy the contain from the source to the destination\n\ncopy[source][destination]");
