@@ -31,32 +31,44 @@ namespace CountAs
         {
             try
             {
-                using (StreamReader sr = File.OpenText(fileNameForFuncion))
+                int counter = 0;
+                if (File.Exists(fileNameForFuncion))
                 {
-                    string content = "";
                     
-                    while ((content = sr.ReadLine()) != null)
+                    using (StreamReader sr = File.OpenText(fileNameForFuncion))
                     {
-                        Console.WriteLine(content);
-                    }
+                        string content = "";
+                        List<string> myContent = new List<string>();
 
-                    int counter = 0;
-
-                    for (int i = 0; i < content.Length; i++)
-                    {
-                        if (content[i] == 'a' || content[i] == 'A')
+                        while ((content = sr.ReadLine()) != null)
                         {
-                            counter += 1;
+                            Console.WriteLine(content);
+                            myContent.Add(content.ToLower().Replace(" ", ""));
+                        }
+                        
+                        for (int i = 0; i < myContent.Count; i++)
+                        {
+                            string tempListElement = myContent[i].ToString();
+
+                            for (int j = 0; j < tempListElement.Length; j++)
+                            {
+                                if (tempListElement[j] == 'a' || tempListElement[j] == 'A')
+                                {
+                                    counter += 1;
+                                }
+
+                            }
+                            
                         }
                     }
 
-                    return counter;
                 }
-        }
+                return counter;
+            }
             catch (Exception myExcept)
             {
                 return 0;
             }
-}
+        }
     }
 }
