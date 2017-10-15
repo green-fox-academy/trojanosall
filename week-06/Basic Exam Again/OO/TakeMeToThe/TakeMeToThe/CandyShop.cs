@@ -26,6 +26,35 @@ namespace TakeMeToThe
             }
         }
 
+        public void Selling(Sweets sweet, int pieces)
+        {
+            for (int i = 0; i < pieces; i++)
+            {
+                Sweets.Remove(sweet);
+                Money += sweet.Price;
+            }
+        }
+
+        public Dictionary<string, int> InventoryCheck()
+        {
+            Dictionary<string, int> inventory = new Dictionary<string, int>();
+            int numberOfCandies = 0, numberOfLollipops = 0;
+            for (int i = 0; i < Sweets.Count; i++)
+            {
+                if (Sweets[i] == CANDY)
+                {
+                    numberOfCandies++;
+                }
+                else
+                {
+                    numberOfLollipops++;
+                }
+            }
+            inventory.Add("candies", numberOfCandies);
+            inventory.Add("lollipops", numberOfLollipops);
+            return inventory;
+        }
+
         public void Sell(Sweets sweet, int pieces)
         {
             if (sweet == CANDY)
@@ -61,35 +90,6 @@ namespace TakeMeToThe
                 }
                 i++;
             }
-        }
-
-        public void Selling(Sweets sweet, int pieces)
-        {
-            for (int i = 0; i < pieces; i++)
-            {
-                Sweets.Remove(sweet);
-                Money += sweet.Price;
-            }
-        }
-
-        public Dictionary<string, int> InventoryCheck()
-        {
-            Dictionary<string, int> inventory = new Dictionary<string, int>();
-            int numberOfCandies = 0, numberOfLollipops = 0;
-            for (int i = 0; i < Sweets.Count; i++)
-            {
-                if (Sweets[i] == CANDY)
-                {
-                    numberOfCandies++;
-                }
-                else
-                {
-                    numberOfLollipops++;
-                }
-            }
-            inventory.Add("candies", numberOfCandies);
-            inventory.Add("lollipops", numberOfLollipops);
-            return inventory;
         }
 
         public void PrintInfo()
