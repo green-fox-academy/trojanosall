@@ -15,9 +15,7 @@ namespace Seconds
             // example: [1, 2, 3, 4, 5] should produce [2, 4] - print this result
 
             List<int> myList = new List<int>(new int []{ 1, 2, 3, 4, 5 });
-
-            Seconds(myList);
-
+            
             for (int i = 0; i < Seconds(myList).Count; i++)
             {
                 Console.Write("[" + Seconds(myList)[i] + "]");
@@ -27,21 +25,21 @@ namespace Seconds
 
         }
 
-        public static List<int> Seconds(List<int> myList)
+        public static List<int> Seconds(List<int> myListForFuncion)
         {
             List<int> secondsList = new List<int>();
 
-            if (myList.Count < 2)
+            if (myListForFuncion.Count < 2)
             {
                 return secondsList = null;
             }
             else
             {
-                for (int i = 0; i < myList.Count; i++)
+                for (int i = 0; i < myListForFuncion.Count; i++)
                 {
                     if (i % 2 != 0)
                     {
-                        secondsList.Add(myList[i]);
+                        secondsList.Add(myListForFuncion[i]);
                     }
                 }
                 return secondsList;
