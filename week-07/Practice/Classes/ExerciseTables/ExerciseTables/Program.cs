@@ -19,45 +19,13 @@ namespace ExerciseTables
 
             Table[] myTableArray = new Table[10];
 
-            Table myTable0 = new Table();
-            myTable0.GenerateTable(rnd);
-            myTableArray[0] = myTable0;
+            for (int i = 0; i < myTableArray.Length; i++)
+            {
+                Table myTable = new Table();
+                myTable.GenerateTable(rnd);
+                myTableArray[i] = myTable;
+            }
 
-            Table myTable1 = new Table();
-            myTable1.GenerateTable(rnd);
-            myTableArray[1] = myTable1;
-
-            Table myTable2 = new Table();
-            myTable2.GenerateTable(rnd);
-            myTableArray[2] = myTable2;
-
-            Table myTable3 = new Table();
-            myTable3.GenerateTable(rnd);
-            myTableArray[3] = myTable3;
-
-            Table myTable4 = new Table();
-            myTable4.GenerateTable(rnd);
-            myTableArray[4] = myTable1;
-
-            Table myTable5 = new Table();
-            myTable5.GenerateTable(rnd);
-            myTableArray[5] = myTable5;
-
-            Table myTable6 = new Table();
-            myTable6.GenerateTable(rnd);
-            myTableArray[6] = myTable6;
-
-            Table myTable7 = new Table();
-            myTable7.GenerateTable(rnd);
-            myTableArray[7] = myTable7;
-
-            Table myTable8 = new Table();
-            myTable8.GenerateTable(rnd);
-            myTableArray[8] = myTable8;
-
-            Table myTable9 = new Table();
-            myTable9.GenerateTable(rnd);
-            myTableArray[9] = myTable9;
 
             for (int i = 0; i < myTableArray.Length; i++)
             {

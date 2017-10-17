@@ -36,7 +36,7 @@ namespace ExerciseTables
 
         public void ShowData()
         {
-            Console.WriteLine($"The width of the table is {width}.\n\n");
+            Console.WriteLine($"The width of the table is {width}.");
             Console.WriteLine($"The height of the table is {height}.\n\n");
         }
 
