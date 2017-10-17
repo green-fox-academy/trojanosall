@@ -40,7 +40,7 @@ namespace ExerciseTables
             Console.WriteLine($"The height of the table is {height}.\n\n");
         }
 
-        public void GenerateTable()
+        public void GenerateTable(Random rnd)
         {
             width = rnd.Next(50, 201);
             height = rnd.Next(50, 200);
