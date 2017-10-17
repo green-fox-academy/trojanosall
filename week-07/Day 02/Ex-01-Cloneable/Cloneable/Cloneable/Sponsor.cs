@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cloneable
 {
-    class Sponsor : Person
+    public class Sponsor : Person
     {
         private string company;
         private int hiredStudent;

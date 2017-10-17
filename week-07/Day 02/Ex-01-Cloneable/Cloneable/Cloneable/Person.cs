@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Cloneable
 {
-    class Person
+    public class Person
     {
         protected string name;
         protected int age;
         protected string gender;
-
+        
         public Person(string name, int age, string gender)
         {
             this.name = name;

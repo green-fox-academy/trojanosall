@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cloneable
 {
-    class Student : Person
+    public class Student : Person, ICloneable
     {
         private string previousOrganization;
         private int skippedDays;
@@ -43,7 +43,11 @@ namespace Cloneable
         public void SkipDays(int numberOfDays)
         {
             skippedDays += numberOfDays;
-
+        }
+        
+        public object Clone()
+        {
+            return new Student(name, age, gender, previousOrganization);
         }
     }
 }
