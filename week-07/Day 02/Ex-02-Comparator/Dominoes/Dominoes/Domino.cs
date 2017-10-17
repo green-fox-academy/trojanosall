@@ -12,20 +12,26 @@ namespace Dominoes
 
         public Domino(int valueA, int valueB)
         {
-            this.Values = new int[] { valueA, valueB };
+            Values = new int[] { valueA, valueB };
         }
 
         public int CompareTo(object obj)
         {
             Domino otherDomino = obj as Domino;
+
             if (otherDomino != null)
             {
-                return this.GetValues()[0].CompareTo(otherDomino.GetValues()[1]);
+                return Values[0].CompareTo(otherDomino.Values[0]);
             }
             else
             {
-                throw new ArgumentException("Nuuuuuuu.... valami nem stim... ");
+                throw new ArgumentException("UPPPPSSSS...."); ;
             }
+        }
+
+        public override string ToString()
+        {
+            return $"({Values[0]}, {Values[1]})";
         }
 
         public int[] GetValues()
