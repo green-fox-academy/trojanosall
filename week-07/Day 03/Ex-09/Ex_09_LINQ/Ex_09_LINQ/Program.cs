@@ -14,6 +14,7 @@ namespace Ex_09_LINQ
 
             char[] myCharArray = new[] {'K', 'o', 's', 's', 'u', 't', 'h', ' ', 'L', 'a', 'j', 'o', 's'};
 
+
             //Query Syntax
             var newStringQuery = from mychar in myCharArray
                 select mychar.ToString();
