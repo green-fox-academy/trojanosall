@@ -32,9 +32,9 @@ namespace Ex_05_LINQ
             var numbersMethod = numbers.GroupBy(x=>x).ToDictionary(key => key.Key, value => value.Count());
 
             Console.WriteLine("\n\nOutput of Method Syntax");
-            foreach (var numDictionary in numbersMethod)
+            foreach (var num in numbersMethod)
             {
-                Console.WriteLine("Number " + numbersMethod.Keys + " appears " + numbersMethod.Values + " times");
+                Console.WriteLine("Number " + num.Key + " appears " + num.Value + " times");
             }
 
             Console.ReadKey();
