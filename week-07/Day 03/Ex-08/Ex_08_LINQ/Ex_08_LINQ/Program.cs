@@ -25,6 +25,16 @@ namespace Ex_08_LINQ
                 Console.Write(character + " ");
             }
 
+
+            // Method Syntax
+            var charMethod = something.Where(x => char.IsUpper(x));
+
+            Console.WriteLine("\n\nUpper case characters with query syntax are the followings: ");
+            foreach (var character in charMethod)
+            {
+                Console.Write(character + " ");
+            }
+            
             Console.ReadKey();
 
         }
