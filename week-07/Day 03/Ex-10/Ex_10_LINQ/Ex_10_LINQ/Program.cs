@@ -14,6 +14,20 @@ namespace Ex_10_LINQ
             // Fill a list with at least 5 foxes, it's up to you how you name/create them! 
             // Write a LINQ Expression to find the foxes with green color! 
             // Write a LINQ Expression to find the foxes with green color and pallida type!
+
+            List<Fox> myFoxsList = new List<Fox>();
+
+            var myFox0 = new Fox("Abigel","sarki", "zold");
+            myFoxsList.Add(myFox0);
+            var myFox1 = new Fox("Lizi", "erdei", "kek");
+            myFoxsList.Add(myFox1);
+            var myFox2 = new Fox("Hunniacska", "tavi", "rozsaszin");
+            myFoxsList.Add(myFox2);
+            var myFox3 = new Fox("Piroska", "folyami", "piros");
+            myFoxsList.Add(myFox3);
+            var myFox4 = new Fox("Nutricia", "varosi", "fekete");
+            myFoxsList.Add(myFox4);
+
         }
     }
 }
