@@ -22,7 +22,16 @@ namespace Ex_02_LINQ
 
             var oddAverageSyntax = numberSyntax.Average();
 
+            Console.WriteLine("Output of Query Syntax");
             Console.WriteLine(oddAverageSyntax);
+
+
+            // Method Syntax
+            var numberMethod = numbers.Where(x => (x % 2 != 0)).Average();
+
+            Console.WriteLine("\n\nOutput of Method Syntax");
+            Console.WriteLine(numberMethod);
+
 
             Console.ReadKey();
 
