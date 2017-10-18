@@ -18,13 +18,23 @@ namespace Ex_05_LINQ
             //Query Syntax
             var numberQuery = from num in numbers
                 group num by num
-                into newNum
+                into newNum 
                 select newNum;
 
             Console.WriteLine("Output of Query Syntax");
             foreach (var  numDictionary in numberQuery)
             {
                 Console.WriteLine("Number " + numDictionary.Key + " appears " + numDictionary.Count() + " times");
+            }
+
+
+            // Method Syntax
+            var numbersMethod = numbers.GroupBy(x=>x).ToDictionary(key => key.Key, value => value.Count());
+
+            Console.WriteLine("\n\nOutput of Method Syntax");
+            foreach (var numDictionary in numbersMethod)
+            {
+                Console.WriteLine("Number " + numDictionary.Key + " appears " + numDictionary.Value + " times");
             }
 
             Console.ReadKey();
