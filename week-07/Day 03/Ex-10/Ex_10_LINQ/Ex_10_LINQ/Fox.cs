@@ -18,5 +18,15 @@ namespace Ex_10_LINQ
             this.Type = type;
             this.Color = color;
         }
+
+        public string GetColor()
+        {
+            return Color;
+        }
+
+        public string GetName()
+        {
+            return Name;
+        }
     }
 }

@@ -28,6 +28,23 @@ namespace Ex_10_LINQ
             var myFox4 = new Fox("Nutricia", "varosi", "fekete");
             myFoxsList.Add(myFox4);
 
+            myFox4.GetColor();
+
+            
+            //Query Syntax
+            var greenFoxSearcherQuery = from myGreenFox in myFoxsList
+                where myGreenFox.GetColor().Equals("zold")
+                select myGreenFox.GetName();
+
+            Console.WriteLine("With query syntax the solution is the following: ");
+            foreach (var fox in greenFoxSearcherQuery)
+            {
+                Console.Write(fox);
+            }
+
+            Console.ReadKey();
+
+
         }
     }
 }
