@@ -27,10 +27,17 @@ namespace Ex_03_LINQ
                 Console.Write(n + " ");
             }
 
+
+            // Method Syntax
+            var numberMethod = numbers.Where(x => (x > 0)).OrderBy(x => x).Select( x => x * x);
+
+            Console.WriteLine("\n\nOutput of Method Syntax");
+            foreach (var n in numberMethod)
+            {
+                Console.Write(n + " ");
+            }
+
             Console.ReadKey();
-
-
-
 
         }
     }
