@@ -26,6 +26,16 @@ namespace Ex_06_LINQ
                 Console.WriteLine("Letter " + letterDictionaryElement.Key + " appears " + letterDictionaryElement.Count() + " times");
             }
 
+
+            // Method Syntax
+            var letterMethod = sentence.GroupBy(character => character).ToDictionary(key => key.Key, value => value.Count());
+
+            Console.WriteLine("\n\nOutput of Method Syntax");
+            foreach (var letter in letterMethod)
+            {
+                Console.WriteLine("Letter " + letter.Key + " appears " + letter.Value + " times");
+            }
+
             Console.ReadKey();
 
         }

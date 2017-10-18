@@ -34,7 +34,7 @@ namespace Ex_05_LINQ
             Console.WriteLine("\n\nOutput of Method Syntax");
             foreach (var numDictionary in numbersMethod)
             {
-                Console.WriteLine("Number " + numDictionary.Key + " appears " + numDictionary.Value + " times");
+                Console.WriteLine("Number " + numbersMethod.Keys + " appears " + numbersMethod.Values + " times");
             }
 
             Console.ReadKey();
