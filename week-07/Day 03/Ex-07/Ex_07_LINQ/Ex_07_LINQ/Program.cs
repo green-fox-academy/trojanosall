@@ -22,13 +22,21 @@ namespace Ex_07_LINQ
                 where city.StartsWith(startingCharacter)
                 where city.EndsWith(endingCharacter)
                 select city;
-
+            
             foreach (var city in cityQuery)
             {
                 Console.WriteLine($"Output of Query Syntax: {city}");
             }
             
 
+            // Method Syntax
+            var cityMethod = cities.Where(x => x.StartsWith(startingCharacter)).Where(x => x.EndsWith(endingCharacter));
+
+            foreach (var city in cityMethod)
+            {
+                Console.WriteLine($"Output of Method Syntax: {city}");
+            }
+            
             Console.ReadKey();
 
         }
