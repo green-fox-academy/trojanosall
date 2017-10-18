@@ -42,9 +42,17 @@ namespace Ex_10_LINQ
                 Console.Write(fox);
             }
 
+
+            // Method Syntax
+            var greenFoxSearcherMethod = myFoxsList.Where(x => x.GetColor().Equals("zold")).Select(x => x.GetName());
+
+            Console.WriteLine("\n\nWith method syntax the solution is the following: ");
+            foreach (var fox in greenFoxSearcherMethod)
+            {
+                Console.Write(fox);
+            }
+
             Console.ReadKey();
-
-
         }
     }
 }
