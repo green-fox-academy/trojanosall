@@ -8,28 +8,17 @@ namespace ParkingLot
 {
     class Car
     {
-        public string Types;
-        public string Color;
-        Random rnd = new Random();
-
-        public Car()
+        public CarTypes Type { get; set; }
+        public CarColor Color { get; set; }
+        
+        public Car(CarTypes type, CarColor color)
         {
-            Types = rnd.Next(0, Enum.GetNames(typeof(Types)).Length + 1).ToString();
-            Color = rnd.Next(0, Enum.GetNames(typeof(Color)).Length + 1).ToString();
-        }
-
-        public string GetColor()
-        {
-            return Color;
-        }
-
-        public string GetType()
-        {
-            return Types;
+            Type = type;
+            Color = color;
         }
     }
 
-    public enum Types
+    public enum CarTypes
     {
         Audi,
         Porsche,
@@ -54,7 +43,7 @@ namespace ParkingLot
         Suzuki
     }
 
-    public enum Color
+    public enum CarColor
     {
         Black,
         White,
