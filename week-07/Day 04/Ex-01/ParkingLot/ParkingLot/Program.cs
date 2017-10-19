@@ -60,6 +60,28 @@ namespace ParkingLot
             }
 
 
+            var sameColor = from carcolor in myCarsList
+                group carcolor by carcolor.Color
+                into selectColor
+                select selectColor;
+
+            Console.WriteLine("\n\nSame color cars by query method: ");
+            foreach (var item in sameColor)
+            {
+                Console.WriteLine("Color of " + item.Key + " appears " + item.Count() + " times");
+            }
+
+
+
+            //var sameTypeMethod = myCarsList.GroupBy(car => car.Type).ToDictionary(key => key.Key, value => value.Count());
+
+            //Console.WriteLine("\n\nSame type cars by query method: ");
+            //foreach (var item in sameTypeMethod)
+            //{
+            //    Console.WriteLine("Type of " + item.Key + " appears " + item.Value + " times");
+            //}
+
+
             Console.ReadKey();
         }
     }
