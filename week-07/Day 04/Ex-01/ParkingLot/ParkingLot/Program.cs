@@ -73,13 +73,13 @@ namespace ParkingLot
 
 
 
-            //var sameTypeMethod = myCarsList.GroupBy(car => car.Type).ToDictionary(key => key.Key, value => value.Count());
+            var sameColorMethod = myCarsList.GroupBy(car => car.Color).ToDictionary(key => key.Key, value => value.Count());
 
-            //Console.WriteLine("\n\nSame type cars by query method: ");
-            //foreach (var item in sameTypeMethod)
-            //{
-            //    Console.WriteLine("Type of " + item.Key + " appears " + item.Value + " times");
-            //}
+            Console.WriteLine("\n\nSame color cars by query method: ");
+            foreach (var item in sameColorMethod)
+            {
+                Console.WriteLine("Color of " + item.Key + " appears " + item.Value + " times");
+            }
 
 
             Console.ReadKey();
