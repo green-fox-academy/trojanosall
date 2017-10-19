@@ -43,11 +43,22 @@ namespace ParkingLot
                 into selectType
                 select selectType;
 
-            Console.WriteLine("\n\n Same type cars by query method: ");
+            Console.WriteLine("\n\nSame type cars by query method: ");
             foreach (var item in sameType)
             {
-                Console.WriteLine("Number " + item.Key + " appears " + item.Count() + " times");
+                Console.WriteLine("Type of " + item.Key + " appears " + item.Count() + " times");
             }
+
+
+            
+            var sameTypeMethod = myCarsList.GroupBy(car => car.Type).ToDictionary(key => key.Key, value => value.Count());
+
+            Console.WriteLine("\n\nSame type cars by query method: ");
+            foreach (var item in sameTypeMethod)
+            {
+                Console.WriteLine("Type of " + item.Key + " appears " + item.Value + " times");
+            }
+
 
             Console.ReadKey();
         }
