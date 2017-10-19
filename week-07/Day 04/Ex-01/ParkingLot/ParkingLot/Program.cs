@@ -23,6 +23,8 @@ namespace ParkingLot
             Random rnd = new Random();
 
             List<Car> myCarsList = new List<Car>();
+
+            Car myCar = new Car();
             
             for (int i = 0; i < numberOfMyCars; i++)
             {
@@ -33,6 +35,18 @@ namespace ParkingLot
             for (int i = 0; i < numberOfMyCars; i++)
             {
                 Console.WriteLine($"{i+1}. car - Type is {myCarsList[i].Type} and the color is {myCarsList[i].Color}");
+            }
+
+
+            var sameType = from carType in myCarsList
+                group carType by carType.Type 
+                into selectType
+                select selectType;
+
+            Console.WriteLine("\n\n Same type cars by query method: ");
+            foreach (var item in sameType)
+            {
+                Console.WriteLine("Number " + item.Key + " appears " + item.Count() + " times");
             }
 
             Console.ReadKey();

@@ -16,6 +16,10 @@ namespace ParkingLot
             Type = type;
             Color = color;
         }
+
+        public Car()
+        {
+        }
     }
 
     public enum CarTypes
