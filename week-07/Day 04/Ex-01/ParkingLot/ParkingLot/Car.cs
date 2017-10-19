@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ParkingLot
 {
-    class Car
+    public class Car
     {
         public CarTypes Type { get; set; }
         public CarColor Color { get; set; }
