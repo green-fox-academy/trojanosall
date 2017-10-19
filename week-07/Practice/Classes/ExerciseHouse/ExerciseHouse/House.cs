@@ -22,7 +22,7 @@ namespace ExerciseHouse
 
         public Door Door { get; set; }
 
-        public void ShowData()
+        public virtual void ShowData()
         {
             Console.WriteLine($"I am a house, my area is {area} m2");
         }
