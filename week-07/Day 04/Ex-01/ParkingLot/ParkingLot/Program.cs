@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ParkingLot
 {
@@ -26,50 +24,55 @@ namespace ParkingLot
 
             Car myCar = new Car();
             
-            for (int i = 0; i < numberOfMyCars; i++)
+            GenerateCarList(numberOfMyCars, myCarsList, rnd);
+
+            PrintList(numberOfMyCars, myCarsList);
+
+
+            SameTypeCar1(myCarsList);
+
+
+            SameTypeCar2(myCarsList);
+
+
+            MostFrequentCarType(myCarsList);
+
+            SameColorCar1(myCarsList);
+
+
+            SameColorCar2(myCarsList);
+
+            MostFrequentColor(myCarsList);
+
+            Console.ReadKey();
+        }
+
+        private static void MostFrequentColor(List<Car> myCarsList)
+        {
+            var mostFrequentColorCar = from colorCar in myCarsList
+                group colorCar by colorCar.Color
+                into frequentColorCar
+                orderby frequentColorCar.Count() descending
+                select frequentColorCar;
+
+            var frequentColor = mostFrequentColorCar.FirstOrDefault();
+
+            Console.WriteLine($"THE MOST FREQUENT CAR COLOR IN PARKINGLOT IS {frequentColor.Key} (using query syntax)");
+        }
+
+        private static void SameColorCar2(List<Car> myCarsList)
+        {
+            var sameColorMethod = myCarsList.GroupBy(car => car.Color).ToDictionary(key => key.Key, value => value.Count());
+
+            Console.WriteLine("\n\nSAME COLOR (using method syntax): ");
+            foreach (var item in sameColorMethod)
             {
-                myCarsList.Add(new Car((CarTypes)rnd.Next(typeof(CarTypes).GetEnumNames().Length),
-                    (CarColor)rnd.Next(typeof(CarColor).GetEnumNames().Length)));
+                Console.WriteLine("Color of " + item.Key + " appears " + item.Value + " times");
             }
+        }
 
-            for (int i = 0; i < numberOfMyCars; i++)
-            {
-                Console.WriteLine($"{i+1}. car - Type is {myCarsList[i].Type} and the color is {myCarsList[i].Color}");
-            }
-
-
-            var sameType = from carType in myCarsList
-                group carType by carType.Type 
-                into selectType
-                select selectType;
-
-            Console.WriteLine("\n\nSAME TYPE CARS (using query syntax): ");
-            foreach (var item in sameType)
-            {
-                Console.WriteLine("Type of " + item.Key + " appears " + item.Count() + " times");
-            }
-
-
-            
-            var sameTypeMethod = myCarsList.GroupBy(car => car.Type).ToDictionary(key => key.Key, value => value.Count());
-
-            Console.WriteLine("\n\nSAME TYPE CARS (using method syntax): ");
-            foreach (var item in sameTypeMethod)
-            {
-                Console.WriteLine("Type of " + item.Key + " appears " + item.Value + " times");
-            }
-
-
-            var mostFrequentTypeCar = from muchCar in myCarsList
-                group muchCar by muchCar.Type
-                into frequentTypeCar
-                orderby frequentTypeCar.Count() descending
-                select frequentTypeCar;
-
-            var mostFrequentType = mostFrequentTypeCar.FirstOrDefault();
-
-            Console.WriteLine($"THE MOST FREQUENT CAR TYPE IN PARKINGLOT IS {mostFrequentType.Key} (using query syntax)");
-            
+        private static void SameColorCar1(List<Car> myCarsList)
+        {
             var sameColor = from carcolor in myCarsList
                 group carcolor by carcolor.Color
                 into selectColor
@@ -80,28 +83,61 @@ namespace ParkingLot
             {
                 Console.WriteLine("Color of " + item.Key + " appears " + item.Count() + " times");
             }
+        }
 
+        private static void MostFrequentCarType(List<Car> myCarsList)
+        {
+            var mostFrequentTypeCar = from muchCar in myCarsList
+                group muchCar by muchCar.Type
+                into frequentTypeCar
+                orderby frequentTypeCar.Count() descending
+                select frequentTypeCar;
 
+            var mostFrequentType = mostFrequentTypeCar.FirstOrDefault();
 
-            var sameColorMethod = myCarsList.GroupBy(car => car.Color).ToDictionary(key => key.Key, value => value.Count());
+            Console.WriteLine($"THE MOST FREQUENT CAR TYPE IN PARKINGLOT IS {mostFrequentType.Key} (using query syntax)");
+        }
 
-            Console.WriteLine("\n\nSAME COLOR (using method syntax): ");
-            foreach (var item in sameColorMethod)
+        private static void SameTypeCar2(List<Car> myCarsList)
+        {
+            var sameTypeMethod = myCarsList.GroupBy(car => car.Type).ToDictionary(key => key.Key, value => value.Count());
+
+            Console.WriteLine("\n\nSAME TYPE CARS (using method syntax): ");
+            foreach (var item in sameTypeMethod)
             {
-                Console.WriteLine("Color of " + item.Key + " appears " + item.Value + " times");
+                Console.WriteLine("Type of " + item.Key + " appears " + item.Value + " times");
             }
+        }
 
-            var mostFrequentColorCar = from colorCar in myCarsList
-                group colorCar by colorCar.Color
-                into frequentColorCar
-                orderby frequentColorCar.Count() descending
-                select frequentColorCar;
+        private static void SameTypeCar1(List<Car> myCarsList)
+        {
+            var sameType = from carType in myCarsList
+                group carType by carType.Type
+                into selectType
+                select selectType;
 
-            var frequentColor = mostFrequentColorCar.FirstOrDefault();
+            Console.WriteLine("\n\nSAME TYPE CARS (using query syntax): ");
+            foreach (var item in sameType)
+            {
+                Console.WriteLine("Type of " + item.Key + " appears " + item.Count() + " times");
+            }
+        }
 
-            Console.WriteLine($"THE MOST FREQUENT CAR COLOR IN PARKINGLOT IS {frequentColor.Key} (using query syntax)");
+        private static void PrintList(int numberOfMyCars, List<Car> myCarsList)
+        {
+            for (int i = 0; i < numberOfMyCars; i++)
+            {
+                Console.WriteLine($"{i + 1}. car - Type is {myCarsList[i].Type} and the color is {myCarsList[i].Color}");
+            }
+        }
 
-            Console.ReadKey();
+        private static void GenerateCarList(int numberOfMyCars, List<Car> myCarsList, Random rnd)
+        {
+            for (int i = 0; i < numberOfMyCars; i++)
+            {
+                myCarsList.Add(new Car((CarTypes) rnd.Next(typeof(CarTypes).GetEnumNames().Length),
+                    (CarColor) rnd.Next(typeof(CarColor).GetEnumNames().Length)));
+            }
         }
     }
 }
