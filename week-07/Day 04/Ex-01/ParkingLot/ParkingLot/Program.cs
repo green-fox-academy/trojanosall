@@ -19,6 +19,21 @@ namespace ParkingLot
             // Count and Print the number of same vehicles for each color
             // Print the most frequently occurring vehicle
 
+            List<Car> carsList = new List<Car>();
+
+            Car myCar = new Car();
+
+            for (int i = 0; i < 256; i++)
+            {
+                carsList.Add(myCar);
+            }
+
+            foreach (var car in carsList)
+            {
+                Console.WriteLine($"Type is {car.GetType()} and the color is {car.GetColor()}");
+            }
+
+            Console.ReadKey();
         }
     }
 }

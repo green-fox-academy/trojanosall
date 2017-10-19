@@ -12,10 +12,20 @@ namespace ParkingLot
         public string Color;
         Random rnd = new Random();
 
-        public Car(string types, string color)
+        public Car()
         {
             Types = rnd.Next(0, Enum.GetNames(typeof(Types)).Length + 1).ToString();
             Color = rnd.Next(0, Enum.GetNames(typeof(Color)).Length + 1).ToString();
+        }
+
+        public string GetColor()
+        {
+            return Color;
+        }
+
+        public string GetType()
+        {
+            return Types;
         }
     }
 
