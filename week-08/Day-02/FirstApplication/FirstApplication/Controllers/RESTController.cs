@@ -14,7 +14,7 @@ namespace FirstApplication.Controllers
     {
 
         [Route("greeting")]
-        public IActionResult Greeting(string name)
+        public IActionResult Greeting()
         {
             Greeting myGreeting = new Greeting()
             {
@@ -24,5 +24,18 @@ namespace FirstApplication.Controllers
 
             return new JsonResult(myGreeting);
         }
+
+        [Route("greetingname")]
+        public IActionResult GreetingName(string name)
+        {
+            Greeting myGreeting = new Greeting()
+            {
+                Id = 1,
+                Content = $"Hello {name}!"
+            };
+
+            return new JsonResult(myGreeting);
+        }
+
     }
 }
