@@ -14,28 +14,16 @@ namespace FirstApplication.Controllers
     {
 
         [Route("greeting")]
-        public IActionResult Greeting()
+        public IActionResult Greeting(string name)
         {
+            int counter = 1;
             Greeting myGreeting = new Greeting()
             {
-                Id = 1,
-                Content = "Hello World!"
+                Id = 1 + counter,
+                Content = $"Hello, {name}!"
             };
 
             return new JsonResult(myGreeting);
         }
-
-        [Route("greetingname")]
-        public IActionResult GreetingName(string name)
-        {
-            Greeting myGreeting = new Greeting()
-            {
-                Id = 1,
-                Content = $"Hello {name}!"
-            };
-
-            return new JsonResult(myGreeting);
-        }
-
     }
 }
