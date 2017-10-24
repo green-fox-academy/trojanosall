@@ -12,14 +12,15 @@ namespace FirstApplication.Controllers
     [Route("api")]
     public class RESTController : Controller
     {
+        static int counter = 0;
 
         [Route("greeting")]
         public IActionResult Greeting(string name)
         {
-            int counter = 1;
+            
             Greeting myGreeting = new Greeting()
             {
-                Id = 1 + counter,
+                Id = ++counter,
                 Content = $"Hello, {name}!"
             };
 
