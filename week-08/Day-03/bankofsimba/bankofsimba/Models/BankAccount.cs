@@ -7,8 +7,8 @@ namespace bankofsimba.Models
 {
     public class BankAccount
     {
-        public string Name { get; set; } = "Simba";
-        public int Balance { get; set; } = 2000;
-        public string AnimalType { get; set; } = "Lion";
+        public string Name { get; set; }
+        public int Balance { get; set; }
+        public string AnimalType { get; set; }
     }
 }
