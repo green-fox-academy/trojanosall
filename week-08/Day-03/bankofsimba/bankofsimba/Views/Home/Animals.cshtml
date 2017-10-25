@@ -5,9 +5,15 @@
     <title></title>
 </head>
 <body>
-    <h1>Client:</h1>
-    <p>@Model.Name</p>
-    <p>@Model.Balance.ToString("0.00")</p>
-    <p>@Model.AnimalType</p>
+<p>
+@foreach (var animals in @Model.)
+{
+
+}
+
+<p>
+<p>@Model.Name</p>
+<p>@Model.Balance.ToString("0.00")</p>
+<p>@Model.AnimalType</p>
 </body>
 </html>

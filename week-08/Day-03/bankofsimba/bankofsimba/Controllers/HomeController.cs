@@ -22,5 +22,25 @@ namespace bankofsimba.Controllers
             };
             return View(BankAccount);
         }
+
+        [Route("Animals")]
+        public IActionResult Animals()
+        {
+            List<BankAccount> AnimalsList = null;
+
+            var animal1 = new BankAccount("Mufasza", 4000, "Lion");
+            var animal2 = new BankAccount("Rafiki", 500, "Monkey");
+            var animal3 = new BankAccount("Zazu", 750, "Parrot");
+            var animal4 = new BankAccount("Pumbaa", 10000, "Wildpig");
+            var animal5 = new BankAccount("Timon", 20, "Rat");
+
+            AnimalsList.Add(animal1);
+            AnimalsList.Add(animal2);
+            AnimalsList.Add(animal3);
+            AnimalsList.Add(animal4);
+            AnimalsList.Add(animal5);
+
+            return View(AnimalsList);
+        }
     }
 }
