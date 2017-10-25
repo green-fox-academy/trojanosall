@@ -1,22 +1,26 @@
 ﻿@model List<bankofsimba.Models.BankAccount>
-    <!DOCTYPE HTML>
-    <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <table>
-            @{ int index = 0; }
-            @foreach (var animals in Model)
-            {
-                <tr>
-                    <td>@(++index) </td>
-                    <td>@animals.Name </td>
-                    <td>@animals.Balance.ToString("0.00 Zebra") </td>
-                    <td>@animals.AnimalType </td>
-                </tr>
-            }
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+</head>
+<body>
+<table>
+    @{ int index = 0; }
+    @foreach (var animals in Model)
+    {
+        if (animals.KingIsTheOwner==true)
+        {
+            <tr>
+                <td>@(++index) </td>
+                <td>The owner of the BankAccount is a King</td>
+                <td>@animals.Name </td>
+                <td>@animals.Balance.ToString("0.00 Zebra") </td>
+                <td>@animals.AnimalType </td>
+            </tr>
+        }
+    }
 
-        </table>
-    </body>
+</table>
+</body>
 </html>
