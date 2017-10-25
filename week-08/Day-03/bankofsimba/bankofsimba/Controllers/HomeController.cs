@@ -26,7 +26,7 @@ namespace bankofsimba.Controllers
         [Route("Animals")]
         public IActionResult Animals()
         {
-            List<BankAccount> AnimalsList = null;
+            List<BankAccount> animalsList = new List<BankAccount>();
 
             var animal1 = new BankAccount("Mufasza", 4000, "Lion");
             var animal2 = new BankAccount("Rafiki", 500, "Monkey");
@@ -34,13 +34,13 @@ namespace bankofsimba.Controllers
             var animal4 = new BankAccount("Pumbaa", 10000, "Wildpig");
             var animal5 = new BankAccount("Timon", 20, "Rat");
 
-            AnimalsList.Add(animal1);
-            AnimalsList.Add(animal2);
-            AnimalsList.Add(animal3);
-            AnimalsList.Add(animal4);
-            AnimalsList.Add(animal5);
+            animalsList.Add(animal1);
+            animalsList.Add(animal2);
+            animalsList.Add(animal3);
+            animalsList.Add(animal4);
+            animalsList.Add(animal5);
 
-            return View(AnimalsList);
+            return View(animalsList);
         }
     }
 }

@@ -1,19 +1,20 @@
-﻿@model bankofsimba.Models.BankAccount
+﻿@model List<bankofsimba.Models.BankAccount>
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title></title>
 </head>
 <body>
-<p>
-@foreach (var animals in @Model.)
-{
+    <table>
+        @foreach (var animals in Model)
+        {
+            <tr>
+                <td>@animals.Name </td>
+                <td>@animals.Balance.ToString("0.00 Zebra")  </td>
+                <td>@animals.AnimalType  </td>
+            </tr>
+        }
 
-}
-
-<p>
-<p>@Model.Name</p>
-<p>@Model.Balance.ToString("0.00")</p>
-<p>@Model.AnimalType</p>
+    </table>
 </body>
 </html>
