@@ -1,4 +1,19 @@
-﻿table {
+﻿body {
+    background-image: url(https://img.buzzfeed.com/buzzfeed-static/static/2014-07/18/10/enhanced/webdr09/anigif_enhanced-buzz-22799-1405693809-7.gif);
+}
+table {
     color: purple;
     background: yellow;
+    border-spacing: 5px;
+    width:800px;
+    margin: 10px auto;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 15px;
+}
+th {
+    text-align: left;
 }
