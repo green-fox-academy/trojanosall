@@ -26,27 +26,10 @@
                 <td>@animals.Balance.ToString("0.00 Zebra") </td>
                 <td>@animals.AnimalType </td>
                 <td>@animals.KingIsTheOwner </td>
-                @*
-                <td>@animals.GoodOrNot </td>*@
-                @{
-                switch (animals.GoodOrNot)
-                {
-                case true:
-                <td>
-                    Gooood
-                </td>
-                break;
-                default:
-                <td>
-                    Baaaaad
-                </td>
-                break;
-                }
-                }
+                <td>@animals.GoodOrNot </td>
             </tr>
             }
             }
-
         </table>
     </body>
 </html>
