@@ -11,7 +11,7 @@ namespace bankofsimba.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("Simba")]
+        [Route("")]
         public IActionResult Index()
         {
             var BankAccount = new BankAccount()
