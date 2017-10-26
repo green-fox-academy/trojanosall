@@ -10,8 +10,14 @@ namespace Counter.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult HttpGet()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult HttpPost()
         {
             return View();
         }
