@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace Counter.Models
 {
-    public class Counter
+    public class CounterClass
     {
-        public int Number { get; set; } = 1;
+        public int Number { get; set; }
 
-        public void Increase()
+        public void Raise()
         {
             Number++;
         }
