@@ -28,17 +28,17 @@ namespace bankofsimba.Controllers
         {
             List<BankAccount> animalsList = new List<BankAccount>();
 
-            var animal1 = new BankAccount("Mufasza", 4000, "Lion", true, true);
-            var animal2 = new BankAccount("Rafiki", 500, "Monkey", true, true);
-            var animal3 = new BankAccount("Zazu", 750, "Parrot", true, true);
-            var animal4 = new BankAccount("Pumbaa", 10000, "Wildpig", true, true);
-            var animal5 = new BankAccount("Timon", 20, "Rat", true, true);
+            //var animal1 = new BankAccount("Mufasza", 4000, "Lion", true, true);
+            //var animal2 = new BankAccount("Rafiki", 500, "Monkey", true, true);
+            //var animal3 = new BankAccount("Zazu", 750, "Parrot", true, true);
+            //var animal4 = new BankAccount("Pumbaa", 10000, "Wildpig", true, true);
+            //var animal5 = new BankAccount("Timon", 20, "Rat", true, true);
 
-            animalsList.Add(animal1);
-            animalsList.Add(animal2);
-            animalsList.Add(animal3);
-            animalsList.Add(animal4);
-            animalsList.Add(animal5);
+            animalsList.Add(new BankAccount("Mufasza", 4000, "Lion", true, true));
+            animalsList.Add(new BankAccount("Rafiki", 500, "Monkey", true, true));
+            animalsList.Add(new BankAccount("Zazu", 750, "Parrot", true, true));
+            animalsList.Add(new BankAccount("Pumbaa", 10000, "Wildpig", true, true));
+            animalsList.Add(new BankAccount("Timon", 20, "Rat", true, true));
 
             return View(animalsList);
         }
