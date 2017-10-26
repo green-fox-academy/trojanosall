@@ -5,14 +5,9 @@ using System.Threading.Tasks;
 
 namespace GreetSomeOneApp.Models
 {
-    public class Greeting
+    public class UserInfo
     {
         public string Name { get; set; }
-
-        public void Greet()
-        {
-            Console.WriteLine($"Hello bello {Name}");
-        }
-
+        
     }
 }

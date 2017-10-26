@@ -1,4 +1,4 @@
-﻿@model GreetSomeOneApp.Models.Greeting
+﻿@model GreetSomeOneApp.Models.UserInfo
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -8,7 +8,7 @@
 <form action="Index" method="post">
     <div>
         <label for="Name">Name:</label>
-        <input type="text" @*@Model.*@Name="Name" value="" />
+        <input type="text" name="Name" value="" />
     </div>
     <input type="submit" value="Submit">
 </form>
