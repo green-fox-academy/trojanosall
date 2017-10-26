@@ -8,6 +8,5 @@ namespace GreetSomeOneApp.Models
     public class UserInfo
     {
         public string Name { get; set; }
-        
     }
 }
