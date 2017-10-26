@@ -1,0 +1,17 @@
+﻿hhtml {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(http://www.freeclipart.pw/uploads/2017/05/mon-french-greeting-is-a-light-handshake-another-mon-greeting--32.jpeg);
+    margin: 0;
+    padding-top: 0;
+    position: center;
+    text-align: center;
+}
+
+h1 {
+    color: purple;
+    font-family: "Times New Roman", Georgia, Serif;
+}
