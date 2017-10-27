@@ -18,7 +18,7 @@ namespace bankofsimba.Controllers
             {
                 Name = "Simba",
                 Balance = 2000,
-                AnimalType = "Lion"
+                AnimalType = AnimalType.lion,
             };
             return View(BankAccount);
         }
@@ -28,11 +28,11 @@ namespace bankofsimba.Controllers
         {
             List<BankAccount> animalsList = new List<BankAccount>
             {
-                new BankAccount("Mufasza", 4000, "Lion", true, true),
-                new BankAccount("Rafiki", 500, "Monkey", true, true),
-                new BankAccount("Zazu", 750, "Parrot", true, true),
-                new BankAccount("Pumbaa", 10000, "Wildpig", true, true),
-                new BankAccount("Timon", 20, "Rat", true, true)
+                new BankAccount("Mufasza", 4000, AnimalType.lion, true, true),
+                new BankAccount("Rafiki", 500, AnimalType.mandrill, true, true),
+                new BankAccount("Zazu", 750, AnimalType.hornbill, true, true),
+                new BankAccount("Pumbaa", 10000, AnimalType.warthog, true, true),
+                new BankAccount("Timon", 20, AnimalType.merkat, true, true)
             };
 
             return View(animalsList);

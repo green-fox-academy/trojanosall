@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+
+
 namespace bankofsimba.Models
 {
     public class BankAccount
     {
         public string Name { get; set; }
         public int Balance { get; set; }
-        public string AnimalType { get; set; }
+        public AnimalType AnimalType { get; set; }
         public bool KingIsTheOwner { get; set; }
         public bool GoodOrNot { get; set; }
 
@@ -17,7 +19,7 @@ namespace bankofsimba.Models
         {
         }
 
-        public BankAccount(string name, int balance, string animalType, bool kingIsTheOwner, bool goodOrNot)
+        public BankAccount(string name, int balance, AnimalType animalType, bool kingIsTheOwner, bool goodOrNot)
         {
             Name = name;
             Balance = balance;
