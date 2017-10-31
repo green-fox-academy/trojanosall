@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-
-
-namespace bankofsimba.Models
+﻿namespace bankofsimba.Models
 {
     public class BankAccount
     {
@@ -27,5 +20,6 @@ namespace bankofsimba.Models
             KingIsTheOwner = kingIsTheOwner;
             GoodOrNot = goodOrNot;
         }
+
     }
 }
