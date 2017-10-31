@@ -1,5 +1,6 @@
 ﻿using ListingTodosApp.Entities;
 using ListingTodosApp.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace ListingTodosApp.Repositories
@@ -16,7 +17,7 @@ namespace ListingTodosApp.Repositories
         public void AddTodo()
         {
             var todo = new Todo()
-            {                
+            {
                 Title = "Practice a lot",
                 IsUrgent = true,
                 IsDone = false,
@@ -26,9 +27,9 @@ namespace ListingTodosApp.Repositories
             TodoContext.SaveChanges();
         }
 
-        public Todo GetLastToDo()
+        public List<Todo> GetList()
         {
-            return TodoContext.Todos.Last();
+            return TodoContext.Todos.ToList();
         }
     }
 }
