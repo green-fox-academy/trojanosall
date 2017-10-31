@@ -15,10 +15,16 @@ namespace ListingTodosApp.Controllers
         }
 
         [Route("")]
-        [Route("/list")]
         public IActionResult List()
         {
-            return View();
+            return View(TodoRepository.GetLastToDo());
+        }
+
+        [Route("/add")]
+        public IActionResult AddTodo()
+        {
+            TodoRepository.AddTodo();
+            return RedirectToAction("List");
         }
     }
 }

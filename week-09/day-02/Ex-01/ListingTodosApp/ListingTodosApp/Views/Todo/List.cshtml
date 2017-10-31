@@ -1,14 +1,16 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model ListingTodosApp.Models.Todo
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
 <body>
     <h1>Todos for today</h1>
     <ul>
-        <li>Start the day</li>
-        <li>Finish H2 workshop1</li>
-        <li>Finish JPA workshop2</li>
-        <li>Create a CRUDE project</li>
+        <li>@Model.Id</li>
+        <li>@Model.Title</li>
+        <li>@Model.IsUrgent</li>
+        <li>@Model.IsDone</li>
     </ul>
 </body>
 </html>
