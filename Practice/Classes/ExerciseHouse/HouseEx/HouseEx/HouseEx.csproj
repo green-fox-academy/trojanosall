@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AA300CDE-2948-42E2-BE38-38DF09E25975}</ProjectGuid>
+    <ProjectGuid>{0059A089-CFA1-45CB-A753-A723B2A8FFFB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ExerciseHouse</RootNamespace>
-    <AssemblyName>ExerciseHouse</AssemblyName>
+    <RootNamespace>HouseEx</RootNamespace>
+    <AssemblyName>HouseEx</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Door.cs" />
     <Compile Include="House.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SmallApartment.cs" />
