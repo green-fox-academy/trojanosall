@@ -15,15 +15,26 @@ namespace ListingTodosApp.Controllers
         }
 
         [Route("")]
+        [HttpGet]
         public IActionResult List()
         {
             return View(TodoRepository.NotDone());
         }
 
+
         [Route("/add")]
-        public IActionResult AddTodo()
+        [HttpGet]
+        public IActionResult Add()
         {
-            TodoRepository.AddTodo();
+            return View();
+        }
+
+
+        [Route("/add")]
+        [HttpPost]
+        public IActionResult Add(string title)
+        {
+            TodoRepository.AddTodo(title);
             return RedirectToAction("List");
         }
     }

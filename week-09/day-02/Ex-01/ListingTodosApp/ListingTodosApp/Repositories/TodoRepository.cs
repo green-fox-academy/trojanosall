@@ -14,19 +14,6 @@ namespace ListingTodosApp.Repositories
             TodoContext = todoContext;
         }
 
-        public void AddTodo()
-        {
-            var todo = new Todo()
-            {
-                Title = "Practice a lot",
-                IsUrgent = true,
-                IsDone = false,
-            };
-
-            TodoContext.Todos.Add(todo);
-            TodoContext.SaveChanges();
-        }
-
         public List<Todo> GetList()
         {
             return TodoContext.Todos.ToList();
@@ -39,6 +26,19 @@ namespace ListingTodosApp.Repositories
                           select notReady;
 
             return notDone.ToList();
+        }
+
+        public void AddTodo(string title)
+        {
+            var todo = new Todo()
+            {
+                Title = title,
+                IsDone = false,
+                IsUrgent = false,
+            };
+
+            TodoContext.Todos.Add(todo);
+            TodoContext.SaveChanges();
         }
     }
 }
