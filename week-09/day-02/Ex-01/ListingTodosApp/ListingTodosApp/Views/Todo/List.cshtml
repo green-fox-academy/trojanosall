@@ -21,7 +21,12 @@
                 <td>@todo.Title </td>
                 <td>@todo.IsUrgent </td>
                 <td>@todo.IsDone</td>
-                <td><a href="/delete">delete</a></td>
+                <td>
+                    <form action="/@todo.Id/delete" method="post">
+                        <input type="hidden" name="Id" value="@todo.Id" />
+                        <button id="table" class="number" type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         }
     </table>
