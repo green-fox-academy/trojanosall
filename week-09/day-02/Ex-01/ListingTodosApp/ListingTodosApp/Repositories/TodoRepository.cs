@@ -31,5 +31,14 @@ namespace ListingTodosApp.Repositories
         {
             return TodoContext.Todos.ToList();
         }
+
+        public List<Todo> NotDone()
+        {
+            var notDone = from notReady in TodoContext.Todos
+                          where notReady.IsDone == false
+                          select notReady;
+
+            return notDone.ToList();
+        }
     }
 }

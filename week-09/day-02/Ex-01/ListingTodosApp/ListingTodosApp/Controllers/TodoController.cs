@@ -1,7 +1,5 @@
-﻿using ListingTodosApp.Models;
-using ListingTodosApp.Repositories;
+﻿using ListingTodosApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -19,7 +17,7 @@ namespace ListingTodosApp.Controllers
         [Route("")]
         public IActionResult List()
         {
-            return View(TodoRepository.GetList());
+            return View(TodoRepository.NotDone());
         }
 
         [Route("/add")]
