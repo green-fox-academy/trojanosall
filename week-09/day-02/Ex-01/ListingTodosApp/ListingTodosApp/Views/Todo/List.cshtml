@@ -27,7 +27,12 @@
                         <button id="table" class="number" type="submit">Delete</button>
                     </form>
                 </td>
-                <td><a href="/update">edit</a></td>
+                <td>
+                    <form action="/@todo.Id/update" method="post">
+                        <input type="hidden" name="Id" value="@todo.Id" />
+                        <button id="table" class="number" type="submit">Edit</button>
+                    </form>
+                </td>
             </tr>
         }
     </table>

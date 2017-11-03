@@ -1,4 +1,5 @@
-﻿using ListingTodosApp.Repositories;
+﻿using ListingTodosApp.Models;
+using ListingTodosApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -44,6 +45,22 @@ namespace ListingTodosApp.Controllers
         public IActionResult Delete(int id)
         {
             TodoRepository.Delete(id);
+            return RedirectToAction("List");
+        }
+
+        [Route("/{id}/update")]
+        [HttpPost]
+        public IActionResult Update(int id)
+        {
+            var todo = TodoRepository.Updating(id);
+            return View(todo);
+        }
+
+        [Route("/{id}/edit")]
+        [HttpPost]
+        public IActionResult Edit(Todo todo)
+        {
+            TodoRepository.UpdateTodo(todo);
             return RedirectToAction("List");
         }
     }
