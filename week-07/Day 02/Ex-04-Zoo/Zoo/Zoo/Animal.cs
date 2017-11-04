@@ -4,10 +4,15 @@
     {
         protected string name;
         protected int age;
+        protected string gender;
+        protected string habitat;
+        protected int numberOfLegs;
+        protected int averageOfWeight;
 
-        public abstract void Greet();
+        public abstract string Greet();
 
-        public abstract void WantChild();
+        public abstract string WantChild();
 
+        public abstract string GetName();
     }
 }

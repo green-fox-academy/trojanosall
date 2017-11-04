@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Zoo
+﻿namespace Zoo
 {
-    class Reptile
+    class Reptile : Animal
     {
+        public Reptile(string name)
+        {
+            this.name = name;
+        }
+
+        public override string GetName()
+        {
+            return name;
+        }
+
+        public override string Greet()
+        {
+            return $"Hello i am an reptile and my name is {name}";
+        }
+
+        public override string WantChild()
+        {
+            return "I wanna child... from egg";
+        }
     }
 }

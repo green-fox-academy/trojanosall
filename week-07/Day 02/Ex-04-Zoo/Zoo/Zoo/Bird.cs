@@ -1,17 +1,25 @@
-﻿using System;
-
-namespace Zoo
+﻿namespace Zoo
 {
     class Bird : Animal
     {
-        public override void Greet()
+        public Bird(string name)
         {
-            throw new NotImplementedException();
+            this.name = name;
         }
 
-        public override void WantChild()
+        public override string GetName()
         {
-            throw new NotImplementedException();
+            return name;
+        }
+
+        public override string Greet()
+        {
+            return $"Hello i am an bird and my name is {name}";
+        }
+
+        public override string WantChild()
+        {
+            return "I wanna child... from egg";
         }
     }
 }
