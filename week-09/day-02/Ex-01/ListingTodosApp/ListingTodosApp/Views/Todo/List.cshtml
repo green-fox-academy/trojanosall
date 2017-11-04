@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <link rel="stylesheet" type="text/css" href="~/List.css" />
 </head>
 <body>
     <h1>TODOS FOR TODAY</h1>
@@ -36,5 +37,10 @@
             </tr>
         }
     </table>
+
+    <form action="/add" method="get">
+        <button id="table" class="number" type="submit">Add New todo</button>
+    </form>
+
 </body>
 </html>

@@ -53,7 +53,11 @@ namespace ListingTodosApp.Repositories
 
         public Todo Updating(int id)
         {
-            return TodoContext.Todos.FirstOrDefault(x => x.Id == id);
+            var updateItem = from updateOne in TodoContext.Todos
+                             where updateOne.Id == id
+                             select updateOne;
+
+            return updateItem.FirstOrDefault();
         }
 
         public void UpdateTodo(Todo todo)
@@ -63,3 +67,5 @@ namespace ListingTodosApp.Repositories
         }
     }
 }
+
+//return TodoContext.Todos.FirstOrDefault(x => x.Id == id);
