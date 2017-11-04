@@ -4,12 +4,21 @@ namespace InstrumentExercise
 {
     class ElectricGuitar : StringedInstrument
     {
-        private string Name = "Electric Guitar";
-        private int NumberOfStrings = 6;
+        public ElectricGuitar()
+        {
+            name = "Electric Guitar";
+            numberOfStrings = 6;
+        }
+
+        public ElectricGuitar(int electricGuitarNumberOfStrings)
+        {
+            name = "Electric Guitar";
+            numberOfStrings = electricGuitarNumberOfStrings;
+        }
 
         public override void Sound()
         {
-            throw new NotImplementedException();
+            Console.WriteLine($"{name} is a {numberOfStrings}-stringed instrument that twangs.");
         }
     }
 }

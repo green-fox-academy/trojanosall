@@ -2,15 +2,8 @@
 {
     abstract class Instrument
     {
-        private readonly string Name;
-
-        protected Instrument(string name)
-        {
-            Name = name;
-        }
+        protected string name;
 
         public abstract void Play();
-
-
     }
 }

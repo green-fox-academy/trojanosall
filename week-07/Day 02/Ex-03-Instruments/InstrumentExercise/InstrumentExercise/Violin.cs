@@ -1,4 +1,6 @@
-﻿namespace InstrumentExercise
+﻿using System;
+
+namespace InstrumentExercise
 {
     class Violin : StringedInstrument
     {
@@ -8,9 +10,9 @@
             numberOfStrings = 4;
         }
 
-        public override string Sound()
+        public override void Sound()
         {
-            return "Screech";
+            Console.WriteLine($"{name} is a {numberOfStrings}-stringed instrument that screeches.");
         }
     }
 }
