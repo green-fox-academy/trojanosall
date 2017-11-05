@@ -2,6 +2,6 @@
 {
     interface IPrintable
     {
-        void printAllFields();
+        void PrintAllFields();
     }
 }

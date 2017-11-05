@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Printable
 {
-    public class Domino : IComparable
+    public class Domino : IComparable, IPrintable
     {
         private readonly int[] Values;
 
         public Domino(int valueA, int valueB)
         {
             Values = new int[] { valueA, valueB };
+        }
+
+        public void PrintAllFields()
+        {
+            Console.WriteLine(ToString()); ;
         }
 
         public int CompareTo(object obj)

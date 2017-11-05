@@ -22,7 +22,7 @@ namespace Printable
 
             foreach (var domino in dominoes)
             {
-                Console.Write(domino);
+                domino.PrintAllFields();
             }
 
             Console.ReadLine();
