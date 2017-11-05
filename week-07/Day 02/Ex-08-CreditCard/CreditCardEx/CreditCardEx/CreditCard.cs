@@ -4,8 +4,9 @@ namespace CreditCardEx
 {
     class CreditCard : CreditCardy
     {
-        private string codeAccount { get; set; }
-        private int nameCardHolder;
+        private string codeAccount;
+        private string nameCardHolder;
+        private int sumCVV;
         private int serialNumberOfCarHolder;
         private static Random random = new Random();
         private static readonly string chars = "0123456789";
@@ -13,20 +14,20 @@ namespace CreditCardEx
         public CreditCard(int serialNumber)
         {
             serialNumberOfCarHolder = serialNumber;
+            codeAccount = GetCodeAccount();
+            nameCardHolder = GetNameCardholder();
+            sumCVV = GetSumCVV();
         }
 
-        public int CumeSumCVV(string codeAccount)
+        public int CumeSumCVV(string CodeAccount)
         {
             int sumCVV = 0;
-            codeAccount = GetCodeAccount();
-            var x = codeAccount.ToCharArray();
+            var x = CodeAccount.ToCharArray();
 
             for (int i = 0; i <= x.Length - 1; i++)
             {
-                if (x[i] > '0' && x[i] <= '9')
-                {
-                    sumCVV += x[i] - '0';
-                }
+                sumCVV += x[i] - '0';
+
             }
             return sumCVV;
         }
@@ -40,9 +41,9 @@ namespace CreditCardEx
                 stringChars[i] = chars[random.Next(chars.Length)];
             }
 
-            var codeAccount = new String(stringChars);
+            var CodeAccount = new String(stringChars);
 
-            return codeAccount;
+            return CodeAccount;
         }
 
         public string GetNameCardholder()
@@ -59,7 +60,8 @@ namespace CreditCardEx
 
         public string Tostring()
         {
-            throw new NotImplementedException();
+            string cardFormat = string.Format("Name ={0} CC#={1} CVV={2}", nameCardHolder, codeAccount, sumCVV);
+            return cardFormat;
         }
     }
 }

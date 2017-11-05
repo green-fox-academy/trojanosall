@@ -10,12 +10,9 @@ namespace CreditCardEx
             {
                 var myCreditCard = new CreditCard(i);
 
-                Console.WriteLine("Name=" + myCreditCard.GetNameCardholder() + " CC#=" + myCreditCard.GetCodeAccount()
-                    + " CVV=" + myCreditCard.GetSumCVV());
+                Console.WriteLine(myCreditCard.Tostring());
             }
-
             Console.ReadKey();
-
         }
     }
 }
