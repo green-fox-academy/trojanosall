@@ -8,7 +8,7 @@ namespace CreditCardEx
         private int nameCardHolder;
         private int serialNumberOfCarHolder;
         private static Random random = new Random();
-        private static readonly string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        private static readonly string chars = "0123456789";
 
         public CreditCard(int serialNumber)
         {
@@ -22,7 +22,16 @@ namespace CreditCardEx
 
         public string GetCodeAccount()
         {
-            throw new NotImplementedException();
+            var stringChars = new char[10];
+
+            for (int i = 0; i < stringChars.Length; i++)
+            {
+                stringChars[i] = chars[random.Next(chars.Length)];
+            }
+
+            var codeAccount = new String(stringChars);
+
+            return codeAccount;
         }
 
         public string GetNameCardholder()
