@@ -7,6 +7,8 @@ namespace ReservationEx
         private string reservationCode;
         private string dow;
         private static Random random = new Random();
+        private static readonly string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        private static readonly string[] DaysName = new string[7] { "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN" };
 
         public Reservation()
         {
@@ -14,9 +16,7 @@ namespace ReservationEx
 
         public string GetCodeBooking()
         {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
             var stringChars = new char[8];
-            var random = new Random();
 
             for (int i = 0; i < stringChars.Length; i++)
             {
@@ -30,8 +30,6 @@ namespace ReservationEx
 
         public string GetDowBooking()
         {
-            var random = new Random();
-            string[] DaysName = new string[7] { "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN" };
 
             int RandomNumber = random.Next(DaysName.Length);
 
