@@ -4,7 +4,7 @@ namespace CreditCardEx
 {
     class CreditCard : CreditCardy
     {
-        private int codeAccount;
+        private string codeAccount { get; set; }
         private int nameCardHolder;
         private int serialNumberOfCarHolder;
         private static Random random = new Random();
@@ -17,7 +17,18 @@ namespace CreditCardEx
 
         public int CumeSumCVV(string codeAccount)
         {
-            throw new NotImplementedException();
+            int sumCVV = 0;
+            codeAccount = GetCodeAccount();
+            var x = codeAccount.ToCharArray();
+
+            for (int i = 0; i <= x.Length - 1; i++)
+            {
+                if (x[i] > '0' && x[i] <= '9')
+                {
+                    sumCVV += x[i] - '0';
+                }
+            }
+            return sumCVV;
         }
 
         public string GetCodeAccount()
@@ -43,7 +54,7 @@ namespace CreditCardEx
 
         public int GetSumCVV()
         {
-            throw new NotImplementedException();
+            return CumeSumCVV(codeAccount);
         }
 
         public string Tostring()
