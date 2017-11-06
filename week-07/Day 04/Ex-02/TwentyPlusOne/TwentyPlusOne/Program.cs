@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TwentyPlusOne
+﻿namespace TwentyPlusOne
 {
     class Program
     {
@@ -25,6 +19,13 @@ namespace TwentyPlusOne
             //    It should have a method that generates a random number between 15 and 21, which will be the opponents score
             //It should ask the player to continue or to stop drawing cards
             //    The game is lost, if the sum of the pulled cards are above 21 or below the random number
+
+            //var myCar = new Card();
+
+            //Console.WriteLine(myCar.GenerateRandomCardSuit());
+
+            //Console.ReadKey();
+
 
         }
     }
