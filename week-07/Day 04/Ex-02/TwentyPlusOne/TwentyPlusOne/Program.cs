@@ -24,7 +24,8 @@ namespace TwentyPlusOne
 
             var myCar = new Card();
 
-            Console.WriteLine(myCar.GenerateRandomCardRank());
+            Console.WriteLine(myCar.CardRank);
+            Console.WriteLine(myCar.CardValue);
 
             Console.ReadKey();
 
