@@ -10,13 +10,22 @@ namespace TwentyPlusOne
 
         public Card()
         {
+            cardSuit = GenerateRandomCardSuit();
+            cardRank = GenerateRandomCardRank();
         }
 
-        public object GenerateRandomCardSuit()
+        public string GenerateRandomCardSuit()
         {
-            Array SuitEnumValues = Enum.GetValues(typeof(SuitEnum));            
+            Array SuitEnumValues = Enum.GetValues(typeof(SuitEnum));
             SuitEnum RandomCardSuit = (SuitEnum)SuitEnumValues.GetValue(random.Next(SuitEnumValues.Length));
-            return RandomCardSuit;
+            return RandomCardSuit.ToString();
+        }
+
+        public string GenerateRandomCardRank()
+        {
+            Array RankEnumValues = Enum.GetValues(typeof(RankEnum));
+            RankEnum RandomCardRank = (RankEnum)RankEnumValues.GetValue(random.Next(RankEnumValues.Length));
+            return RandomCardRank.ToString();
         }
     }
 }
