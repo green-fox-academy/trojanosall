@@ -14,7 +14,7 @@ namespace FrontendEx.Controllers
 
         [HttpGet]
         [Route("/doubling")]
-        public IActionResult Index(int? input)
+        public IActionResult Doubling(int? input)
         {
             if (input == null)
             {
