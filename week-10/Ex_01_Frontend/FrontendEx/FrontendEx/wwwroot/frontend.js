@@ -16,7 +16,7 @@ handle = function handle(id, info, where, data) {
 }
 $("#doubling").on("click", function () {
     $.get(window.baseUrl + "/doubling", {}).done(function (data) {
-        if ("error" in data && data["error"] ==== "Please provide an input!") {
+        if ("error" in data && data["error"] === "Please provide an input!") {
             handle("#doubling_response", "OK - without data");
         } else {
             handle("#doubling_response", "not ok - without data", "Doubling", data);
