@@ -14,7 +14,7 @@ namespace FrontendEx.Controllers
 
         [HttpGet]
         [Route("/doubling")]
-        public IActionResult Index(int? input)
+        public IActionResult Doubling(int? input)
         {
             if (input == null)
             {
@@ -25,7 +25,7 @@ namespace FrontendEx.Controllers
 
         [HttpGet]
         [Route("/greeter")]
-        public IActionResult Index(string name, string title)
+        public IActionResult Greeter(string name, string title)
         {
             if (name == null)
             {
