@@ -70,6 +70,11 @@ namespace FrontendEx.Controllers
                 return Json(new { result = myDoUntilClass.Sum() });
             }
 
+            if (string.IsNullOrEmpty(what))
+            {
+                return NotFound();
+            }
+
             if (myDoUntilClass == null)
             {
                 return Json(new { error = "Please provide a number!" });

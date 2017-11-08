@@ -25,5 +25,13 @@ namespace FrontendEx.IntegrationTests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
+
+        [Fact]
+        public async Task ReturnWithOutWhat()
+        {
+            var response = await Client.GetAsync("/dountil");
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
     }
 }
