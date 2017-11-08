@@ -37,5 +37,16 @@ namespace RestTest
             //assert
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
+
+        [Fact]
+        public async Task ReturnErrorMessage()
+        {
+            //act
+            var response = await Context.Client.GetAsync("/doubling");
+            string responseJson = await response.Content.ReadAsStringAsync();
+
+            //assert
+            Assert.Equal("{\"error\":\"Please provide an input!\"}", responseJson);
+        }
     }
 }
