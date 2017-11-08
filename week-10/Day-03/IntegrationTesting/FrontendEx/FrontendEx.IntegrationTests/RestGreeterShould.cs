@@ -38,6 +38,28 @@ namespace FrontendEx.IntegrationTests
         }
 
         [Fact]
+        public async Task ReturnWithoutName()
+        {
+            //act
+            var response = await Client.GetAsync("/greeter?title=student");
+            string responseJson = await response.Content.ReadAsStringAsync();
+
+            //assert
+            Assert.Equal("{\"error\":\"Please provide a name!\"}", responseJson);
+        }
+
+        [Fact]
+        public async Task ReturnWithoutTitle()
+        {
+            //act
+            var response = await Client.GetAsync("/greeter?name=Petike");
+            string responseJson = await response.Content.ReadAsStringAsync();
+
+            //assert
+            Assert.Equal("{\"error\":\"Please provide a title!\"}", responseJson);
+        }
+
+        [Fact]
         public async Task ReturnWithContent()
         {
             //act
