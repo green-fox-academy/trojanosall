@@ -7,7 +7,7 @@ using Xunit;
 
 namespace FrontendEx.IntegrationTests
 {
-    class RestAppendaShould
+    public class RestAppendaShould
     {
         private readonly TestServer Server;
         private readonly HttpClient Client;
@@ -26,27 +26,27 @@ namespace FrontendEx.IntegrationTests
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
         }
 
-        //[Fact]
-        //public async Task ReturnErrorMessage()
-        //{
-        //    //act
-        //    var response = await Client.GetAsync("/appenda/{appendable}");
-        //    string responseJson = await response.Content.ReadAsStringAsync();
+        [Fact]
+        public async Task ReturnWithContent()
+        {
+            //act
+            var response = await Client.GetAsync("/appenda/kuty");
+            string responseJson = await response.Content.ReadAsStringAsync();
 
-        //    //assert
-        //    Assert.Equal("{\"error\":\"Please provide a name!\"}", responseJson);
-        //}
+            //assert
+            Assert.Equal("{\"appended\":\"kutya\"}", responseJson);
+        }
 
-        //[Fact]
-        //public async Task ReturnWithContent()
-        //{
-        //    //act
-        //    var response = await Client.GetAsync("/greeter?name=Petike&title=student");
-        //    string responseJson = await response.Content.ReadAsStringAsync();
+        [Fact]
+        public async Task ReturnNotFound()
+        {
+            //act
+            var response = await Client.GetAsync("/appenda");
+            string responseJson = await response.Content.ReadAsStringAsync();
 
-        //    //assert
-        //    Assert.Equal("{\"welcome_message\":\"Oh, hi there Petike, my dear student!\"}", responseJson);
-        //}
+            //assert
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
+        }
 
     }
 }
