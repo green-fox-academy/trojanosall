@@ -1,0 +1,30 @@
+﻿namespace MyBudgetApp.Models
+{
+    public enum ExpenseCategoryEnum
+    {
+        InternetAndTV,
+        GasUtilityService,
+        WaterUtilityService,
+        WasteUtilityService,
+        ElectricityUtilityservice,
+        LunchTinus,
+        LunchLoci,
+        MobileServiceFee,
+        Cigarette,
+        Shopping,
+        Fuel,
+        PublicTransportFee,
+        Clothes,
+        Recreation,
+        Car,
+        BankLoan,
+        Savings,
+        BankCharges,
+        HealthCare,
+        Gifts,
+        Childs,
+        Learning,
+        Other,
+        Travel
+    }
+}
