@@ -9,35 +9,39 @@
 </head>
 <body>
     <h1>TODOS FOR TODAY</h1>
-    <h2><a href="/add">Add new Todo</a></h2>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>TITLE</th>
-            <th>IS URGENT?</th>
-            <th>IS DONE?</th>
-        </tr>
-        @foreach (var todo in Model)
-            {
+
+    <table class="table table-striped">
+        <tbody>
             <tr>
-                <td>@todo.Id </td>
-                <td>@todo.Title </td>
-                <td>@todo.IsUrgent </td>
-                <td>@todo.IsDone</td>
-                <td>
-                    <form action="/@todo.Id/delete" method="post">
-                        <input type="hidden" name="Id" value="@todo.Id" />
-                        <button id="table" class="number" type="submit">Delete</button>
-                    </form>
-                </td>
-                <td>
-                    <form action="/@todo.Id/update" method="post">
-                        <input type="hidden" name="Id" value="@todo.Id" />
-                        <button id="table" class="number" type="submit">Edit</button>
-                    </form>
-                </td>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>IS URGENT?</th>
+                <th>IS DONE?</th>
+                <th></th>
+                <th></th>
             </tr>
-        }
+            @foreach (var todo in Model)
+            {
+                <tr>
+                    <td>@todo.Id </td>
+                    <td>@todo.Title </td>
+                    <td>@todo.IsUrgent </td>
+                    <td>@todo.IsDone</td>
+                    <td>
+                        <form action="/@todo.Id/delete" method="post">
+                            <input type="hidden" name="Id" value="@todo.Id" />
+                            <button id="table" class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/@todo.Id/update" method="post">
+                            <input type="hidden" name="Id" value="@todo.Id" />
+                            <button id="table" class="btn btn-success" type="submit">Edit</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
 
     <form action="/add" method="get">
@@ -45,7 +49,6 @@
     </form>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-
     <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>

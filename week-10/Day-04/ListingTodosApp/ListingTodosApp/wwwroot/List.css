@@ -6,3 +6,14 @@
     padding: 40px 15px;
     text-align: center;
 }
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: mediumpurple;
+    color: white;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
