@@ -1,0 +1,52 @@
+﻿@model ICollection<ListingTodosApp.Models.Todo>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/List.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>TODOS FOR TODAY</h1>
+    <h2><a href="/add">Add new Todo</a></h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>TITLE</th>
+            <th>IS URGENT?</th>
+            <th>IS DONE?</th>
+        </tr>
+        @foreach (var todo in Model)
+            {
+            <tr>
+                <td>@todo.Id </td>
+                <td>@todo.Title </td>
+                <td>@todo.IsUrgent </td>
+                <td>@todo.IsDone</td>
+                <td>
+                    <form action="/@todo.Id/delete" method="post">
+                        <input type="hidden" name="Id" value="@todo.Id" />
+                        <button id="table" class="number" type="submit">Delete</button>
+                    </form>
+                </td>
+                <td>
+                    <form action="/@todo.Id/update" method="post">
+                        <input type="hidden" name="Id" value="@todo.Id" />
+                        <button id="table" class="number" type="submit">Edit</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <form action="/add" method="get">
+        <button id="table" class="number" type="submit">Add New todo</button>
+    </form>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using FrontendEx.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using System.Net;
 using System.Net.Http;
@@ -29,9 +30,18 @@ namespace FrontendEx.IntegrationTests
         [Fact]
         public async Task ReturnWithOutWhat()
         {
-            var response = await Client.GetAsync("/dountil");
+            var myDoUntilClass = new DoUntilClass();
 
-            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            var convertedUsedUntil = JsonConvert.SerializeObject(usedUntil);
+            var data = new StringContent(convertedUsedUntil.ToString(),
+                         encoding: Encoding.UTF8,
+                         mediaType: "application/json");
+
+            var response = await Client.PostAsync("dountil", data);
+
+            var responseString = await response.Content.ReadAsStringAsync();
+
+            Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
         }
     }
 }
