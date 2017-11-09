@@ -6,7 +6,7 @@
         GasUtilityService,
         WaterUtilityService,
         WasteUtilityService,
-        ElectricityUtilityservice,
+        ElectricityUtilityService,
         LunchTinus,
         LunchLoci,
         MobileServiceFee,
