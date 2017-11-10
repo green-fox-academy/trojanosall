@@ -1,1 +1,14 @@
-﻿
+﻿@model MyBudgetApp.Models.Expense
+<body>
+    <h1>Edit Expense</h1>
+    @using (Html.BeginForm("edit", "expense"))
+    {
+        <input type="hidden" name="Id" value="@Model.Id" />
+        @Html.LabelFor(x => x.Date) @Html.TextBoxFor(x => x.Date)<br />
+        @Html.LabelFor(x => x.Title) @Html.TextBoxFor(x => x.Title)<br />
+        @Html.LabelFor(x => x.Amount) @Html.TextBoxFor(x => x.Amount)<br />
+        @Html.LabelFor(x => x.Category) @Html.TextBoxFor(x => x.Category)<br />
+        <button type="submit">Submit</button>
+    }
+    <h2><a href="">Cancel</a></h2>
+</body>
