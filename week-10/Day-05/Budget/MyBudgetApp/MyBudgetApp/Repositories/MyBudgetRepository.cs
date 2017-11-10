@@ -32,5 +32,15 @@ namespace MyBudgetApp.Repositories
             MyBudgetContext.Expenses.Add(expense);
             MyBudgetContext.SaveChanges();
         }
+
+        public void Delete(int id)
+        {
+            var deleteItem = from deleteOne in MyBudgetContext.Expenses
+                             where deleteOne.Id == id
+                             select deleteOne;
+
+            MyBudgetContext.Expenses.Remove(deleteItem.FirstOrDefault());
+            MyBudgetContext.SaveChanges();
+        }
     }
 }
