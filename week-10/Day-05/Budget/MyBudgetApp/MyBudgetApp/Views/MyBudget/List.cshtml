@@ -1,0 +1,50 @@
+﻿@model ICollection<MyBudgetApp.Models.Expense>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="~/List.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>MY BUDGET</h1>
+    <table>
+        <tbody>
+            <tr>
+                <th>ID</th>
+                <th>DATE</th>
+                <th>TITLE</th>
+                <th>AMOUNT</th>
+                <th>CATEGORY</th>
+                <th></th>
+                <th></th>
+            </tr>
+            @foreach (var expense in Model)
+            {
+                <tr>
+                    <td>@expense.Id </td>
+                    <td>@expense.Date </td>
+                    <td>@expense.Title </td>
+                    <td>@expense.Amount</td>
+                    <td>@expense.Category</td>
+                    <td>
+                        <form action="/@expense.Id/delete" method="post">
+                            <input type="hidden" name="Id" value="@expense.Id" />
+                            <button id="table" class="number" type="submit">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/@expense.Id/update" method="post">
+                            <input type="hidden" name="Id" value="@expense.Id" />
+                            <button id="table" class="number" type="submit">Edit</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <form action="/add" method="get">
+        <button id="table" class="number" type="submit">Add New Expense</button>
+    </form>
+
+</body>
+</html>

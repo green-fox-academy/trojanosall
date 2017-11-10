@@ -5,10 +5,10 @@ namespace MyBudgetApp.Models
     public class Expense
     {
         public int Id { get; set; }
+        public int Amount { get; set; }
         public DateTime Date { get; set; }
         public string Title { get; set; }
         public ExpenseCategoryEnum Category { get; set; }
-
 
         //public string GetExpenseCategory(ExpenseCategoryEnum Category)
         //{
