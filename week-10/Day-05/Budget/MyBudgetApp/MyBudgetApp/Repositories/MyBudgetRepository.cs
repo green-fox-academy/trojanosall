@@ -42,5 +42,20 @@ namespace MyBudgetApp.Repositories
             MyBudgetContext.Expenses.Remove(deleteItem.FirstOrDefault());
             MyBudgetContext.SaveChanges();
         }
+
+        public Expense Updating(int id)
+        {
+            var updateItem = from updateOne in MyBudgetContext.Expenses
+                             where updateOne.Id == id
+                             select updateOne;
+
+            return updateItem.FirstOrDefault();
+        }
+
+        public void UpdateExpense(Expense expense)
+        {
+            MyBudgetContext.Expenses.Update(expense);
+            MyBudgetContext.SaveChanges();
+        }
     }
 }
