@@ -20,13 +20,14 @@ namespace MyBudgetApp.Repositories
             return MyBudgetContext.Expenses.ToList();
         }
 
-        public void AddExpense(string title, DateTime date, ExpenseCategoryEnum category)
+        public void AddExpense(string title, DateTime date, ExpenseCategoryEnum category, int amount)
         {
             var expense = new Expense()
             {
                 Title = title,
                 Date = date,
                 Category = category,
+                Amount = amount
             };
 
             MyBudgetContext.Expenses.Add(expense);

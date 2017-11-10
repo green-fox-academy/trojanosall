@@ -32,9 +32,9 @@ namespace MyBudgetApp.Controllers
 
         [Route("/add")]
         [HttpPost]
-        public IActionResult Add(string title, DateTime date, ExpenseCategoryEnum category)
+        public IActionResult Add(string title, DateTime date, ExpenseCategoryEnum category, int amount)
         {
-            MyBudgetRepository.AddExpense(title, date, category);
+            MyBudgetRepository.AddExpense(title, date, category, amount);
             return RedirectToAction("List");
         }
 
