@@ -24,7 +24,7 @@ namespace TwentyPlusOne
 
             var myCar = new Card(SuitEnum.Clubs, RankEnum.Queen);
 
-            Console.WriteLine(myCar.CardSuit);
+            Console.WriteLine(myCar.Carduit);
             Console.WriteLine(myCar.CardRank);
             Console.WriteLine(myCar.CardName);
             Console.WriteLine(myCar.CardValue);

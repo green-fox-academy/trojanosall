@@ -9,8 +9,6 @@ namespace TwentyPlusOne
         public string CardName { get; set; }
         public int CardValue { get; set; }
 
-
-
         public Card(SuitEnum cardSuit, RankEnum cardRank)
         {
             CardSuit = cardSuit;
