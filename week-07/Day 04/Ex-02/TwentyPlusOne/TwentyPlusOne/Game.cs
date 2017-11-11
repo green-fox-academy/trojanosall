@@ -36,5 +36,22 @@ namespace TwentyPlusOne
 
             return PlayerCards;
         }
+
+        public void PrintActualPlayerCardsAndPoints(List<Card> playerCards)
+        {
+            Console.WriteLine("\nYour cards are the following:");
+            foreach (var cards in playerCards)
+            {
+                Console.WriteLine(cards.CardName);
+            }
+
+            Console.WriteLine("\nThe value of your cards is the following:");
+
+            int TotalValueOfPlayerCards = 0;
+            foreach (var cards in playerCards)
+            {
+                TotalValueOfPlayerCards += cards.CardValue;
+            }
+        }
     }
 }
