@@ -31,9 +31,7 @@ namespace TwentyPlusOne
 
             var myDeck = new Deck();
 
-            var myVeryNew2Deck = myDeck.GenerateMyDeck();
-
-            //myDeck.Shuffle(myNewDeck);
+            var myNewDeck = myDeck.ShuffleDeck(myDeck.GenerateMyDeck());
 
             Console.ReadKey();
 

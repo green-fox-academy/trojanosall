@@ -7,6 +7,8 @@ namespace TwentyPlusOne
     {
         public List<Card> myDeck;
 
+        static readonly Random RandomNumber = new Random();
+
         public List<Card> GenerateMyDeck()
         {
             int NumberOfCardPackages = 2;
@@ -24,6 +26,20 @@ namespace TwentyPlusOne
                 }
             }
             return myDeck;
+        }
+
+        public List<Card> ShuffleDeck(List<Card> shuffledCard)
+        {
+            int n = shuffledCard.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = RandomNumber.Next(n + 1);
+                Card temporary = shuffledCard[k];
+                shuffledCard[k] = shuffledCard[n];
+                shuffledCard[n] = temporary;
+            }
+            return shuffledCard;
         }
     }
 }
