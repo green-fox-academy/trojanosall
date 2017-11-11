@@ -57,5 +57,13 @@ namespace TwentyPlusOne
 
             return LastPulledCard;
         }
+
+        public Card PullRandom(List<Card> shuffledCards)
+        {
+            Card RandomCard = shuffledCards[RandomNumber.Next(0, shuffledCards.Count - 1)];
+            shuffledCards.Remove(RandomCard);
+
+            return RandomCard;
+        }
     }
 }
