@@ -31,7 +31,9 @@ namespace TwentyPlusOne
 
             var myDeck = new Deck();
 
-            var myNewDeck = myDeck.ShuffleDeck(myDeck.GenerateMyDeck());
+            var FirstPulledCar = myDeck.PullFirst(myDeck.ShuffleDeck(myDeck.GenerateMyDeck()));
+
+            
 
             Console.ReadKey();
 
