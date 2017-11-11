@@ -49,5 +49,13 @@ namespace TwentyPlusOne
 
             return FirstPulledCard;
         }
+
+        public Card PullLast(List<Card> shuffledCards)
+        {
+            Card LastPulledCard = shuffledCards[shuffledCards.Count - 1];
+            shuffledCards.Remove(LastPulledCard);
+
+            return LastPulledCard;
+        }
     }
 }
