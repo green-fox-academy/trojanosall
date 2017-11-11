@@ -7,7 +7,6 @@ namespace TwentyPlusOne
     {
         public List<Card> myDeck;
 
-
         public List<Card> GenerateMyDeck()
         {
             int NumberOfCardPackages = 2;
