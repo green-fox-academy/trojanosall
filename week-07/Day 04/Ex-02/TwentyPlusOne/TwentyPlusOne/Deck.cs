@@ -28,18 +28,26 @@ namespace TwentyPlusOne
             return myDeck;
         }
 
-        public List<Card> ShuffleDeck(List<Card> shuffledCard)
+        public List<Card> ShuffleDeck(List<Card> shuffledCards)
         {
-            int n = shuffledCard.Count;
+            int n = shuffledCards.Count;
             while (n > 1)
             {
                 n--;
                 int k = RandomNumber.Next(n + 1);
-                Card temporary = shuffledCard[k];
-                shuffledCard[k] = shuffledCard[n];
-                shuffledCard[n] = temporary;
+                Card temporary = shuffledCards[k];
+                shuffledCards[k] = shuffledCards[n];
+                shuffledCards[n] = temporary;
             }
-            return shuffledCard;
+            return shuffledCards;
+        }
+
+        public Card PullFirst(List<Card> shuffledCards)
+        {
+            Card FirstPulledCard = shuffledCards[0];
+            shuffledCards.Remove(FirstPulledCard);
+
+            return FirstPulledCard;
         }
     }
 }
