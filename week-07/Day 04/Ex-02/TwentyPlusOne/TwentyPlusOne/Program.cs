@@ -22,9 +22,11 @@ namespace TwentyPlusOne
             //It should ask the player to continue or to stop drawing cards
             //    The game is lost, if the sum of the pulled cards are above 21 or below the random number
 
-            var myCar = new Card();
+            var myCar = new Card(SuitEnum.Clubs, RankEnum.Queen);
 
+            Console.WriteLine(myCar.CardSuit);
             Console.WriteLine(myCar.CardRank);
+            Console.WriteLine(myCar.CardName);
             Console.WriteLine(myCar.CardValue);
 
             Console.ReadKey();

@@ -1,56 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace TwentyPlusOne
 {
-    class Card
+    public class Card
     {
-        public string CardSuit { get; set; }
-        public string CardRank { get; set; }
+        public SuitEnum CardSuit { get; set; }
+        public RankEnum CardRank { get; set; }
         public string CardName { get; set; }
         public int CardValue { get; set; }
-        public Dictionary<string, int> CardRankAndCardValueMapping = new Dictionary<string, int>()
-        {
-            {RankEnum.Two.ToString(), 2},
-            {RankEnum.Three.ToString(), 3},
-            {RankEnum.Four.ToString(), 4},
-            {RankEnum.Five.ToString(), 5},
-            {RankEnum.Six.ToString(), 6},
-            {RankEnum.Seven.ToString(), 7},
-            {RankEnum.Eight.ToString(), 8},
-            {RankEnum.Nine.ToString(), 9},
-            {RankEnum.Ten.ToString(), 10},
-            {RankEnum.Jack.ToString(), 10},
-            {RankEnum.Queen.ToString(), 10},
-            {RankEnum.King.ToString(), 10},
-            {RankEnum.Ace.ToString(), 11},
-        };
-        private static Random random = new Random();
 
-        public Card()
+
+
+        public Card(SuitEnum cardSuit, RankEnum cardRank)
         {
-            CardSuit = GenerateRandomCardSuit();
-            CardRank = GenerateRandomCardRank();
+            CardSuit = cardSuit;
+            CardRank = cardRank;
             CardName = CardSuit + " " + CardRank;
             CardValue = GetCardValue();
         }
 
-        public string GenerateRandomCardSuit()
-        {
-            Array SuitEnumValues = Enum.GetValues(typeof(SuitEnum));
-            SuitEnum RandomCardSuit = (SuitEnum)SuitEnumValues.GetValue(random.Next(SuitEnumValues.Length));
-            return RandomCardSuit.ToString();
-        }
-
-        public string GenerateRandomCardRank()
-        {
-            Array RankEnumValues = Enum.GetValues(typeof(RankEnum));
-            RankEnum RandomCardRank = (RankEnum)RankEnumValues.GetValue(random.Next(RankEnumValues.Length));
-            return RandomCardRank.ToString();
-        }
-
         public int GetCardValue()
         {
+            Dictionary<object, int> CardRankAndCardValueMapping = new Dictionary<object, int>()
+        {
+            {RankEnum.Two, 2},
+            {RankEnum.Three, 3},
+            {RankEnum.Four, 4},
+            {RankEnum.Five, 5},
+            {RankEnum.Six, 6},
+            {RankEnum.Seven, 7},
+            {RankEnum.Eight, 8},
+            {RankEnum.Nine, 9},
+            {RankEnum.Ten, 10},
+            {RankEnum.Jack, 10},
+            {RankEnum.Queen, 10},
+            {RankEnum.King, 10},
+            {RankEnum.Ace, 11},
+        };
+
             int CardValue = CardRankAndCardValueMapping[CardRank];
             return CardValue;
         }
