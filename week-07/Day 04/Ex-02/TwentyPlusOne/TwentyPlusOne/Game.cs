@@ -19,11 +19,11 @@ namespace TwentyPlusOne
             return OponentScore;
         }
 
-        public List<Card> GetActualGameDeck()
-        {
-            List<Card> actualGameDeck = GameDeck.ShuffleDeck(GameDeck.GenerateMyDeck());
-            return actualGameDeck;
-        }
+        //public List<Card> GetActualGameDeck()
+        //{
+        //    List<Card> actualGameDeck = GameDeck.ShuffleDeck(GameDeck.GenerateMyDeck());
+        //    return actualGameDeck;
+        //}
 
 
         public List<Card> GetInitialPlayerCards(List<Card> actualGameDeck)
@@ -53,5 +53,20 @@ namespace TwentyPlusOne
                 TotalValueOfPlayerCards += cards.CardValue;
             }
         }
+
+        public void StartGame()
+        {
+            Console.WriteLine($"Welcome to My Black Jack Game!");
+
+            List<Card> actualGameDeck = GameDeck.ShuffleDeck(GameDeck.GenerateMyDeck());
+
+            List<Card> PlayerCards = GetInitialPlayerCards(actualGameDeck);
+
+            PrintActualPlayerCardsAndPoints(PlayerCards);
+
+            Console.WriteLine($"\n The value of cards of Bank is the following: {GetOponentScore()} ");
+
+        }
+
     }
 }
