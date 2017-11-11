@@ -19,7 +19,14 @@ namespace TwentyPlusOne
             return OponentScore;
         }
 
-        public List<Card> GetPlayerCards(List<Card> actualGameDeck)
+        public List<Card> GetActualGameDeck()
+        {
+            List<Card> actualGameDeck = GameDeck.ShuffleDeck(GameDeck.GenerateMyDeck());
+            return actualGameDeck;
+        }
+
+
+        public List<Card> GetInitialPlayerCards(List<Card> actualGameDeck)
         {
             PlayerCards = new List<Card>();
             Card FirstPlayerCard = GameDeck.PullFirst(actualGameDeck);
@@ -29,6 +36,5 @@ namespace TwentyPlusOne
 
             return PlayerCards;
         }
-
     }
 }
