@@ -1,35 +1,39 @@
 ﻿@model List<bankofsimba.Models.BankAccount>
->
-    <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title></title>
-        <link rel="stylesheet" type="text/css" href="/StyleSheet.css" />
-    </head>
-    <body>
-        <table>
-            <tr>
-                <th>Index</th>
-                <th>Name</th>
-                <th>Balance</th>
-                <th>Type</th>
-                <th>Is the King the owner?</th>
-                <th>Good</th>
-            </tr>
-            @{ int index = 0; }
-            @foreach (var animals in Model)
-            {
+    >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/StyleSheet.css" />
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Type</th>
+            <th>Is the King the owner?</th>
+            <th>Good</th>
+        </tr>
+        @{ int index = 0; }
+        @foreach (var animals in Model)
+        {
             if (animals.KingIsTheOwner)
             {
-            <tr>
-                <td>@(++index) </td>
-                <td>@animals.Name </td>
-                <td>@animals.Balance.ToString("0.00 Zebra") </td>
-                <td>@animals.AnimalType </td>
-                <td>@animals.KingIsTheOwner </td>
-                <td>@animals.GoodOrNot </td>
-            </tr>
+                <tr>
+                    <td>@(++index) </td>
+                    <td>@animals.Name </td>
+                    <td>@animals.Balance.ToString("0.00 Zebra") </td>
+                    <td>@animals.AnimalType </td>
+                    <td>@animals.KingIsTheOwner </td>
+                    <td>@animals.GoodOrNot </td>
+                    @using (Html.BeginForm("Increase", "home"))
+                    {
+                        <td><input type="submit" value="Raise" /></td>
+                    }
+                </tr>
             }
-            }
-        </table>
-    </body>
+        }
+    </table>
+</body>
 </html>

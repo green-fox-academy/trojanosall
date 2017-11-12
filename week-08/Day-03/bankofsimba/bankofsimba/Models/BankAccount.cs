@@ -21,5 +21,18 @@
             GoodOrNot = goodOrNot;
         }
 
+        public void Raise()
+        {
+            if (GoodOrNot != true)
+            {
+                Balance += 100;
+            }
+            else
+            {
+                Balance += 10;
+            }
+        }
     }
+
 }
+

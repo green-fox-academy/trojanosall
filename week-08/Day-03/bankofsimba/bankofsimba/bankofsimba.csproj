@@ -19,4 +19,10 @@
     <Folder Include="wwwroot\Style\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\StyleSheet.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
