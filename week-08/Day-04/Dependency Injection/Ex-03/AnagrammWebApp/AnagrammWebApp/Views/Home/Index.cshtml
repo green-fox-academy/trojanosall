@@ -1,0 +1,19 @@
+﻿@model AnagrammWebApp.Models.AnagramChecker
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @using (Html.BeginForm("index", "home"))
+    {
+        <p>ANAGRAM CHECKER</p>
+        <p>FIRST WORD:</p>
+        <p>@Html.TextBoxFor(model => model.FirstWord)</p>
+        <p>SECOND WORD:</p>
+        <p>@Html.TextBoxFor(model => model.SecondWord)</p>
+        <button type="submit">Are these words anagramm? Check it?</button>
+    }
+
+</body>
+</html>
