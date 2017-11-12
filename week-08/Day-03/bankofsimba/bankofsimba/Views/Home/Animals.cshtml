@@ -20,7 +20,7 @@
         {
             if (animals.KingIsTheOwner)
             {
-                <tr>
+                <tr style="@((animals.KingIsTheOwner) ? "color:red" : "color:crim")">
                     <td>@(++index) </td>
                     <td>@animals.Name </td>
                     <td>@animals.Balance.ToString("0.00 Zebra") </td>

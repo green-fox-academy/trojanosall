@@ -39,9 +39,22 @@ namespace bankofsimba.Controllers
 
         [HttpPost]
         [Route("Animals")]
-        public IActionResult Increase(string Name)
+        public IActionResult Increase()
         {
-            MyBankAccount.Raise();
+            List<BankAccount> animalsList = new List<BankAccount>
+            {
+                new BankAccount("Mufasza", 4000, AnimalType.lion, true, true),
+                new BankAccount("Rafiki", 500, AnimalType.mandrill, true, true),
+                new BankAccount("Zazu", 750, AnimalType.hornbill, true, true),
+                new BankAccount("Pumbaa", 10000, AnimalType.warthog, true, true),
+                new BankAccount("Timon", 20, AnimalType.merkat, true, true)
+            };
+
+            foreach (var animal in animalsList)
+            {
+                animal.Raise();
+            }
+
             return RedirectToAction("Animals");
         }
     }
