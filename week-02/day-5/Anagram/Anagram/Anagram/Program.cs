@@ -33,27 +33,27 @@ namespace Anagram
 
         }
 
-        private static void AnagramChecker(string firstUserinput, string secondUserinput)
+        private static void AnagramChecker(string FirstWord, string SecondWord)
         {
-            if (firstUserinput.Length != secondUserinput.Length)                            //eleve nem lehet anagramma, ha a ket szo hossza eltero.
+            if ((FirstWord != null) && (SecondWord != null))
             {
-                Console.WriteLine("It is not an anagram.");
-            }
-            else
-            {
-                Char[] firstUserinputArray = firstUserinput.ToCharArray();                   // A ket szobol csinaltam ket char tipusu arrayt
-                Char[] secondUserinputArray = secondUserinput.ToCharArray();
+                Char[] FirstWordArray = FirstWord.Replace(" ", "").ToLower().ToCharArray();
+                Char[] SecondWordArray = SecondWord.Replace(" ", "").ToLower().ToCharArray();
 
-                var result = firstUserinputArray.Except(secondUserinputArray);               // Google haverom mondta ezt a tippet. Az elso tombol csinaltam egy olyan tombot, amiben nincsenek benne a masodik tomb elemei. Ha a ket tomb megegyezik, akor az uj tombnek nincs eleme.
+                var result = FirstWordArray.Except(SecondWordArray);
                 if (result.Count() == 0)
                 {
                     Console.WriteLine("It is an anagram.");
                 }
-                else
-                {
-                    Console.WriteLine("It is not an anagram.");
-                }
             }
+            Console.WriteLine("It is not an anagram.");
         }
+
+
+
+
+
+
     }
 }
+

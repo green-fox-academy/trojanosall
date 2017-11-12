@@ -7,22 +7,28 @@ namespace AnagrammWebApp.Models
     {
         public string FirstWord { get; set; }
         public string SecondWord { get; set; }
-        public bool IsAnagram { get; set; }
 
-        public void IsAnagramOrNot(string input1, string input2)
+        public bool IsAnagram()
         {
-            if (input1 != null && input2 != null)
+            if (FirstWord.Length != SecondWord.Length)
             {
-                Char[] firstUserinputArray = input1.Replace(" ", "").ToLower().ToCharArray();
-                Char[] secondUserinputArray = input2.Replace(" ", "").ToLower().ToCharArray();
+                return false;
+            }
+            else
+            {
+                Char[] firstStringArray = FirstWord.Replace(" ", "").ToLower().ToCharArray();
+                Char[] secondStringArray = SecondWord.Replace(" ", "").ToLower().ToCharArray();
 
-                var result = firstUserinputArray.Except(secondUserinputArray);
+                var result = firstStringArray.Except(secondStringArray);
                 if (result.Count() == 0)
                 {
-                    IsAnagram = true;
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
-            IsAnagram = false;
         }
     }
 }
