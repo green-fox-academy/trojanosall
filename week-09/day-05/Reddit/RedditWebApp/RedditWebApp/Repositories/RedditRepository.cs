@@ -1,4 +1,7 @@
 ﻿using RedditWebApp.Entities;
+using RedditWebApp.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace RedditWebApp.Repositories
 {
@@ -11,5 +14,9 @@ namespace RedditWebApp.Repositories
             this.redditContext = redditContext;
         }
 
+        public List<Reddit> GetList()
+        {
+            return redditContext.Reddits.ToList();
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace RedditWebApp.Controllers
         [Route("/post")]
         public IActionResult Post()
         {
-            return View();
+            return View(redditRepository.GetList());
         }
     }
 }
