@@ -19,7 +19,6 @@ namespace RedditWebApp.Repositories
             return RedditContext.Reddits.ToList();
         }
 
-
         public void Vote(string direction, int id)
         {
             var votedItem = (from votedOne in RedditContext.Reddits
@@ -37,7 +36,17 @@ namespace RedditWebApp.Repositories
 
             RedditContext.Update(votedItem);
             RedditContext.SaveChanges();
+        }
 
+        public void AddReddit(string content)
+        {
+            var myReddit = new Reddit()
+            {
+                Content = content
+            };
+
+            RedditContext.Add(myReddit);
+            RedditContext.SaveChanges();
         }
     }
 }

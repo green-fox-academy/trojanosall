@@ -5,7 +5,7 @@
     <title></title>
 </head>
 <body>
-    <form action="post/add" method="get">
+    <form action="/add" method="get">
         <button id="table" class="number" type="submit">Add new post</button>
     </form>
 
@@ -27,6 +27,7 @@
                     <a href="/vote/down/@reddit.Id">-</a>
                 </td>
                 <td>@reddit.Content</td>
+                <td>@reddit.Date</td>
             </tr>
         }
     </table>

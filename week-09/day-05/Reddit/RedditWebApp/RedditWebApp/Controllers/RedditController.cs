@@ -22,8 +22,22 @@ namespace RedditWebApp.Controllers
             return View(redditRepository.GetList());
         }
 
+        [Route("/add")]
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [Route("/add")]
+        [HttpPost]
+        public IActionResult Add(string content)
+        {
+            redditRepository.AddReddit(content);
+            return RedirectToAction("Post");
+        }
+
         [Route("/vote/up/{id}")]
-        //[HttpPost]
         public IActionResult UpVote(int id)
         {
             redditRepository.Vote("up", id);
@@ -31,12 +45,10 @@ namespace RedditWebApp.Controllers
         }
 
         [Route("/vote/down/{id}")]
-        //[HttpPost]
         public IActionResult DownVote(int id)
         {
             redditRepository.Vote("down", id);
             return RedirectToAction("Post");
         }
-
     }
 }
