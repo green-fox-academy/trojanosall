@@ -14,7 +14,9 @@ namespace RedditWebApp.Controllers
             this.redditRepository = redditRepository;
         }
 
-        public IActionResult Index()
+        [HttpGet]
+        [Route("/post")]
+        public IActionResult Post()
         {
             return View();
         }
