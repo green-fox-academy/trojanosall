@@ -18,5 +18,16 @@ namespace RedditWebApp.Repositories
         {
             return redditContext.Reddits.ToList();
         }
+
+        public Reddit UpVote(int id)
+        {
+            var upgradeItem = from upgradeOne in redditContext.Reddits
+                              where upgradeOne.Id == id
+                              select upgradeOne;
+
+            upgradeItem.FirstOrDefault().Score += 1;
+
+            return upgradeItem.FirstOrDefault();
+        }
     }
 }
