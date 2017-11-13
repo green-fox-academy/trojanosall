@@ -9,6 +9,7 @@ namespace RedditWebApp.Entities
         {
         }
 
+        public static object Reddit { get; internal set; }
         public DbSet<Reddit> Reddits { get; set; }
     }
 }

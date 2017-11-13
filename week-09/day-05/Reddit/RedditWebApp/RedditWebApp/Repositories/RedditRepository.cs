@@ -21,13 +21,19 @@ namespace RedditWebApp.Repositories
 
         public Reddit UpVote(int id)
         {
-            var upgradeItem = from upgradeOne in redditContext.Reddits
-                              where upgradeOne.Id == id
-                              select upgradeOne;
+            var upVoteItem = from upVoteOne in redditContext.Reddits
+                             where upVoteOne.Id == id
+                             select upVoteOne;
 
-            upgradeItem.FirstOrDefault().Score += 1;
+            upVoteItem.FirstOrDefault().Score += 1;
 
-            return upgradeItem.FirstOrDefault();
+            return upVoteItem.FirstOrDefault();
+        }
+
+        public void UpVoteReddit(Reddit reddit)
+        {
+            redditContext.Reddits.Update(reddit);
+            redditContext.SaveChanges();
         }
 
         public Reddit DownVote(int id)

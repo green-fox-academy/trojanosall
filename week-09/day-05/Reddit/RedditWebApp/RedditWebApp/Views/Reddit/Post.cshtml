@@ -18,10 +18,16 @@
             <th>Content</th>
         </tr>
         @foreach (var reddit in Model)
-            {
+        {
             <tr>
                 <td>@reddit.Score</td>
-                <td>UP / DOWN</td>
+                <td>
+                    <form action="/@reddit.Id/upvote" method="post">
+                        <input type="hidden" name="Id" value="@reddit.Id" />
+                        <button id="table" class="number" type="submit">Upvote</button>
+                    </form>
+
+                </td>
                 <td>@reddit.Content</td>
             </tr>
         }
