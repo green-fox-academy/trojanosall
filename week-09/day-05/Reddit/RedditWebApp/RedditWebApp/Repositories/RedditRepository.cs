@@ -29,5 +29,16 @@ namespace RedditWebApp.Repositories
 
             return upgradeItem.FirstOrDefault();
         }
+
+        public Reddit DownVote(int id)
+        {
+            var downgradeItem = from downgradeOne in redditContext.Reddits
+                                where downgradeOne.Id == id
+                                select downgradeOne;
+
+            downgradeItem.FirstOrDefault().Score += 1;
+
+            return downgradeItem.FirstOrDefault();
+        }
     }
 }
