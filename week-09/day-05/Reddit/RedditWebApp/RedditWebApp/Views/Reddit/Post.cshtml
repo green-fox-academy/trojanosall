@@ -1,8 +1,31 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿@model ICollection<RedditWebApp.Models.Reddit>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
 </head>
 <body>
-    <h1> NU LATSZIK-E</h1>
+    <form action="post/add" method="get">
+        <button id="table" class="number" type="submit">Add new post</button>
+    </form>
+
+    <h1>Posts</h1>
+
+    <table>
+        <tr>
+            <th>SCORE</th>
+            <th>Actions</th>
+            <th>Content</th>
+        </tr>
+        @foreach (var reddit in Model)
+            {
+            <tr>
+                <td>@reddit.Score</td>
+                <td>UP / DOWN</td>
+                <td>@reddit.Content</td>
+            </tr>
+        }
+    </table>
+
 </body>
 </html>
