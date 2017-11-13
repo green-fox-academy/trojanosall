@@ -7,44 +7,37 @@ namespace RedditWebApp.Repositories
 {
     public class RedditRepository
     {
-        RedditContext redditContext;
+        RedditContext RedditContext;
 
         public RedditRepository(RedditContext redditContext)
         {
-            this.redditContext = redditContext;
+            this.RedditContext = redditContext;
         }
 
         public List<Reddit> GetList()
         {
-            return redditContext.Reddits.ToList();
+            return RedditContext.Reddits.ToList();
         }
 
-        public Reddit UpVote(int id)
+
+        public void Vote(string direction, int id)
         {
-            var upVoteItem = from upVoteOne in redditContext.Reddits
-                             where upVoteOne.Id == id
-                             select upVoteOne;
+            var votedItem = (from votedOne in RedditContext.Reddits
+                             where votedOne.Id == id
+                             select votedOne).FirstOrDefault();
 
-            upVoteItem.FirstOrDefault().Score += 1;
+            if (direction.Equals("up"))
+            {
+                votedItem.Score++;
+            }
+            else if (direction.Equals("down"))
+            {
+                votedItem.Score--;
+            }
 
-            return upVoteItem.FirstOrDefault();
-        }
+            RedditContext.Update(votedItem);
+            RedditContext.SaveChanges();
 
-        public void UpVoteReddit(Reddit reddit)
-        {
-            redditContext.Reddits.Update(reddit);
-            redditContext.SaveChanges();
-        }
-
-        public Reddit DownVote(int id)
-        {
-            var downgradeItem = from downgradeOne in redditContext.Reddits
-                                where downgradeOne.Id == id
-                                select downgradeOne;
-
-            downgradeItem.FirstOrDefault().Score += 1;
-
-            return downgradeItem.FirstOrDefault();
         }
     }
 }

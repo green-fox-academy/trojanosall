@@ -23,6 +23,8 @@ namespace RedditWebApp.Migrations
 
                     b.Property<string>("Content");
 
+                    b.Property<DateTime>("Date");
+
                     b.Property<int>("Score");
 
                     b.HasKey("Id");

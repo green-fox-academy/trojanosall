@@ -8,8 +8,8 @@ using RedditWebApp.Entities;
 namespace RedditWebApp.Migrations
 {
     [DbContext(typeof(RedditContext))]
-    [Migration("20171113134438_initialmigration")]
-    partial class initialmigration
+    [Migration("20171113214315_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,8 @@ namespace RedditWebApp.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Content");
+
+                    b.Property<DateTime>("Date");
 
                     b.Property<int>("Score");
 

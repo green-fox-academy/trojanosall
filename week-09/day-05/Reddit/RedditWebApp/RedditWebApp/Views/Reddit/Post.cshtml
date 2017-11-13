@@ -9,24 +9,22 @@
         <button id="table" class="number" type="submit">Add new post</button>
     </form>
 
-    <h1>Posts</h1>
+    <h1>POSTS:</h1>
 
     <table>
         <tr>
             <th>SCORE</th>
-            <th>Actions</th>
-            <th>Content</th>
+            <th>ACTIONS</th>
+            <th>CONTENT</th>
+            <th>DATE</th>
         </tr>
         @foreach (var reddit in Model)
         {
             <tr>
                 <td>@reddit.Score</td>
                 <td>
-                    <form action="/@reddit.Id/upvote" method="post">
-                        <input type="hidden" name="Id" value="@reddit.Id" />
-                        <button id="table" class="number" type="submit">Upvote</button>
-                    </form>
-
+                    <a href="/vote/up/@reddit.Id">+</a>
+                    <a href="/vote/down/@reddit.Id">-</a>
                 </td>
                 <td>@reddit.Content</td>
             </tr>

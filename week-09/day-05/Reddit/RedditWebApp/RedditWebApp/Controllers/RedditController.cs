@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RedditWebApp.Models;
 using RedditWebApp.Repositories;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -16,17 +15,26 @@ namespace RedditWebApp.Controllers
         }
 
         [HttpGet]
+        [Route("")]
         [Route("/post")]
         public IActionResult Post()
         {
             return View(redditRepository.GetList());
         }
 
-        [Route("/{id}/upvote")]
-        [HttpPost]
-        public IActionResult Upvote(Reddit reddit)
+        [Route("/vote/up/{id}")]
+        //[HttpPost]
+        public IActionResult UpVote(int id)
         {
-            redditRepository.UpVoteReddit(reddit);
+            redditRepository.Vote("up", id);
+            return RedirectToAction("Post");
+        }
+
+        [Route("/vote/down/{id}")]
+        //[HttpPost]
+        public IActionResult DownVote(int id)
+        {
+            redditRepository.Vote("down", id);
             return RedirectToAction("Post");
         }
 
