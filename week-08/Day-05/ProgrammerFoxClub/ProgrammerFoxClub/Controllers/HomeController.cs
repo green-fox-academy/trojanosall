@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using ProgrammerFoxClub.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -10,10 +8,25 @@ namespace ProgrammerFoxClub.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /<controller>/
+        Fox myFox;
+
+        public HomeController(Fox myFox)
+        {
+            this.myFox = myFox;
+        }
+
+        [Route("")]
         public IActionResult Index()
         {
-            return View();
+            var myFox = new Fox()
+            {
+                Name = "Vuk",
+                Skills = new List<TrickEnum>(),
+                Food = FoodEnum.cake,
+                Drink = DrinkEnum.cognac
+            };
+
+            return View(myFox);
         }
     }
 }
