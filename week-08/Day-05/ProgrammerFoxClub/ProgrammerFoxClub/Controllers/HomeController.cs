@@ -23,8 +23,12 @@ namespace ProgrammerFoxClub.Controllers
                 Name = "Vuk",
                 Skills = new List<TrickEnum>(),
                 Food = FoodEnum.cake,
-                Drink = DrinkEnum.cognac
+                Drink = DrinkEnum.cognac,
             };
+
+            myFox.Skills.Add(TrickEnum.drink);
+            myFox.Skills.Add(TrickEnum.love);
+            myFox.Skills.Add(TrickEnum.play);
 
             return View(myFox);
         }
