@@ -19,6 +19,7 @@
             <th>ACTIONS</th>
             <th>CONTENT</th>
             <th>DATE</th>
+            <th></th>
         </tr>
         @foreach (var reddit in Model)
         {
@@ -30,6 +31,12 @@
                 </td>
                 <td>@reddit.Content</td>
                 <td>@reddit.Date</td>
+                <td>
+                    <form action="/delete/@reddit.Id" method="post">
+                        <input type="hidden" name="Id" value="@reddit.Id" />
+                        <button id="table" class="w3-button w3-black w3-round-xlarge" type="submit">Delete</button>
+                    </form>
+                </td>
             </tr>
         }
     </table>

@@ -8,6 +8,5 @@ namespace RedditWebApp.Models
         public string Content { get; set; }
         public int Score { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
-
     }
 }

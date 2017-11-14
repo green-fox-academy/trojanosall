@@ -52,5 +52,15 @@ namespace RedditWebApp.Repositories
             RedditContext.Add(myReddit);
             RedditContext.SaveChanges();
         }
+
+        public void Delete(int id)
+        {
+            var deleteItem = (from deleteOne in RedditContext.Reddits
+                              where deleteOne.Id == id
+                              select deleteOne).FirstOrDefault();
+
+            RedditContext.Remove(deleteItem);
+            RedditContext.SaveChanges();
+        }
     }
 }

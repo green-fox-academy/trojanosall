@@ -37,6 +37,14 @@ namespace RedditWebApp.Controllers
             return RedirectToAction("Post");
         }
 
+        [Route("/delete/{id}")]
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            redditRepository.Delete(id);
+            return RedirectToAction("Post");
+        }
+
         [Route("/vote/up/{id}")]
         public IActionResult UpVote(int id)
         {
