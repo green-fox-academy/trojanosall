@@ -9,15 +9,5 @@ namespace RedditWebApp.Models
         public int Score { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
 
-        //public Reddit()
-        //{
-        //}
-
-        //public Reddit(int id, string content, int score)
-        //{
-        //    Id = id;
-        //    Content = content;
-        //    Score = score;
-        //}
     }
 }
