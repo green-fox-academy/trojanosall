@@ -11,9 +11,31 @@
         </li>
     </ul>
 
-    <img src="~/greenfox.png" alt="My Greenfox" width="500" height="377">
+    <img src="~/greenfox.png" alt="My Greenfox" width="330" height="250">
+
 
     <h3>This is Mr @Model.Name. Currently living on @Model.Food and @Model.Drink. He know @Model.Skills.Count() trick.</h3>
+
+    <h2>Known tricks</h2>
+
+    <h3>
+        @{if (Model.Skills.Count == 0)
+            {
+                <div>
+                    You know no tricks yet. Go and learn some.
+                </div>
+            }
+            else
+            {
+                @foreach (var skills in Model.Skills)
+                {
+                    <li>
+                        @skills;
+                    </li>
+                }
+            }
+        }
+    </h3>
 
 </body>
 </html>
