@@ -16,7 +16,11 @@ namespace RedditWebApp.Repositories
 
         public List<Reddit> GetList()
         {
-            return RedditContext.Reddits.ToList();
+            var listOfReddit = (from reddits in RedditContext.Reddits
+                                orderby reddits.Score descending
+                                select reddits).ToList();
+
+            return listOfReddit;
         }
 
         public void Vote(string direction, int id)
