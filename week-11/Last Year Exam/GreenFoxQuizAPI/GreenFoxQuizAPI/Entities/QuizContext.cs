@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GreenFoxQuizAPI.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace GreenFoxQuizAPI.Entities
 {
