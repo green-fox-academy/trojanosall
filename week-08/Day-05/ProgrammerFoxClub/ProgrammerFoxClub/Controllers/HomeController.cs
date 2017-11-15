@@ -32,5 +32,24 @@ namespace ProgrammerFoxClub.Controllers
 
             return View(myFox);
         }
+
+        //[Route("/nutritionStore")]
+        //[HttpPost]
+        //public IActionResult NutritionStore()
+        //{
+        //    var myFox = new Fox()
+        //    {
+        //        Name = "Vuk",
+        //        Skills = new List<TrickEnum>(),
+        //        Food = FoodEnum.cake,
+        //        Drink = DrinkEnum.cognac,
+        //    };
+
+        //    myFox.Skills.Add(TrickEnum.drink);
+        //    myFox.Skills.Add(TrickEnum.love);
+        //    myFox.Skills.Add(TrickEnum.play);
+
+        //    return View(myFox);
     }
+}
 }

@@ -10,14 +10,16 @@ namespace GreenFoxQuizAPI.Repositories
     public class QuizRepository
     {
         QuizContext quizContext;
+        QuizQuestion quizQuestion;
         static readonly Random RandomNumber = new Random();
 
-        public QuizRepository(QuizContext quizContex)
+        public QuizRepository(QuizContext quizContex, QuizQuestion quizQuestion)
         {
             this.quizContext = quizContex;
+            this.quizQuestion = quizQuestion;
         }
 
-        public List<Quiz> GetRandomQuestions()
+        public List<Quiz> GetRandomListOfQuiz()
         {
             List<Quiz> listOfQuestions = (from quizes in quizContext.Quizes
                                           orderby quizes.Id ascending
@@ -45,62 +47,17 @@ namespace GreenFoxQuizAPI.Repositories
             listOfQuiz.Add(randomQuiz4);
             listOfQuiz.Add(randomQuiz5);
 
-            //var randomListOfQuestionsWithId = new List<Quiz>();
-
-            //var randomListOfQuestionsWithId = (from randomQuestion in listOfQuiz orderby randomQuestion.Id
-            //                            select new { randomQuestion.Id, randomQuestion.Question }).ToList();
-
             return listOfQuiz;
         }
 
-        //public List<List<string>> GetRandomQuestions()
-        //{
-        //    List<Quiz> listOfQuestions = (from quizes in quizContext.Quizes
-        //                                  orderby quizes.Id ascending
-        //                                  select quizes).ToList();
+        public List<Quiz> GetAnswerForRandomQuestion(List<QuizQuestion> quizQuestions)
+        {
+            List<Quiz> listOfAnswer = (from quizes in quizContext.Quizes where quizes.Id == quizQuestion.Id select quizes).ToList();
 
-        //    var randomQuiz1 = listOfQuestions[RandomNumber.Next(listOfQuestions.Count)];
-        //    listOfQuestions.Remove(randomQuiz1);
+            return listOfAnswer;
+        }
 
-        //    var randomQuiz2 = listOfQuestions[RandomNumber.Next(listOfQuestions.Count)];
-        //    listOfQuestions.Remove(randomQuiz2);
 
-        //    var randomQuiz3 = listOfQuestions[RandomNumber.Next(listOfQuestions.Count)];
-        //    listOfQuestions.Remove(randomQuiz3);
 
-        //    var randomQuiz4 = listOfQuestions[RandomNumber.Next(listOfQuestions.Count)];
-        //    listOfQuestions.Remove(randomQuiz4);
-
-        //    var randomQuiz5 = listOfQuestions[RandomNumber.Next(listOfQuestions.Count)];
-
-        //    List<string> IdAndQuestionRandomQuiz1 = new List<string>();
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz1.Id.ToString());
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz1.Question);
-
-        //    List<string> IdAndQuestionRandomQuiz2 = new List<string>();
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz2.Id.ToString());
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz2.Question);
-
-        //    List<string> IdAndQuestionRandomQuiz3 = new List<string>();
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz3.Id.ToString());
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz3.Question);
-
-        //    List<string> IdAndQuestionRandomQuiz4 = new List<string>();
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz4.Id.ToString());
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz4.Question);
-
-        //    List<string> IdAndQuestionRandomQuiz5 = new List<string>();
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz5.Id.ToString());
-        //    IdAndQuestionRandomQuiz1.Add(randomQuiz5.Question);
-
-        //    List<List<string>> IdAndQuestionOfRandomQuizes = new List<List<string>>();
-        //    IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz1);
-        //    IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz2);
-        //    IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz3);
-        //    IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz4);
-        //    IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz5);
-
-        //    return IdAndQuestionOfRandomQuizes;
-        //}
     }
 }
