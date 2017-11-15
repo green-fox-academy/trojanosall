@@ -18,7 +18,7 @@ namespace GreenFoxQuizAPI.Controllers
         [Route("/questions")]
         public IActionResult Questions()
         {
-            return View(quizRepository.GetRandomQuestions());
+            return Json(quizRepository.GetRandomQuestions());
         }
     }
 }
