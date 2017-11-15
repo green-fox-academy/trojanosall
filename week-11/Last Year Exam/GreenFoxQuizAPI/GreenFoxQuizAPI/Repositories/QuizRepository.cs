@@ -48,7 +48,7 @@ namespace GreenFoxQuizAPI.Repositories
         //    return listOfQuiz;
         //}
 
-        public List<string> GetRandomQuestions()
+        public List<List<string>> GetRandomQuestions()
         {
             List<Quiz> listOfQuestions = (from quizes in quizContext.Quizes
                                           orderby quizes.Id ascending
@@ -68,14 +68,34 @@ namespace GreenFoxQuizAPI.Repositories
 
             var randomQuiz5 = listOfQuestions[RandomNumber.Next(listOfQuestions.Count)];
 
-            List<string> RandomQuestions = new List<string>();
-            RandomQuestions.Add(randomQuiz1.Question);
-            RandomQuestions.Add(randomQuiz2.Question);
-            RandomQuestions.Add(randomQuiz3.Question);
-            RandomQuestions.Add(randomQuiz4.Question);
-            RandomQuestions.Add(randomQuiz5.Question);
+            List<string> IdAndQuestionRandomQuiz1 = new List<string>();
+            IdAndQuestionRandomQuiz1.Add(randomQuiz1.Id.ToString());
+            IdAndQuestionRandomQuiz1.Add(randomQuiz1.Question);
 
-            return RandomQuestions;
+            List<string> IdAndQuestionRandomQuiz2 = new List<string>();
+            IdAndQuestionRandomQuiz1.Add(randomQuiz2.Id.ToString());
+            IdAndQuestionRandomQuiz1.Add(randomQuiz2.Question);
+
+            List<string> IdAndQuestionRandomQuiz3 = new List<string>();
+            IdAndQuestionRandomQuiz1.Add(randomQuiz3.Id.ToString());
+            IdAndQuestionRandomQuiz1.Add(randomQuiz3.Question);
+
+            List<string> IdAndQuestionRandomQuiz4 = new List<string>();
+            IdAndQuestionRandomQuiz1.Add(randomQuiz4.Id.ToString());
+            IdAndQuestionRandomQuiz1.Add(randomQuiz4.Question);
+
+            List<string> IdAndQuestionRandomQuiz5 = new List<string>();
+            IdAndQuestionRandomQuiz1.Add(randomQuiz5.Id.ToString());
+            IdAndQuestionRandomQuiz1.Add(randomQuiz5.Question);
+
+            List<List<string>> IdAndQuestionOfRandomQuizes = new List<List<string>>();
+            IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz1);
+            IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz2);
+            IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz3);
+            IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz4);
+            IdAndQuestionOfRandomQuizes.Add(IdAndQuestionRandomQuiz5);
+
+            return IdAndQuestionOfRandomQuizes;
         }
     }
 }
