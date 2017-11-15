@@ -2,6 +2,7 @@
 
 using GreenFoxQuizAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace GreenFoxQuizAPI.Controllers
 {
@@ -18,7 +19,10 @@ namespace GreenFoxQuizAPI.Controllers
         [Route("/questions")]
         public IActionResult Questions()
         {
-            return Json(quizRepository.GetRandomQuestions());
+            var quizList = quizRepository.GetRandomQuestions();
+            var questionList = (from quiz in quizList orderby quiz.Id select new { quiz.Id, quiz.Question }).ToList();
+
+            return Json(questionList);
         }
     }
 }
