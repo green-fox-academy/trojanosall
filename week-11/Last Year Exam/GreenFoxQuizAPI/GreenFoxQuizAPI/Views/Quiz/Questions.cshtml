@@ -1,0 +1,25 @@
+﻿@model ICollection<GreenFoxQuizAPI.Models.Quiz>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <table class="w3-table-all">
+        <tr class="w3-red">
+            <th>ID</th>
+            <th>ANSWER</th>
+            <th>QUESTION</th>            
+        </tr>
+        @foreach (var quiz in Model)
+        {
+            <tr>
+                <td>@quiz.Id</td>                                
+                <td>@quiz.Answer</td>
+                <td>@quiz.Question</td>
+                
+            </tr>
+        }
+    </table>  
+</body>
+</html>

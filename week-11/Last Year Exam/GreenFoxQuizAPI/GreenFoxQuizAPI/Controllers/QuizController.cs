@@ -14,10 +14,11 @@ namespace GreenFoxQuizAPI.Controllers
             this.quizRepository = quizRepository;
         }
 
-        // GET: /<controller>/
-        public IActionResult Index()
+        [HttpGet]
+        [Route("/questions")]
+        public IActionResult Questions()
         {
-            return View();
+            return View(quizRepository.GetRandomQuestions());
         }
     }
 }
