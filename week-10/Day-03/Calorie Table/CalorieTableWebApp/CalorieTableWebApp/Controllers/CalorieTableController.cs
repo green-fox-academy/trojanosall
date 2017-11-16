@@ -14,10 +14,11 @@ namespace CalorieTableWebApp.Controllers
             CalorieTableRepository = calorieTableRepository;
         }
 
-        // GET: /<controller>/
-        public IActionResult Index()
+        [Route("/table")]
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            return View();
+            return Json(CalorieTableRepository.GetList());
         }
     }
 }
