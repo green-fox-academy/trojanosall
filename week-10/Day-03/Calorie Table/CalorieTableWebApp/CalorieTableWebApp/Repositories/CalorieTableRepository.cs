@@ -18,5 +18,14 @@ namespace CalorieTableWebApp.Repositories
         {
             return CalorieTableContext.Foods.ToList();
         }
+
+        public Food GetById(int id)
+        {
+            var selectedItem = from selectOne in CalorieTableContext.Foods
+                               where selectOne.Id == id
+                               select selectOne;
+
+            return selectedItem.FirstOrDefault();
+        }
     }
 }

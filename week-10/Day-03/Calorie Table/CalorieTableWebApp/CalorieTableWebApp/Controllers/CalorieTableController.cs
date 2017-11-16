@@ -22,5 +22,20 @@ namespace CalorieTableWebApp.Controllers
         {
             return CalorieTableRepository.GetAllFood();
         }
+
+        [Route("/table/{id}")]
+        [HttpGet]
+        public IActionResult GetById(int id)
+        {
+
+            var food = CalorieTableRepository.GetById(id);
+
+            if (food == null)
+            {
+                return NotFound();
+            }
+
+            return new ObjectResult(food);
+        }
     }
 }
