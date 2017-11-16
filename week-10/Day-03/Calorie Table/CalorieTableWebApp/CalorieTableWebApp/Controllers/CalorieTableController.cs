@@ -11,9 +11,11 @@ namespace CalorieTableWebApp.Controllers
     {
         CalorieTableRepository CalorieTableRepository;
 
+
         public CalorieTableController(CalorieTableRepository calorieTableRepository)
         {
             CalorieTableRepository = calorieTableRepository;
+
         }
 
         [Route("/table")]
@@ -38,7 +40,7 @@ namespace CalorieTableWebApp.Controllers
             return new ObjectResult(food);
         }
 
-        [Route("/add")]
+        [Route("add")]
         [HttpPost]
         public IActionResult AddFood([FromBody] Food food)
         {
@@ -49,6 +51,23 @@ namespace CalorieTableWebApp.Controllers
             CalorieTableRepository.AddFood(food);
 
             return Ok(food);
+        }
+
+        [Route("/remove/{id}")]
+        [HttpDelete]
+        public IActionResult RemoveFood(int id)
+        {
+            var food = CalorieTableRepository.GetById(id);
+
+            if (food == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                CalorieTableRepository.RemoveFood(food);
+                return new NoContentResult();
+            }
         }
     }
 }

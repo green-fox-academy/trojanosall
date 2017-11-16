@@ -19,6 +19,7 @@ namespace CalorieTableWebApp
             services.AddMvc();
             services.AddScoped<CalorieTableRepository>();
             services.AddDbContext<CalorieTableContext>(options => options.UseSqlServer(connectionString));
+            services.AddSingleton<Models.Food>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

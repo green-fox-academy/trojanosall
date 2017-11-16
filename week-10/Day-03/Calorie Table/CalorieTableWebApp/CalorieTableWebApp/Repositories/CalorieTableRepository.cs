@@ -33,5 +33,11 @@ namespace CalorieTableWebApp.Repositories
             CalorieTableContext.Foods.Add(food);
             CalorieTableContext.SaveChanges();
         }
+
+        public void RemoveFood(Food food)
+        {
+            CalorieTableContext.Foods.Remove(food);
+            CalorieTableContext.SaveChanges();
+        }
     }
 }
