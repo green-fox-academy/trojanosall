@@ -14,7 +14,7 @@ namespace CalorieTableWebApp.Repositories
             CalorieTableContext = calorieTableContext;
         }
 
-        public List<Food> GetList()
+        public List<Food> GetAllFood()
         {
             return CalorieTableContext.Foods.ToList();
         }

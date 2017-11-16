@@ -1,5 +1,7 @@
-﻿using CalorieTableWebApp.Repositories;
+﻿using CalorieTableWebApp.Models;
+using CalorieTableWebApp.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -16,9 +18,9 @@ namespace CalorieTableWebApp.Controllers
 
         [Route("/table")]
         [HttpGet]
-        public IActionResult GetAll()
+        public IEnumerable<Food> GetAll()
         {
-            return Json(CalorieTableRepository.GetList());
+            return CalorieTableRepository.GetAllFood();
         }
     }
 }
