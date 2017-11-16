@@ -39,5 +39,13 @@ namespace CalorieTableWebApp.Repositories
             CalorieTableContext.Foods.Remove(food);
             CalorieTableContext.SaveChanges();
         }
+
+        public void UpdateFood(Food food, int amount)
+        {
+            food.Amount = amount;
+
+            CalorieTableContext.Foods.Update(food);
+            CalorieTableContext.SaveChanges();
+        }
     }
 }

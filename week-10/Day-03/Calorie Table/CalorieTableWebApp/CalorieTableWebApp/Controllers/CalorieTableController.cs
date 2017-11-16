@@ -69,5 +69,26 @@ namespace CalorieTableWebApp.Controllers
                 return new NoContentResult();
             }
         }
+
+        [HttpPut]
+        [Route("/update/{id}")]
+        public IActionResult UpdateAmount(int id, [FromBody] Food food, int amount)
+        {
+            if (food == null)
+            {
+                return BadRequest();
+            }
+
+            var foodToUpdate = CalorieTableRepository.GetById(id);
+            if (foodToUpdate == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                CalorieTableRepository.UpdateFood(foodToUpdate, amount);
+                return new NoContentResult();
+            }
+        }
     }
 }
