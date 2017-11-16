@@ -27,5 +27,11 @@ namespace CalorieTableWebApp.Repositories
 
             return selectedItem.FirstOrDefault();
         }
+
+        public void AddFood(Food food)
+        {
+            CalorieTableContext.Foods.Add(food);
+            CalorieTableContext.SaveChanges();
+        }
     }
 }

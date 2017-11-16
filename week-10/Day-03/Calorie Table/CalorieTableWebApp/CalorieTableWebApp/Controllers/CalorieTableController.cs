@@ -37,5 +37,18 @@ namespace CalorieTableWebApp.Controllers
 
             return new ObjectResult(food);
         }
+
+        [Route("/add")]
+        [HttpPost]
+        public IActionResult AddFood([FromBody] Food food)
+        {
+            if (food.Name == null)
+            {
+                return BadRequest();
+            }
+            CalorieTableRepository.AddFood(food);
+
+            return Ok(food);
+        }
     }
 }
