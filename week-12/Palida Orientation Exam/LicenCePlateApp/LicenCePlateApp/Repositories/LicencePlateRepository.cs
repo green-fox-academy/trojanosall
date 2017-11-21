@@ -41,5 +41,13 @@ namespace LicenCePlateApp.Repositories
                                 select searchedPlates).ToList();
             return searchedList;
         }
+
+        public List<LicencePlate> RefineTheOriginalSearchingBasedOnBrand(string brandName)
+        {
+            var searchedList = (from searchedPlates in LicencePlateContext.LicencePlates
+                                where searchedPlates.Brand == brandName
+                                select searchedPlates).ToList();
+            return searchedList;
+        }
     }
 }

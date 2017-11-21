@@ -36,5 +36,12 @@ namespace LicenCePlateApp.Controllers
         {
             return View("Index", LicencePlateRepository.SearchDiplomatsCarList());
         }
+
+        [HttpGet]
+        [Route("/search/{brand}")]
+        public IActionResult RefineSearchingByBrand(string brand)
+        {
+            return View("Index", LicencePlateRepository.RefineTheOriginalSearchingBasedOnBrand(brand));
+        }
     }
 }

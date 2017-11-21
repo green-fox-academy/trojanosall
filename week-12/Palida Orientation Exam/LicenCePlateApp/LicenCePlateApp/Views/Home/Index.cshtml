@@ -23,10 +23,10 @@
             </tr>
         </thead>
         @foreach (var car in @Model)
-            {
+        {
             <tr>
                 <td>| @car.Plate</td>
-                <td>| @car.Brand</td>
+                <td>| [<a href="http://localhost:55215/search/@car.Brand">@car.Brand</a>  ]</td>
                 <td>| @car.Model</td>
                 <td>| @car.Color</td>
                 <td>| @car.Year |</td>
