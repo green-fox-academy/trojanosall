@@ -17,7 +17,27 @@ namespace LicenCePlateApp.Repositories
         public List<LicencePlate> SearchLicencePlateListByUserInput(string userInput)
         {
             var searchedList = (from searchedPlates in LicencePlateContext.LicencePlates
-                                where searchedPlates.Plate.Contains(userInput)
+                                where searchedPlates.Plate.StartsWith(userInput)
+                                select searchedPlates).ToList();
+            return searchedList;
+        }
+
+        public List<LicencePlate> SearchPoliceCarList()
+        {
+            string policeCarCode = "RB";
+
+            var searchedList = (from searchedPlates in LicencePlateContext.LicencePlates
+                                where searchedPlates.Plate.StartsWith(policeCarCode)
+                                select searchedPlates).ToList();
+            return searchedList;
+        }
+
+        public List<LicencePlate> SearchDiplomatsCarList()
+        {
+            string diplomatsCarCode = "DT";
+
+            var searchedList = (from searchedPlates in LicencePlateContext.LicencePlates
+                                where searchedPlates.Plate.StartsWith(diplomatsCarCode)
                                 select searchedPlates).ToList();
             return searchedList;
         }

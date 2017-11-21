@@ -22,5 +22,19 @@ namespace LicenCePlateApp.Controllers
         {
             return View("Index", LicencePlateRepository.SearchLicencePlateListByUserInput(userInput));
         }
+
+        [HttpGet]
+        [Route("/search/police")]
+        public IActionResult SearchForPoliceCars()
+        {
+            return View("Index", LicencePlateRepository.SearchPoliceCarList());
+        }
+
+        [HttpGet]
+        [Route("/search/diplomats")]
+        public IActionResult SearchForDiplomatsCars()
+        {
+            return View("Index", LicencePlateRepository.SearchDiplomatsCarList());
+        }
     }
 }

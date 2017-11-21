@@ -1,28 +1,28 @@
 ﻿@model ICollection<LicenCePlateApp.Models.LicencePlate>
 
-    <html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <h1>LICENCE PLATE SEARCHER</h1>
-        <h4>Please enter a licence plate, like HMZ-140 or any part of the license plate (like MZ-1):</h4>
-        <form action="/search" method="get">
-            <label for="userInput"> Licence Plate:</label>
-            <input type="text" name="userInput">
-            <button type="submit">SEARCH</button>
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <td>Licence plate</td>
-                    <td>Brand</td>
-                    <td>Model</td>
-                    <td>Color</td>
-                    <td>Year</td>
-                </tr>
-            </thead>
-            @foreach (var car in @Model)
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>LICENCE PLATE SEARCHER</h1>
+    <h4>Please enter a licence plate, like HMZ-140 or any part of the license plate (like MZ-1):</h4>
+    <form action="/search" method="get">
+        <label for="userInput"> Licence Plate:</label>
+        <input type="text" name="userInput">
+        <button type="submit">SEARCH</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <td>Licence plate</td>
+                <td>Brand</td>
+                <td>Model</td>
+                <td>Color</td>
+                <td>Year</td>
+            </tr>
+        </thead>
+        @foreach (var car in @Model)
             {
             <tr>
                 <td>@car.Plate</td>
@@ -31,7 +31,10 @@
                 <td>@car.Color</td>
                 <td>@car.Year</td>
             </tr>
-            }
-        </table>
-    </body>
+        }
+    </table>
+
+    <a href="http://localhost:55215/search/police">Police cars list</a>
+    <a href="http://localhost:55215/search/diplomats">Diplomats cars list</a>
+</body>
 </html>
