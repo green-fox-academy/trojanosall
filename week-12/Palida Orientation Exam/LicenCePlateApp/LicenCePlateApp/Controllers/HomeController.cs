@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LicenCePlateApp.Controllers
 {
+    [Route("")]
     public class HomeController : Controller
     {
         LicencePlateRepository LicencePlateRepository;
@@ -14,10 +15,12 @@ namespace LicenCePlateApp.Controllers
             LicencePlateRepository = licencePlateRepository;
         }
 
-
-        public IActionResult Index()
+        [HttpGet]
+        [Route("")]
+        [Route("/search")]
+        public IActionResult Search(string userInput)
         {
-            return View();
+            return View("Index", LicencePlateRepository.SearchLicencePlateListByUserInput(userInput));
         }
     }
 }
