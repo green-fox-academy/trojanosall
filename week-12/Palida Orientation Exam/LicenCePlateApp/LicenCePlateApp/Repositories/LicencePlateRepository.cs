@@ -49,5 +49,17 @@ namespace LicenCePlateApp.Repositories
                                 select searchedPlates).ToList();
             return searchedList;
         }
+
+        public bool LicencePlateCheck(string licenePlate)
+        {
+            if (licenePlate.Length > 7)
+            {
+                return false;
+            }
+            if (true)
+            {
+
+            }
+        }
     }
 }
