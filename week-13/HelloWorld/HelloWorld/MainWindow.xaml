@@ -5,22 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HelloWorld"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" ButtonBase.Click  = "Window_Click" >
 
     <Grid>
-        <Button  Height = "40" Width = "175" Margin = "10" Content = "Dependency Property">
-            <Button.Style>
-                <Style TargetType = "{x:Type Button}">
-                    <Style.Triggers>
+        <StackPanel Margin = "20" ButtonBase.Click = "StackPanel_Click">
 
-                        <Trigger Property = "IsMouseOver" Value = "True">
-                            <Setter Property = "Foreground" Value = "Red" />
-                        </Trigger>
+            <StackPanel Margin = "10">
+                <TextBlock Name = "txt1" FontSize = "18" Margin = "5" Text = "This is a TextBlock 1" />
+                <TextBlock Name = "txt2" FontSize = "18" Margin = "5" Text = "This is a TextBlock 2" />
+                <TextBlock Name = "txt3" FontSize = "18" Margin = "5" Text = "This is a TextBlock 3" />
+            </StackPanel>
 
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
+            <Button Margin = "10" Content = "Click me" Click = "Button_Click" Width = "80"/>
+        </StackPanel>
     </Grid>
 
 </Window>
