@@ -9,6 +9,11 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="219,142,0,0" TextWrapping="Wrap" Text="Hello World!!!!" VerticalAlignment="Top"/>
         <Button Content = "Click Me" Height = "30" Width = "60" Margin="219,188,239.4,102.8" />
+        <Button Margin="219,38,239.4,252.8">
+            <Button.Content>Click Me</Button.Content>
+            <Button.Height>30</Button.Height>
+            <Button.Width>60</Button.Width>
+        </Button>
 
     </Grid>
 </Window>
