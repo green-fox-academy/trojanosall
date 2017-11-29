@@ -6,16 +6,21 @@
         xmlns:local="clr-namespace:HelloWorld"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    
-    <StackPanel>
-        <Button x:Name = "button" Height = "30" Width = "70" Content = "OK" Margin = "20" />
 
-        <ListBox x:Name = "listBox" Height = "100" Width = "100" Margin = "20">
-            <ListBoxItem Content = "Item 1" />
-            <ListBoxItem Content = "Item 2" />
-            <ListBoxItem Content = "Item 3" />
-        </ListBox>
+    <Grid>
+        <Button  Height = "40" Width = "175" Margin = "10" Content = "Dependency Property">
+            <Button.Style>
+                <Style TargetType = "{x:Type Button}">
+                    <Style.Triggers>
 
-    </StackPanel>
-    
+                        <Trigger Property = "IsMouseOver" Value = "True">
+                            <Setter Property = "Foreground" Value = "Red" />
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+
 </Window>
