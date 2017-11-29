@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace HelloWorld
+namespace WPFButtonControl
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -10,11 +10,11 @@ namespace HelloWorld
         public MainWindow()
         {
             InitializeComponent();
-
         }
-        private void MyCustomControl_Click(object sender, RoutedEventArgs e)
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("It is the custom routed event of your custom control");
+            MessageBox.Show("You have clicked the button");
         }
     }
 }
