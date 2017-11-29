@@ -8,6 +8,7 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="219,142,0,0" TextWrapping="Wrap" Text="Hello World!!!!" VerticalAlignment="Top"/>
+        <Button Content = "Click Me" Height = "30" Width = "60" Margin="219,188,239.4,102.8" />
 
     </Grid>
 </Window>
