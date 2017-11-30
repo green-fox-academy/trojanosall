@@ -2,6 +2,7 @@
 
 namespace MVVMDemo.Model
 {
+
     public class StudentModel { }
 
     public class Student : INotifyPropertyChanged
@@ -11,10 +12,7 @@ namespace MVVMDemo.Model
 
         public string FirstName
         {
-            get
-            {
-                return firstName;
-            }
+            get { return firstName; }
 
             set
             {
