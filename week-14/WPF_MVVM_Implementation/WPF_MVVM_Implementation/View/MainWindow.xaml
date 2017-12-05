@@ -7,11 +7,11 @@
         xmlns:vm="clr-namespace:WPF_MVVM_Implementation.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    
+
     <Window.Resources>
         <vm:PersonViewModel x:Key="PersonViewmodel"/>
     </Window.Resources>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

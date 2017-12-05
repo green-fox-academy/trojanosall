@@ -14,6 +14,11 @@ namespace WPF_MVVM_Implementation.ViewModels
             set { _person = value; NotifyPropertyChanged("Person"); }
         }
 
+        public PersonViewModel()
+        {
+            this.Person = Person;
+        }
+
         private ObservableCollection<Person> _persons;
 
         public ObservableCollection<Person> Persons
