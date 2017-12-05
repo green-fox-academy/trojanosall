@@ -38,6 +38,13 @@ namespace WPF_MVVM_Implementation.Models
             }
         }
 
+        public Person()
+        {
+            this.FName = FName;
+            this.LName = LName;
+            this.FullName = FullName;
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string p)
