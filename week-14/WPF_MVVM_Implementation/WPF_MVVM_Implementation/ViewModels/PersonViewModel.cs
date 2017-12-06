@@ -9,7 +9,6 @@ namespace WPF_MVVM_Implementation.ViewModels
     public class PersonViewModel : INotifyPropertyChanged
     {
         private Person _person;
-
         public Person Person
         {
             get { return _person; }
@@ -18,11 +17,11 @@ namespace WPF_MVVM_Implementation.ViewModels
 
         public PersonViewModel()
         {
-            this.Person = Person;
+            Person = new Person();
+            Persons = new ObservableCollection<Person>();
         }
 
         private ObservableCollection<Person> _persons;
-
         public ObservableCollection<Person> Persons
         {
             get
@@ -36,26 +35,26 @@ namespace WPF_MVVM_Implementation.ViewModels
             }
         }
 
-        private ICommand _SummitCommand;
+        private ICommand _SubmitCommand;
 
-        public ICommand SummitCommand
+        public ICommand SubmitCommand
         {
             get
             {
-                if (_SummitCommand == null)
+                if (_SubmitCommand == null)
                 {
-                    _SummitCommand = new RelayCommand(SummitExecute, CanSummitExecute, false);
+                    _SubmitCommand = new RelayCommand(SubmitExecute, CanSubmitExecute, false);
                 }
-                return _SummitCommand;
+                return _SubmitCommand;
             }
         }
 
-        private void SummitExecute(object parameter)
+        private void SubmitExecute(object parameter)
         {
             Persons.Add(Person);
         }
 
-        private bool CanSummitExecute(object parameter)
+        private bool CanSubmitExecute(object parameter)
         {
             if (string.IsNullOrEmpty(Person.FName) || string.IsNullOrEmpty(Person.LName))
             {

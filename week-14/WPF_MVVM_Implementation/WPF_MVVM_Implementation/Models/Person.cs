@@ -5,23 +5,20 @@ namespace WPF_MVVM_Implementation.Models
     public class Person : INotifyPropertyChanged
     {
         private string fName;
-
         public string FName
         {
             get { return fName; }
-            set { fName = value; OnPropertyChanged(FName); }
+            set { fName = value; }
         }
 
         private string lName;
-
         public string LName
         {
             get { return lName; }
-            set { lName = value; OnPropertyChanged(LName); }
+            set { lName = value; }
         }
 
         private string fullName;
-
         public string FullName
         {
             get
@@ -37,13 +34,6 @@ namespace WPF_MVVM_Implementation.Models
 
             }
         }
-
-        //public Person()
-        //{
-        //    this.FName = FName;
-        //    this.LName = LName;
-        //    this.FullName = FullName;
-        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 

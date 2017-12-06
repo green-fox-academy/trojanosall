@@ -25,9 +25,9 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="First Name" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="0" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.FName, Mode=TwoWay}"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.FName, Mode=TwoWay}"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Last Name" HorizontalAlignment="Center"/>
-        <TextBlock Grid.Row="1" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.LName, Mode=TwoWay}"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.LName, Mode=TwoWay}"/>
         <Button Content="Submit" Command="{Binding SubmitCommand}" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
         <ListView ItemsSource="{Binding Persons}" Grid.Row="3" Grid.Column="1" Width="Auto">
             <ListView.View>
