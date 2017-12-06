@@ -9,10 +9,10 @@
         Title="MainWindow" Height="350" Width="525">
 
     <Window.Resources>
-        <vm:PersonViewModel x:Key="PersonViewmodel"/>
+        <vm:PersonViewModel x:Key="PersonViewModel"/>
     </Window.Resources>
 
-    <Grid>
+    <Grid DataContext="{Binding Source={StaticResource PersonViewModel}}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -28,8 +28,8 @@
         <TextBlock Grid.Row="0" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.FName, Mode=TwoWay}"/>
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Last Name" HorizontalAlignment="Center"/>
         <TextBlock Grid.Row="1" Grid.Column="1" Width="100" HorizontalAlignment="Center" Text="{Binding Person.LName, Mode=TwoWay}"/>
-        <Button Content="Submit" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
-        <ListView Grid.Row="3" Grid.Column="1" Width="Auto">
+        <Button Content="Submit" Command="{Binding SubmitCommand}" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0"/>
+        <ListView ItemsSource="{Binding Persons}" Grid.Row="3" Grid.Column="1" Width="Auto">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="First Name" DisplayMemberBinding="{Binding FName}" Width="Auto"/>
