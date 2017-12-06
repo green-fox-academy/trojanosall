@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Input;
+using WPF_MVVM_Implementation.Command;
 using WPF_MVVM_Implementation.Models;
 
 namespace WPF_MVVM_Implementation.ViewModels
@@ -31,6 +33,37 @@ namespace WPF_MVVM_Implementation.ViewModels
             {
                 _persons = value;
                 NotifyPropertyChanged("Persons");
+            }
+        }
+
+        private ICommand _SummitCommand;
+
+        public ICommand SummitCommand
+        {
+            get
+            {
+                if (_SummitCommand == null)
+                {
+                    _SummitCommand = new RelayCommand(SummitExecute, CanSummitExecute, false);
+                }
+                return _SummitCommand;
+            }
+        }
+
+        private void SummitExecute(object parameter)
+        {
+            Persons.Add(Person);
+        }
+
+        private bool CanSummitExecute(object parameter)
+        {
+            if (string.IsNullOrEmpty(Person.FName) || string.IsNullOrEmpty(Person.LName))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 
