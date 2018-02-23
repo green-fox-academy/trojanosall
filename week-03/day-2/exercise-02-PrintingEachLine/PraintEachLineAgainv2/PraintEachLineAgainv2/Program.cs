@@ -17,13 +17,11 @@ namespace PraintEachLineAgainv2
             {
                 string content = File.ReadAllText(fileName);
                 Console.WriteLine(content);
-
             }
             catch (Exception MyExcept)
             {
                 Console.WriteLine($"Unable to read file: {fileName}");
             }
-
             Console.ReadKey();
         }
     }

@@ -1,18 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+using System.Linq;
 
 namespace CountLines
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
-
             // Write a function that takes a filename as string,
             // then returns the number of lines the file contains.
             // It should return zero if it can't open the file, and
@@ -24,20 +20,20 @@ namespace CountLines
         }
 
         public static int LineCounter(string filename)
+        {
+            try
             {
-                try
-                {                
-                    StreamReader sr = new StreamReader(filename);
-                    int lineCount = File.ReadLines(filename).Count();
+                StreamReader sr = new StreamReader(filename);
+                int lineCount = File.ReadLines(filename).Count();
 
-                    return lineCount;
-                }
-                catch (FileNotFoundException)
-                {
-                    return 0;
-                }
+                return lineCount;
+            }
+            catch (FileNotFoundException)
+            {
+                return 0;
+            }
         }
-                            
+
     }
 }
 

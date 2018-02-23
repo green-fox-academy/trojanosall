@@ -8,7 +8,6 @@ namespace PrintArgument
 {
     class Program
     {
-
         static void Main(string[] args)
         {
             // - Create a function called `printer`

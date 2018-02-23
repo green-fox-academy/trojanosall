@@ -11,7 +11,6 @@ namespace WriteSingleLine
     {
         static void Main(string[] args)
         {
-
             // Open a file called "my-file.txt"
             // Write your name in it as a single line
             // If the program is unable to write the file,

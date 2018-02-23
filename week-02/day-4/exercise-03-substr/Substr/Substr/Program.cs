@@ -1,15 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Substr
 {
     class Program
     {
 
-            static void Main(string[] args)
+        static void Main(string[] args)
         {
 
             // Find part of an integer
@@ -28,16 +24,16 @@ namespace Substr
 
             Console.WriteLine(SubStringFinder(String1, String2));
             Console.ReadKey();
-            
+
         }
 
         private static int SubStringFinder(string String1, string String2) // Integer-t varok vissza a fuggvenytol es ket stringet adok neki.
         {
-            
+
             for (int i = 0; i < String1.Length; i++) // for ciklussal megyek vegig az string1-ben es keresem, hol van benne string 2
             {
                 if (String1.Substring(i).StartsWith(String2)) // String.Substring Method (Int32, Int32) --> string Substring(int startIndex, int length) --> A substring egy megadott sorszamu kezdo karaktertol egy megadott karakter hosszik "levag" az eredeti stringbol.
-                {                                             // String.StartsWih Method: determines whether the beginning of this string instance matches a specified string. Return Value: true if value matches the beginning of this string; otherwise, false.
+                {                                             // String.StartsWith Method: determines whether the beginning of this string instance matches a specified string. Return Value: true if value matches the beginning of this string; otherwise, false.
                     return i;
                 }
             }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Anagram
 {
@@ -30,7 +27,6 @@ namespace Anagram
             AnagramChecker(FirstUserinput, SecondUserinput);
 
             Console.ReadKey();
-
         }
 
         private static void AnagramChecker(string FirstWord, string SecondWord)
@@ -48,12 +44,6 @@ namespace Anagram
             }
             Console.WriteLine("It is not an anagram.");
         }
-
-
-
-
-
-
     }
 }
 

@@ -18,10 +18,10 @@ namespace append_a
             Console.WriteLine(appendA(am));
             Console.ReadKey();
         }
-        public static string appendA (string name)
-            {
+        public static string appendA(string name)
+        {
             name = name + "a";
             return name;
-            }
+        }
     }
 }

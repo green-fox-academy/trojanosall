@@ -20,7 +20,6 @@ namespace Ex_01_List_SolarSystem
             // Insert it into the correct position
 
             foreach (string a in planetList)
-
             {
                 Console.WriteLine(a);
             }

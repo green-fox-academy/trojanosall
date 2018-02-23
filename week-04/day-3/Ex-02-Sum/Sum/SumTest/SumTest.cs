@@ -1,10 +1,6 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SumList;
+using System.Collections.Generic;
 
 namespace SumTest
 {
@@ -32,7 +28,7 @@ namespace SumTest
         public void TestSumList_WhenOneElement_ThenOutput()
         {
             //arrange
-            List<int> test = new List<int>{ 5 };
+            List<int> test = new List<int> { 5 };
 
             //act
             int output = 5;

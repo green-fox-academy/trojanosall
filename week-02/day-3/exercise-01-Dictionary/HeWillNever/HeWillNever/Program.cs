@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HeWillnever
 {
@@ -27,8 +24,7 @@ namespace HeWillnever
 
             // Things are a little bit messed up
             // Your job is to decode the notSoCrypticMessage by using the hashmap as a look up table
-            // Assemble the fragments into the out variable
-
+            // Assemble the fragments into the out variable                     
 
             for (int i = 0; i < notSoCrypticMessage.Length; i++)
             {
@@ -37,7 +33,6 @@ namespace HeWillnever
             Console.WriteLine(output);
 
             Console.ReadLine();
-
         }
     }
 }

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AppendA
 {
@@ -16,9 +12,9 @@ namespace AppendA
             // - Add all elements an `"a"` at the end
 
             string[] nimals = new string[]
-                {
-                    "kuty", "macsk", "cic"
-                };
+            {
+                "kuty", "macsk", "cic"
+            };
 
             nimals[0] += "a";
             nimals[1] += "a";
@@ -29,9 +25,7 @@ namespace AppendA
             {
                 Console.Write("{0} ", i);
             }
-
             Console.ReadKey();
-
         }
     }
 }

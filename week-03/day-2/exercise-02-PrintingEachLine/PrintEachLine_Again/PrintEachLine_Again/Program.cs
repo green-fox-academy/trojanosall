@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace PrintEachLine_Again
@@ -17,16 +13,15 @@ namespace PrintEachLine_Again
 
                 if (File.Exists(fileName))
                 {
-
-                using (StreamReader str = File.OpenText(fileName))
-                {
-                    string content;
-
-                    while ((content = str.ReadLine()) != null)
+                    using (StreamReader str = File.OpenText(fileName))
                     {
-                        Console.WriteLine(content);
+                        string content;
+
+                        while ((content = str.ReadLine()) != null)
+                        {
+                            Console.WriteLine(content);
+                        }
                     }
-                }
 
                 }
                 else

@@ -16,6 +16,7 @@ namespace ChangeElements
             // - Print the fourth element
             int[] s = { 1, 2, 3, 8, 5, 6 };
             s[3] = 4;
+            s.ToList().Remove(3);
             Console.WriteLine(s[3]);
             Console.ReadKey();
         }

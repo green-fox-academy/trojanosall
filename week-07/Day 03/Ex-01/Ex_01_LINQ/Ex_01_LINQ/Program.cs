@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ex_01_LINQ
 {
@@ -17,9 +14,9 @@ namespace Ex_01_LINQ
 
             // Query Syntax
             var numberSyntax = from num in numbers
-                where num % 2 == 0
-                orderby num
-                select num;
+                               where num % 2 == 0
+                               orderby num
+                               select num;
 
             Console.WriteLine("Output of Query Syntax");
             foreach (var n in numberSyntax)
@@ -36,9 +33,7 @@ namespace Ex_01_LINQ
             {
                 Console.Write(n + " ");
             }
-
             Console.ReadKey();
-
         }
     }
 }

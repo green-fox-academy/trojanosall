@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IsInList
 {
@@ -20,7 +17,7 @@ namespace IsInList
             var CheckList = new List<int> { 4, 8, 12, 16 };
 
             // CHECKING OF "A" LIST ELEMENTS ARE OR NOT IN "B" LIST (ALL OF THEM)
-            if (list.Contains(CheckList[0]) & list.Contains(CheckList[1]) & list.Contains(CheckList[2]) & list.Contains(CheckList[3]))
+            if (list.Contains(CheckList[0]) && list.Contains(CheckList[1]) && list.Contains(CheckList[2]) && list.Contains(CheckList[3]))
             {
                 Console.WriteLine("True");
             }

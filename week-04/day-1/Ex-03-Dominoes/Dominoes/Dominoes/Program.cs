@@ -12,11 +12,11 @@ namespace Dominoes
         {
 
             var dominoes = InitializeDominoes(); // ehun meghivom a lenti funcion-t
-            // You have the list of Dominoes
-            // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
-            // Create a function to write the dominous to the console in the following format
-            // eg: [2, 4], [4, 3], [3, 5] ...
-            
+                                                 // You have the list of Dominoes
+                                                 // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
+                                                 // Create a function to write the dominous to the console in the following format
+                                                 // eg: [2, 4], [4, 3], [3, 5] ...
+
             OrderDominoes(dominoes);
             Console.ReadLine();
 
@@ -24,7 +24,6 @@ namespace Dominoes
 
         public static List<Domino> InitializeDominoes() // ez egy funcion, ami legeneralja a dominokat...
         {
-
             var dominoes = new List<Domino>();
             dominoes.Add(new Domino(5, 2));
             dominoes.Add(new Domino(4, 6));
@@ -34,6 +33,7 @@ namespace Dominoes
             dominoes.Add(new Domino(7, 1));
             return dominoes;
         }
+
         public static void OrderDominoes(List<Domino> listDomino)
         {
             var ordered = new List<int[]>();
@@ -50,7 +50,6 @@ namespace Dominoes
                         ordered.Add(dominoArray2);
                     }
                 }
-
             }
             foreach (var array in ordered)
             {
@@ -63,6 +62,5 @@ namespace Dominoes
             }
             Console.ReadLine();
         }
-
     }
 }

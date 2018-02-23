@@ -15,7 +15,7 @@ namespace MyBudgetApp
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MyBudgetApp;Integrated Security=True;Connect Timeout=30";
+            var connectionString = @"(localdb)\MSSQLLocalDB;Initial Catalog=MyBudgetApp;Integrated Security=True;Connect Timeout=30";
             services.AddMvc();
             services.AddScoped<MyBudgetRepository>();
             services.AddDbContext<MyBudgetContext>(options => options.UseSqlServer(connectionString));

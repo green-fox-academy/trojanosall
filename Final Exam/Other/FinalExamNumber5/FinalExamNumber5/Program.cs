@@ -47,7 +47,7 @@ namespace FinalExamNumber5
                         Console.WriteLine("\nFirst array element " + p1[i] + " was found in Second array");
                     }
                 }
-                if (equal == false)
+                if (!equal)
                 {
                     Console.WriteLine("\nFirst array element " + p1[i] + " was NOT found in Second array");
                 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SubInt
 {
@@ -19,7 +16,7 @@ namespace SubInt
             //output: [0, 1, 4]
 
             List<int> Input = new List<int> { 1, 11, 34, 52, 61 }; // Keszitettem egy integer elemeket tartalmazo listat.            
-           
+
             SubInt(Input); // Meghivtam egy funcion-t, amelybe egy lista megy be es egy lista jon ki belole.
 
             SubInt(Input).ForEach(Console.WriteLine); // Foreach-el kiratom a fentebb generalt lista tartalmat.
@@ -29,7 +26,7 @@ namespace SubInt
 
         private static List<int> SubInt(List<int> input)
         {
-            List<int> Output = new List<int>();         // !!! A Fore ciklus elott mar deklaralom az outpot listat, amibe majd mennek az uj elemek. Az IF-en belul valamiert nem mukodott.
+            List<int> Output = new List<int>();         // !!! A For ciklus elott mar deklaralom az outpot listat, amibe majd mennek az uj elemek. Az IF-en belul valamiert nem mukodott.
 
             for (int i = 0; i < input.Count; i++)       //List<T>.Count Property --> Gets the number of elements contained in the List<T>.
             {                                           // A For ciklus vegig megy az input lista valamennyi elemen.
@@ -39,6 +36,6 @@ namespace SubInt
                 }
             }
             return Output;                              // Ha nincs egyes az input listaban, akkor az output listaval terek vissza, ami ures lesz.
-        }        
+        }
     }
 }

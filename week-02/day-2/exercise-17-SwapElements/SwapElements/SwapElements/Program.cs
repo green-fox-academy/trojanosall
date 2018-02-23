@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SwapElements
 {
@@ -30,9 +26,7 @@ namespace SwapElements
             {
                 Console.Write("{0} ", i);
             }
-            
             Console.ReadKey();
-
         }
     }
 }

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PostIt_V2_Constructor
+﻿namespace PostIt_V2_Constructor
 {
     class Program
     {
@@ -27,7 +21,6 @@ namespace PostIt_V2_Constructor
             PostIt postIt1 = new PostIt("Orange", "Idea 1", "Blue");
             PostIt postIt2 = new PostIt("Pink", "Awesome", "Black");
             PostIt postIt3 = new PostIt("Yellow", "Superb", "Green");
-            
         }
     }
 }

@@ -27,7 +27,6 @@ namespace WriteMultipleLines
             WriteMultipleLines(path, word, number);
 
             Console.ReadKey();
-
         }
 
         private static void WriteMultipleLines(string path, string word, int number)

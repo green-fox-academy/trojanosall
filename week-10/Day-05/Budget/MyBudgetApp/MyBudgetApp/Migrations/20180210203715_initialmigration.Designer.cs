@@ -4,12 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using MyBudgetApp.Entities;
-using MyBudgetApp.Models;
 
 namespace MyBudgetApp.Migrations
 {
     [DbContext(typeof(MyBudgetContext))]
-    [Migration("20171110105343_initialmigration")]
+    [Migration("20180210203715_initialmigration")]
     partial class initialmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,7 +24,7 @@ namespace MyBudgetApp.Migrations
 
                     b.Property<int>("Amount");
 
-                    b.Property<int>("Category");
+                    b.Property<string>("Category");
 
                     b.Property<DateTime>("Date");
 

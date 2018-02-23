@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace CopyFile
@@ -21,7 +17,6 @@ namespace CopyFile
             Console.WriteLine(CopyFile(pathSource, pathTarget));
 
             Console.ReadKey();
-            
         }
 
         private static bool CopyFile(string pathSource, string pathTarget)

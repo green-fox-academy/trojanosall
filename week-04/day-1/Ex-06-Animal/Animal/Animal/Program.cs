@@ -18,7 +18,7 @@ namespace Animal
             // Every animal can play() which increases both by one
 
             var dog = new Animal("Dog", 50, 50);
-            
+
             dog.Drink();
             dog.Eat();
             dog.Play();
@@ -27,7 +27,7 @@ namespace Animal
             Console.WriteLine(dog.GetHunger());
 
             var cat = new Animal("Cat", 50, 50);
-            
+
             dog.Play();
 
             Console.WriteLine(dog.GetThirst());
@@ -35,9 +35,6 @@ namespace Animal
 
 
             Console.ReadKey();
-
-
-
         }
     }
 }

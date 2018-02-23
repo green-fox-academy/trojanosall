@@ -16,11 +16,11 @@ namespace greet
             // - Greet `al`
 
             string al = "Greenfox";
-            Console.WriteLine(Greet((al));
+            Console.WriteLine(Greet(al));
             Console.ReadKey();
         }
 
-            public static string Greet(string name)
+        public static string Greet(string name)
 
         {
             name = "Greetings dear, " + name;

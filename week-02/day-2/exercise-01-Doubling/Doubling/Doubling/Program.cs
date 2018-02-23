@@ -20,7 +20,7 @@ namespace Doubling
         }
 
         public static void Doubling(int ak)
-            { 
+        { 
             Console.WriteLine(ak*2); 
         }
     }

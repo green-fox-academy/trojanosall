@@ -10,7 +10,6 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-
             // Create a simple calculator application which reads the parameters from the prompt
             // and prints the result to the prompt.
             // It should support the following operations:

@@ -20,14 +20,13 @@ namespace Ex_05_Strings_Reverse
 
             Console.ReadKey();
 
-        }    
-                public static string Reverse(string s)
-
-                {
-                    char[] charArray = s.ToCharArray();
-                    Array.Reverse(charArray);
-                    return new string(charArray);
-                }
+        }
+        public static string Reverse(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
     }
 }
 

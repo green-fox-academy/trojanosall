@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Anagram
 {
@@ -10,7 +7,6 @@ namespace Anagram
     {
         static void Main(string[] args)
         {
-
             // Anagram
             // Exercise
             // Create a function named is anagram following your current language's style guide. It should take two strings and return a boolean value depending on whether its an anagram or not.
@@ -30,11 +26,10 @@ namespace Anagram
             AnagramChecker(FirstUserinput, SecondUserinput);
 
             Console.ReadKey();
-
         }
 
         private static void AnagramChecker(string firstUserinput, string secondUserinput)
-         {
+        {
             if (firstUserinput.Length != secondUserinput.Length)                            //eleve nem lehet anagramma, ha a ket szo hossza eltero.
             {
                 Console.WriteLine("It is not an anagram.");
