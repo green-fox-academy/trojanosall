@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:BasicFormulaOne"
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
-      Title="BasicFormulaOneReportPage">
+      Title="BasicFormulaOne - View Details">
 
     <Grid>
         
