@@ -50,7 +50,7 @@
                 <DataGrid  ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >                    
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name" />
-                        <DataGridTextColumn Header="YearOfEstablishment"  />
+                        <DataGridTextColumn Header="YearOfFoundation"  />
                         <DataGridTextColumn Header="TitleWon"  />
                         <DataGridTextColumn Header="LicensePaid"  />
                     </DataGrid.Columns>

@@ -9,31 +9,42 @@
       Title="BasicFormulaOne - Home">
 
     <Grid Margin="10,0,10,10">
-
         <Grid.Resources>
             <!-- Basic Informations -->
-            <XmlDataProvider x:Key="ExpenseDataSource" XPath="Expenses">
+            <XmlDataProvider x:Key="BasicDataSource" XPath="BasicInformations">
                 <x:XData>
-                    <Expenses xmlns="">
-                        <Person Name="Mike" Department="Legal">
-                            <Expense ExpenseType="Lunch" ExpenseAmount="50" />
-                            <Expense ExpenseType="Transportation" ExpenseAmount="50" />
-                        </Person>
-                        <Person Name="Lisa" Department="Marketing">
-                            <Expense ExpenseType="Document printing"
-      ExpenseAmount="50"/>
-                            <Expense ExpenseType="Gift" ExpenseAmount="125" />
-                        </Person>
-                        <Person Name="John" Department="Engineering">
-                            <Expense ExpenseType="Magazine subscription" 
-     ExpenseAmount="50"/>
-                            <Expense ExpenseType="New machine" ExpenseAmount="600" />
-                            <Expense ExpenseType="Software" ExpenseAmount="500" />
-                        </Person>
-                        <Person Name="Mary" Department="Finance">
-                            <Expense ExpenseType="Dinner" ExpenseAmount="100" />
-                        </Person>
-                    </Expenses>
+                    <BasicInformations xmlns="">
+                        <Team Name="Ferrari">
+                            <BasicInformation YearOfFoundation="1950" TitleWon="16" LicencePaid="YES" />                            
+                        </Team>
+                        <Team Name="Force India">
+                            <BasicInformation YearOfFoundation="2008" TitleWon="0" LicencePaid="YES" />
+                        </Team>
+                        <Team Name="Haas">
+                            <BasicInformation YearOfFoundation="2016" TitleWon="0" LicencePaid="YES" />
+                        </Team>
+                        <Team Name="McLaren">
+                            <BasicInformation YearOfFoundation="1966" TitleWon="8" LicencePaid="YES" />
+                        </Team>
+                        <Team Name="Mercedes">
+                            <BasicInformation YearOfFoundation="1954" TitleWon="4" LicencePaid="YES" />
+                        </Team>
+                        <Team Name="Red Bull">
+                            <BasicInformation YearOfFoundation="2005" TitleWon="4" LicencePaid="YES" />
+                        </Team>
+                        <Team Name="Renault">
+                            <BasicInformation YearOfFoundation="1977" TitleWon="2" LicencePaid="YES" />
+                        </Team>
+                        <Team Name="Sauber">
+                            <BasicInformation YearOfFoundation="1993" TitleWon="0" LicencePaid="NO" />
+                        </Team>
+                        <Team Name="Toro Rosso">
+                            <BasicInformation YearOfFoundation="2006" TitleWon="0" LicencePaid="YES" />
+                        </Team>
+                        <Team Name="Williams">
+                            <BasicInformation YearOfFoundation="1978" TitleWon="9" LicencePaid="YES" />
+                        </Team>
+                    </BasicInformations>
                 </x:XData>
             </XmlDataProvider>
 
@@ -69,17 +80,10 @@
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
             <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
         </Border>
-        <ListBox Name="formulaOneTeamListBox" Grid.Column="1" Grid.Row="2">
-            <ListBoxItem>Ferrari</ListBoxItem>
-            <ListBoxItem>Force India</ListBoxItem>
-            <ListBoxItem>Haas</ListBoxItem>
-            <ListBoxItem>McLaren</ListBoxItem>
-            <ListBoxItem>Mercedes</ListBoxItem>
-            <ListBoxItem>Red Bull</ListBoxItem>
-            <ListBoxItem>Renault</ListBoxItem>
-            <ListBoxItem>Sauber</ListBoxItem>
-            <ListBoxItem>Toro Rosso</ListBoxItem>
-            <ListBoxItem>Williams</ListBoxItem>
+        
+        <ListBox Name="formulaOneTeamListBox" Grid.Column="1" Grid.Row="2"
+            ItemsSource="{Binding Source={StaticResource BasicDataSource}, XPath=Team}"
+         ItemTemplate="{StaticResource nameItemTemplate}">
         </ListBox>
 
         <!-- View report button -->
