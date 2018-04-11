@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FormulaOne.Views.UserControls
+namespace FormulaOne.Views
 {
     /// <summary>
     /// Interaction logic for FormulaOneTeamsView.xaml
