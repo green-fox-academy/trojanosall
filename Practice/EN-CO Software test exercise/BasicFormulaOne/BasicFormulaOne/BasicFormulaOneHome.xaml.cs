@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace BasicFormulaOne
@@ -17,7 +18,7 @@ namespace BasicFormulaOne
     /// <summary>
     /// Interaction logic for BasicFormulaOneHome.xaml
     /// </summary>
-    public partial class BasicFormulaOneHome : Window
+    public partial class BasicFormulaOneHome : Page
     {
         public BasicFormulaOneHome()
         {
