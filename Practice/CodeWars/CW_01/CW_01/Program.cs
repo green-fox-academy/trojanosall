@@ -21,11 +21,11 @@ namespace CW_01
 
             Console.ReadKey();
 
-        }              
+        }
 
         public static int PositiveSum(int[] arr)
         {
-            if (arr.Length>0)
+            if (arr.Length > 0)
             {
                 var positiveNumbers = from numbers in arr
                                       where numbers > 0
@@ -39,7 +39,7 @@ namespace CW_01
 
                 return Sum;
             }
-            
+
             return 0;
         }
 
