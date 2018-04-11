@@ -23,37 +23,30 @@
         </Grid.RowDefinitions>
 
 
-        <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS" 
-FontWeight="Bold" FontSize="18" Foreground="#0066cc">
-            Expense Report For:
-        </Label>
+        <Label Grid.Column="1" VerticalAlignment="Center" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="18" Foreground="#0066cc"> Basic Information Report For: </Label>
+        
         <Grid Margin="10" Grid.Column="1" Grid.Row="1">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />                
                 <RowDefinition />
             </Grid.RowDefinitions>
 
             <!-- Name -->
-            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Orientation="Horizontal">
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Orientation="Horizontal">
                 <Label Margin="0,0,0,5" FontWeight="Bold">Name:</Label>
                 <Label Margin="0,0,0,5" FontWeight="Bold"></Label>
-            </StackPanel>
+            </StackPanel>            
 
-            <!-- Department -->
-            <StackPanel Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Orientation="Horizontal">
-                <Label Margin="0,0,0,5" FontWeight="Bold">Department:</Label>
-                <Label Margin="0,0,0,5" FontWeight="Bold"></Label>
-            </StackPanel>
-
-            <Grid Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2" VerticalAlignment="Top" 
+            <Grid Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" VerticalAlignment="Top" 
           HorizontalAlignment="Left">
-                <!-- Expense type and Amount table -->
+                <!-- Basic Information Table -->
                 <DataGrid  AutoGenerateColumns="False" RowHeaderWidth="0" >
                     <DataGrid.ColumnHeaderStyle>
                         <Style TargetType="{x:Type DataGridColumnHeader}">
@@ -64,8 +57,10 @@ FontWeight="Bold" FontSize="18" Foreground="#0066cc">
                         </Style>
                     </DataGrid.ColumnHeaderStyle>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="ExpenseType" />
-                        <DataGridTextColumn Header="Amount"  />
+                        <DataGridTextColumn Header="Name" />
+                        <DataGridTextColumn Header="YearOfEstablishment"  />
+                        <DataGridTextColumn Header="TitleWon"  />
+                        <DataGridTextColumn Header="LicensePaid"  />
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
