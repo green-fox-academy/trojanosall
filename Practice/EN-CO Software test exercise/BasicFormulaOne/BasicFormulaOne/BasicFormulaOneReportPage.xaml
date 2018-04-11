@@ -10,6 +10,22 @@
 
     <Grid>
 
+        <Grid.Resources>
+           
+            <DataTemplate x:Key="foundationItemTemplate">
+                <Label Content="{Binding XPath=@YearOfFoundation}"/>
+            </DataTemplate>
+
+            <DataTemplate x:Key="titleItemTemplate">
+                <Label Content="{Binding XPath=@TitleWon}"/>
+            </DataTemplate>
+
+            <DataTemplate x:Key="licenceItemTemplate">
+                <Label Content="{Binding XPath=@LicencePaid}"/>
+            </DataTemplate>
+
+        </Grid.Resources>
+
         <Grid.Background>
             <ImageBrush ImageSource="FormulaOneLogo.png" />
         </Grid.Background>
@@ -30,8 +46,7 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
+                <ColumnDefinition />                
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />                
@@ -39,20 +54,19 @@
             </Grid.RowDefinitions>
 
             <!-- Name -->
-            <StackPanel Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Orientation="Horizontal">
+            <StackPanel Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Orientation="Horizontal">
                 <Label Style="{StaticResource labelStyle}">Name:</Label>
-                <Label Style="{StaticResource labelStyle}"></Label>
+                <Label Style="{StaticResource labelStyle}" Content="{Binding XPath=@Name}"></Label>
             </StackPanel>            
 
-            <Grid Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="1" VerticalAlignment="Top" 
+            <Grid Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Top" 
           HorizontalAlignment="Left">
                 <!-- Basic Information Table -->
-                <DataGrid  ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >                    
+                <DataGrid ItemsSource="{Binding XPath=BasicInformation}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >                    
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Name" />
-                        <DataGridTextColumn Header="YearOfFoundation"  />
-                        <DataGridTextColumn Header="TitleWon"  />
-                        <DataGridTextColumn Header="LicensePaid"  />
+                        <DataGridTextColumn Header="YearOfFoundation" Binding="{Binding XPath=@YearOfFoundation}" />
+                        <DataGridTextColumn Header="TitleWon" Binding="{Binding XPath=@TitleWon}" />
+                        <DataGridTextColumn Header="LicensePaid" Binding="{Binding XPath=@LicencePaid}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
