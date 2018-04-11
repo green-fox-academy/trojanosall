@@ -64,9 +64,9 @@
                 <!-- Basic Information Table -->
                 <DataGrid ItemsSource="{Binding XPath=BasicInformation}" ColumnHeaderStyle="{StaticResource columnHeaderStyle}" AutoGenerateColumns="False" RowHeaderWidth="0" >                    
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="YearOfFoundation" Binding="{Binding XPath=@YearOfFoundation}" />
-                        <DataGridTextColumn Header="TitleWon" Binding="{Binding XPath=@TitleWon}" />
-                        <DataGridTextColumn Header="LicensePaid" Binding="{Binding XPath=@LicencePaid}" />
+                        <DataGridTextColumn Header="Year Of Foundation" Binding="{Binding XPath=@YearOfFoundation}" />
+                        <DataGridTextColumn Header="Title Won" Binding="{Binding XPath=@TitleWon}" />
+                        <DataGridTextColumn Header="License Paid" Binding="{Binding XPath=@LicencePaid}" />
                     </DataGrid.Columns>
                 </DataGrid>
             </Grid>
