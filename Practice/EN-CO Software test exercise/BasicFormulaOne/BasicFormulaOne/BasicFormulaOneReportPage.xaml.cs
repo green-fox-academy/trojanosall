@@ -9,5 +9,10 @@ namespace BasicFormulaOne
         {
             InitializeComponent();
         }
+
+        public BasicFormulaOneReportPage(object data) : this()
+        {
+            this.DataContext = data;
+        }
     }
 }

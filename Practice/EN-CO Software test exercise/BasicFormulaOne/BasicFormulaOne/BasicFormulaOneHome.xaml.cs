@@ -13,7 +13,7 @@ namespace BasicFormulaOne
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            BasicFormulaOneReportPage basicFormulaOneReportPage = new BasicFormulaOneReportPage();
+            BasicFormulaOneReportPage basicFormulaOneReportPage = new BasicFormulaOneReportPage(this.formulaOneTeamListBox.SelectedItem);
             this.NavigationService.Navigate(basicFormulaOneReportPage);
         }
     }
